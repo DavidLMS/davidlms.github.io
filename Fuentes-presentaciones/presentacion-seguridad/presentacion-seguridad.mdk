@@ -57,61 +57,46 @@ Según la ley, no me des coba
   - Legislación sobre protección de datos. 
   - Legislación sobre los servicios de la sociedad de la información y correo electrónico.
 
-## Metodología
+# Y esto se traduce en
 
-Reveal.js comes with a few themes built in:
+*	UD1: Introducción a la seguridad informática
+*	UD2: Seguridad en el entorno físico
+*	UD3: Seguridad en el hardware
+*	UD4: Criptografía
+*	UD5: Amenazas y seguridad del software
+*	UD6: Redes seguras
 
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
+# ¿Queréis Python?
 
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
+# Cómo aprendemos
 
-## Evaluación
+* Explicaciones teóricas... Con calma, intentemos no abusar tampoco.
+* Proyectos de investigación concretos sobre debilidad de un sistema y posibilidades de prevención.
+* Políticas de prevención generales.
+* Proyectos multidisplinares (App Web y Seguridad).
+* Permanecer curiosos.
 
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
+# ¿Y mi nota?
 
+* Asistencia obligatoria al 75% de horas lectivas para evaluación continua.
+* 10% Asistencia y actitud frente a la asignatura.
+* 50% Trabajos de clase.
+* 30% Exámenes escritos conceptuales.
+* 10% Prueba de competencias en el final del trimestre.
+* Mínimo un 4 en cada parte para hacer media.
+* Trabajo no entregado, entregado tarde o no asistencia a un exámen supondrá un 0.
 
-
-## Comunicación
-
-Some pauses.
-
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
-
-And more:
-
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
-
-Cool!.
-
-~ Slide
-A slide with no header
-~
-
-## Gracias :-)
+# Gracias :-)
 ¿Alguna pregunta?
 
-[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
-[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
-[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+# Un vídeo para asustar...
+
+[link]
+[link]: https://www.youtube.com/watch?v=hpF7LhMXu5I "Youtube"
+
+# Demostrad lo que sabéis
+
+kahoot.it
+
+[link]
+[link]: https://play.kahoot.it/#/k/6dad698c-8dd0-43e4-97b6-4810369e5136 "Kahoot"
