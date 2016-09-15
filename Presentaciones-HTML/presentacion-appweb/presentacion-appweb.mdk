@@ -1,78 +1,80 @@
 [INCLUDE=presentation]
-Title         : Seguridad Informática
-Sub Title     : La materia más complicada
+Title         : Aplicaciones Web
+Sub Title     : La materia más práctica jamás vista
 Author        : David Romero
 Affiliation   : La Salle Sgdo. Corazón de Jesús
 Email         : dromeros@lasalleandalucia.net
-Reveal Theme  : night
+Reveal Theme  : beige
 Beamer Theme  : singapore
 
 [TITLE]
 
 # ¿Eso qué es lo que es?
 
-
 # ¿Cuáles son los contenidos?
 Según la ley, no me des coba
 
-# Contenidos
+# Contenidos (I)
 
-* Aplicación de medidas de seguridad pasiva
-  - Ubicación y protección física de los equipos y servidores. 
-  - Sistemas de alimentación ininterrumpida.
+* Instalación de gestores de contenidos
+  - Instalación en sistemas operativos libres y propietarios. 
+  - Creación de usuarios y grupos de usuarios. 
+  - Utilización del interfaz gráfico. 
+  - Personalización del entorno. 
+  - Funcionalidades proporcionadas por el gestor de contenidos. 
+  - Sindicación. 
+  - Funcionamiento de los gestores de contenidos. 
+  - Actualizaciones del gestor de contenidos. 
+  - Configuración de módulos y menús. 
 
-* Gestión de dispositivos de almacenamiento
-  - Almacenamiento de la información: rendimiento, disponibilidad, accesibilidad. 
-  - Almacenamiento redundante y distribuido. 
-  - Almacenamiento remoto y extraíble. 
-  - Criptografía. 
-  - Copias de seguridad e imágenes de respaldo. 
-  - Medios de almacenamiento.
+# Contenidos (II)
 
-# Más contenidos
+* Instalación de sistemas de gestión de aprendizaje a distancia
+  - Elementos lógicos: comunicación, materiales y actividades. 
+  - Instalación en sistemas operativos libres y propietarios. 
+  - Modos de registro. Interfaz gráfico asociado. 
+  - Personalización del entorno. 
+  - Navegación y edición. 
+  - Creación de cursos siguiendo especificaciones. 
+  - Gestión de usuarios y grupos. 
+  - Activación de funcionalidades 
 
-* Aplicación de mecanismos de seguridad activa: 
-  - Identificación digital. 
-  - Firma electrónica y certificado digital. 
-  - Seguridad en los protocolos para comunicaciones inalámbricas. 
-  - Utilización de cortafuegos en un sistema o servidor. 
-  - Listas de control de acceso. 
-  - Política de contraseñas. 
-  - Recuperación de datos. 
-  - Software malicioso. 
-  - Clasificación. 
-  - Herramientas de protección y desinfección.
+# Contenidos (III)
 
-# Y no se acaban
+* Instalación de servicios de gestión de archivos web
+  - Instalación. 
+  - Navegación y operaciones básicas. 
+  - Administración del gestor. 
+  - Usuarios y permisos. 
+  - Tipos de usuario. 
+  - Creación de recursos compartidos. 
 
-* Aseguramiento de la privacidad: 
-  - Métodos para asegurar la privacidad de la información transmitida. 
-  - Fraudes informáticos y robos de información. 
-  - Control de la monitorización en redes cableadas. 
-  - Seguridad en redes inalámbricas. 
-  - Sistemas de identificación: firma electrónica, certificados digitales y otros. 
-  - Cortafuegos en equipos y servidores. 
+# Contenidos (y IV)
 
-* Cumplimiento de la legislación y de las normas sobre seguridad: 
-  - Legislación sobre protección de datos. 
-  - Legislación sobre los servicios de la sociedad de la información y correo electrónico.
+* Instalación de aplicaciones de ofimática web
+  - Instalación. 
+  - Utilización de las aplicaciones instaladas. 
+  - Gestión de usuarios y permisos asociados. 
+  - Comprobación de la seguridad. 
+
+* Instalación de aplicaciones web de escritorio
+  - Aplicaciones de correo web. 
+  - Instalación. 
+  - Gestión de usuarios. 
 
 # Y esto se traduce en
 
-*	UD1: Introducción a la seguridad informática
-*	UD2: Seguridad en el entorno físico
-*	UD3: Seguridad en el hardware
-*	UD4: Criptografía
-*	UD5: Amenazas y seguridad del software
-*	UD6: Redes seguras
-
-# ¿Queréis Python?
+*	UD1: Tecnología web
+*	UD2: Gestores de contenidos
+*	UD3: Sistemas de gestión de aprendizaje a distancia
+*	UD4: Servicios de gestión de archivos web
+*	UD5: Aplicaciones de ofimática web
+*	UD6: Aplicaciones web de escritorio
 
 # Cómo aprendemos
 
-* Explicaciones teóricas... Con calma, intentemos no abusar tampoco.
-* Proyectos de investigación concretos sobre debilidad de un sistema y posibilidades de prevención.
-* Políticas de prevención generales.
+* Sesiones formativas a decidir por el alumnado.
+* Proyectos de implantación.
 * Proyectos multidisplinares (App Web y Seguridad).
 * Permanecer curiosos.
 
@@ -92,11 +94,11 @@ Según la ley, no me des coba
 # Un vídeo para asustar...
 
 [Youtube]
-[Youtube]: https://www.youtube.com/watch?v=hpF7LhMXu5I "Youtube"
+[Youtube]: https://www.youtube.com/watch?v=mg0T_Gb_Z1w "Youtube"
 
 # Demostrad lo que sabéis
 
 kahoot.it
 
 [Kahoot]
-[Kahoot]: https://play.kahoot.it/#/k/6dad698c-8dd0-43e4-97b6-4810369e5136 "Kahoot"
+[Kahoot]: https://play.kahoot.it/#/k/fb194978-ced6-4ab5-aeda-fd9e530eb6d2 "Kahoot"
