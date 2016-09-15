@@ -9,73 +9,30 @@ Beamer Theme  : singapore
 
 [TITLE]
 
-# Ahora vosotros
+# Contenidos
 
+* 1. La Sociedad de la Información y la Sociedad del Conocimiento
+* 2. Hardware y Software
+* 3. Ofimática
+* 4. Redes
+* 5. Programación
 
-[madoko]: http://madoko.codeplex.com
+# ¿Cómo?
 
-## Deja constancia
+* Prácticas
+* Proyectos, con presentaciones públicas
 
-http://goo.gl/vCC1Y4
+# Evaluación
 
-## Contenidos
+* 10% Asistencia, comportamiento y participación (cuantificable)
+* 50% Proyectos y prácticas
+* 40% Pruebas
+* Mínimo 5 de media en cada parte
+* Cualquier prueba sin asistencia o proyecto no entregado en tiempo y forma, podrá ser considerado como 0
 
-
-## Metodología
-
-Reveal.js comes with a few themes built in:
-
-* [Default](?#/themes)
-* [Sky](?theme=sky#/themes)
-* [Beige](?theme=beige#/themes)
-* [Serif](?theme=serif#/themes)
-* [Simple](?theme=simple#/themes)
-* [Night](?theme=night#/themes)
-* [Moon](?theme=moon#/themes)
-* [Solarized](?theme=solarized#/themes)
-
-Theme demos are loaded after the presentation which leads to flicker. In
-production you should load your theme in the `<head>` using a
-`<link>`.
-
-## Evaluación
-
-You can select from different transitions, like:\
-[Cube](?transition=cube#/transitions) -
-[Page](?transition=page#/transitions) -
-[Concave](?transition=concave#/transitions) -
-[Zoom](?transition=zoom#/transitions) -
-[Linear](?transition=linear#/transitions) -
-[Fade](?transition=fade#/transitions) -
-[None](?transition=none#/transitions) -
-[Default](?#/transitions)
-
-
-
-## Comunicación
-
-Some pauses.
-
-* {.fragment} One
-* {.fragment} Two
-* {.fragment} Three
-
-And more:
-
-- Test 1
-- Test 2
-- Test 3
-{.fragmented}
-
-Cool!.
-
-~ Slide
-A slide with no header
-~
-
-## Gracias :-)
+# Gracias :-)
 ¿Alguna pregunta?
 
-[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
-[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
-[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
+# El día de mañana
+[Youtube]
+[Youtube]: https://www.youtube.com/watch?v=Usj5MBGkhKY "Youtube"
