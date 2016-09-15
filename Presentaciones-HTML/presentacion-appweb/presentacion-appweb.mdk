@@ -91,7 +91,12 @@ Según la ley, no me des coba
 # Gracias :-)
 ¿Alguna pregunta?
 
-# Un vídeo para orientativo
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
+# Un vídeo para asustar...
+~ End Remote
+# Un vídeo orientativo
+<!-- end merge -->
 
 [Youtube]
 [Youtube]: https://www.youtube.com/watch?v=mg0T_Gb_Z1w "Youtube"
