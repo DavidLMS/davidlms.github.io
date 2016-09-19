@@ -82,26 +82,26 @@ Realiza una tabla con ejemplos
 * Pasivo
 
 # Algunos ataques más comunes
-* Sniffing
-* Spoofing
-* Aprovechar agujeros de seguridad
-* Denegación de servicio (DoS)
-* Ingeniería social
-* Phishing
-* Troyanos
-* Adivinación de password
+* {.fragment} Sniffing
+* {.fragment} Spoofing
+* {.fragment} Aprovechar agujeros de seguridad
+* {.fragment} Denegación de servicio (DoS)
+* {.fragment} Ingeniería social
+* {.fragment} Phishing
+* {.fragment} Troyanos
+* {.fragment} Adivinación de password
 
 # Mecanismos de seguridad
-* Identificación y autenticación
+* {.fragment} Identificación y autenticación
   - Estática
   - Robusta
   - Continua
-* Control de la adquisición y actualización del software
-* Cifrado
-* Actuaciones en el nivel de arquitectura
-* Gestión de incidentes
-* Acciones administrativas
-* Formación
+* {.fragment} Control de la adquisición y actualización del software
+* {.fragment} Cifrado
+* {.fragment} Actuaciones en el nivel de arquitectura
+* {.fragment} Gestión de incidentes
+* {.fragment} Acciones administrativas
+* {.fragment} Formación
 
 # Clasificación de mecanismos de seguridad
 * Prevención
