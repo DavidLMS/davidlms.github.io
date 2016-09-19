@@ -35,7 +35,7 @@ Disciplina que se encarga de proveer a los sistemas informáticos de una serie d
 
 Teniendo en cuenta las dos clasificaciones que has visto de seguridad informática, en el caso de un antivirus ¿a qué tipos de seguridad corresponde?
 
-# Ejercicio 1
+# Ejercicio
 
 Realiza una tabla con ejemplos
 
@@ -46,3 +46,87 @@ Realiza una tabla con ejemplos
 | **Pasiva**       | Ejemplo2       | Ejemplo4      |
 |--------------|--------------|--------------|
 {  }
+
+# ¿Qué queremos proteger?
+* {.fragment} En efecto, los datos
+
+# Características de un sistema seguro
+* {.fragment} Confidencialidad
+* {.fragment} Integridad
+* {.fragment} Disponibilidad
+* {.fragment} No repudio
+
+# ¿Lo hemos entendido?
+* {.fragment} Un apagón deja un servidor inoperativo durante toda la noche
+* {.fragment} Al acercar un imán a un disco, hace que se dañen parte de los datos almacenados en el mismo
+* {.fragment} Compra de un artículo a través de Internet y posterior negativa a pagarlo alegando que es otra persona la que ha hecho la compra
+* {.fragment} Un correo electrónico es interceptado y leído por una persona que no es el destinatario de dicho correo
+
+# Accede al documento y escribe un ejemplo de cada tipo
+[https://goo.gl/Tb91Ns]
+[https://goo.gl/Tb91Ns]: https://goo.gl/Tb91Ns "Documento"
+
+# Repite: Internet es un sitio hostil
+
+# Algunos consejos de la policía
+[Vídeo]
+[Vídeo]: https://www.youtube.com/watch?feature=player_embedded&v=2KQUvERUa-8 "Vídeo"
+
+# Diferencia entre vulnerabilidad, amenaza y ataque
+* {.fragment} Bug
+* {.fragment} Parche
+* {.fragment} Ataques 0 day
+
+# Tipos de ataques
+* Activo
+* Pasivo
+
+# Algunos ataques más comunes
+* Sniffing
+* Spoofing
+* Aprovechar agujeros de seguridad
+* Denegación de servicio (DoS)
+* Ingeniería social
+* Phishing
+* Troyanos
+* Adivinación de password
+
+# Mecanismos de seguridad
+* Identificación y autenticación
+  - Estática
+  - Robusta
+  - Continua
+* Control de la adquisición y actualización del software
+* Cifrado
+* Actuaciones en el nivel de arquitectura
+* Gestión de incidentes
+* Acciones administrativas
+* Formación
+
+# Clasificación de mecanismos de seguridad
+* Prevención
+* Detección
+* Recuperación
+
+# Ejercicio 2
+
+Relaciona cada ataque que hemos visto con los mecanismos de seguridad que pueden evitarlo
+
+|-----------------------|-------------------------------------------------------|
+| Ataque                | Mecanismo                                            |
++-----------------------|:-----------------------------------------------------:+
+| Sniffing              | Identificación y autenticación                        |
+| Spoofing              | Control de la adquisición y actualización de software |
+| Agujeros de seguridad | Cifrado                                               |
+| DoS                   | Actuaciones a nivel de arquitectura                   |
+| Ingeniería social     | Gestión de incidentes                                 |
+| Phishing              | Acciones administrativas                              |
+| Troyano               | Formación                                             |
+| Adivinación password  |                                                       |
+|-----------------------|-------------------------------------------------------|
+{  }
+
+# Autoevaluación
+Entre toda la clase, cread un formulario de Google de autoevaluación acerca de los contenidos que hemos visto hasta ahora. Cada grupo debe realizar un mínimo de tres preguntas.
+
+**Conceptos clave**: Seguridad activa y pasiva, física y lógica, confidencialidad, integridad, disponibilidad, no repudio, ataques pasivos y activos
