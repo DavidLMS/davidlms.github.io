@@ -126,6 +126,45 @@ Relaciona cada ataque que hemos visto con los mecanismos de seguridad que pueden
 |-----------------------|-------------------------------------------------------|
 {  }
 
+# Gestión de riesgos
+Riesgo = Amenaza x Vulnerabilidad x Valor del bien
+
+# Materialización de la amenaza
+* Impactos cuantitativos
+* Impactos cualitativos
+
+# Proceso de estimación de riesgos
+* Identificación de riesgos
+* Análisis de riesgos
+* Evaluación de riesgos (lista ordenada)
+* MAGERIT -> Metodología en España
+
+# Políticas de seguridad
+* Objetivos de la empresa referentes a seguridad
+* Concienciar sobre el uso de los recursos
+
+# Auditoría
+* Evaluación inicial del entorno auditable
+* Definición del alcance y los objetivos de la auditoría
+* Planificación
+* Puesta en marcha del proceso
+* Informe y propuestas de mejora
+* Seguimiento
+
+# Más sobre auditoría
+* Interna o externa
+* Mucho software para procesos automatizables auditorías de seguridad
+
+# Plan de contingencias
+* Medidas complementarias
+* Asegurar la continuación del negocio tras impacto
+* Fundamental el conocimiento por parte del personal
+
+# Subplanos del plan de contingencias
+* Plan de respaldo (Preventivo)
+* Plan de emergencias (En el momento)
+* Plan de recuperación
+
 # Autoevaluación
 Entre toda la clase, cread un formulario de Google de autoevaluación acerca de los contenidos que hemos visto hasta ahora. Cada grupo debe realizar un mínimo de tres preguntas.
 
