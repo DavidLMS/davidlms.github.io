@@ -47,7 +47,7 @@ Disciplina que se encarga de proveer a los sistemas informáticos de una serie d
 * {.fragment} Pulsadores de emergencia
 * {.fragment} La alarma
 
-# Ejemplo: Securitas Direct
+# Ejemplo - Securitas Direct
 
 [Web Securitas Direct]
 [Web Securitas Direct]: https://www.securitasdirect.es/es/alarmas-negocios "password"
@@ -93,6 +93,18 @@ Disciplina que se encarga de proveer a los sistemas informáticos de una serie d
 * Barreras
 * Vías de evacuación
 * Extintores
+
+# Ejemplo - CPD Google
+
+[Vídeo explicativo]
+[Vídeo explicativo]: https://youtu.be/XZmGGAbHqa0 "password"
+
+# Ejercicio - Estudio CPD
+
+Estudia el CPD del siguiente enlace y encuentra una manera de acceder a sus datos, o al menos algún SPOF:
+
+[https://goo.gl/9lq5ce]
+[https://goo.gl/9lq5ce]: https://goo.gl/9lq5ce "password"
 
 # Créditos
 
