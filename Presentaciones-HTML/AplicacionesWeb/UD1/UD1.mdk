@@ -1,0 +1,128 @@
+[INCLUDE=presentation]
+Title         : Seguridad Informática
+Sub Title     : 2 - Seguridad en el entorno físico
+Author        : David Romero
+Affiliation   : La Salle Sgdo. Corazón de Jesús
+Email         : dromeros@lasalleandalucia.net
+Reveal Theme  : night
+Beamer Theme  : singapore
+
+[TITLE]
+
+#Para pensar
+<div>
+  <blockquote>
+	“La seguridad de una empresa es tan fuerte como el punto donde menos está segura.”
+<br><br>Chema Alonso, experto en seguridad
+</blockquote>
+</div>
+
+# Seguridad Informática
+Disciplina que se encarga de proveer a los sistemas informáticos de una serie de elementos (normas, métodos, procedimientos) para conseguir que estos sean más fiables.
+
+# SPOF
+
+* Single Point Of Failure
+* Todos los elementos asegurados
+* [Robo del CPD]
+
+[Robo del CPD]: http://barrapunto.com/articles/08/05/07/1141243.shtml "Robo del CPD"
+
+# Acceso de personas al recinto
+
+* DNI al entrar y tarjeta de visitante
+* Tarjetas magnéticas
+* Accesos biométricos
+* Cámaras
+* Registros de visita
+
+# Alarma contra intrusos
+
+* {.fragment} Módulo central
+* {.fragment} Detectores
+* {.fragment} Sistemas inalámbricos o de cableado
+* {.fragment} Baterías autónomas o de emergencia
+* {.fragment} Contactos magnéticos (puertas o ventanas)
+* {.fragment} Avisador telefónico
+* {.fragment} Pulsadores de emergencia
+* {.fragment} La alarma
+
+# Ejemplo - Securitas Direct
+
+[Web Securitas Direct]
+[Web Securitas Direct]: https://www.securitasdirect.es/es/alarmas-negocios "password"
+
+# Instalación eléctrica
+
+* {.fragment} Red eléctrica externa
+* {.fragment} Red eléctrica interna (Potencia suficiente P=V*I)
+* {.fragment} Personas
+
+# Protección frente a cortes de electricidad
+
+* {.fragment} Grupo electrógeno
+* {.fragment} SAI
+* {.fragment} Luces de emergencia
+
+# Condiciones ambientales: Humedad y temperatura
+
+* Personas: Entre 20 y 25ºC
+* Ordenadores: Entre 9 y 33 ºC
+* Salas frías: solo para ordenadores
+  - 20-30ºC. Humedad entre 15% y 80%
+  - Más de 70ºC o 30ºC 90% no funcionan
+
+# Refrigeración en CPD
+
+* {.fragment} Climatización por falso suelo
+* {.fragment} Climatización InRow
+* {.fragment} Climatización de precisión complementaria para servidores de alta densidad
+
+# Polvo
+* Ventilación
+* Aislamiento integral
+* Pureza del aire
+
+# Agua
+* Sistemas de desviación
+* Sistemas de salvaguarda
+* Sistemas de detección
+
+# Fuego
+
+* Barreras
+* Vías de evacuación
+* Extintores
+
+# Ejemplo - CPD Google
+
+[Vídeo explicativo]
+[Vídeo explicativo]: https://youtu.be/XZmGGAbHqa0 "password"
+
+# Ejercicio - Estudio CPD
+
+Estudia el CPD del siguiente enlace y encuentra una manera de acceder a sus datos, o al menos algún SPOF:
+
+[https://goo.gl/9lq5ce]
+[https://goo.gl/9lq5ce]: https://goo.gl/9lq5ce "password"
+
+# Créditos
+
+Presentación a partir de un material elaborado por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía
+
+~ Center
+
+![EducacionCulturaYDeporte]
+
+[EducacionCulturaYDeporte]: images/EducacionCulturaYDeporte.jpg "EducacionCulturaYDeporte" { width:auto; max-width:90% }
+
+![Junta_Andalucia]
+
+[Junta_Andalucia]: images/Junta_Andalucia.jpg "Junta_Andalucia" { width:auto; max-width:90% }
+
+
+![by-nc-sa.eu_petit]
+
+[by-nc-sa.eu_petit]: images/by-nc-sa.eu_petit.png "by-nc-sa.eu_petit" { width:auto; max-width:90% }
+
+~
