@@ -1,110 +1,82 @@
 [INCLUDE=presentation]
-Title         : Seguridad Informática
-Sub Title     : 2 - Seguridad en el entorno físico
+Title         : Aplicaciones Web
+Sub Title     : 1 - Gestores de contenidos
 Author        : David Romero
 Affiliation   : La Salle Sgdo. Corazón de Jesús
 Email         : dromeros@lasalleandalucia.net
-Reveal Theme  : night
+Reveal Theme  : beige
 Beamer Theme  : singapore
 
 [TITLE]
 
-#Para pensar
-<div>
-  <blockquote>
-	“La seguridad de una empresa es tan fuerte como el punto donde menos está segura.”
-<br><br>Chema Alonso, experto en seguridad
-</blockquote>
-</div>
+# Gestores de contenidos (CMS)
 
-# Seguridad Informática
-Disciplina que se encarga de proveer a los sistemas informáticos de una serie de elementos (normas, métodos, procedimientos) para conseguir que estos sean más fiables.
+* Para personas sin conocimientos técnicos
+* Sitios web dinámicos e interactivos
 
-# SPOF
+# Ventajas
 
-* Single Point Of Failure
-* Todos los elementos asegurados
-* [Robo del CPD]
+* Control del acceso
+* Interfaz de navegación
+* Mantenimiento óptimo
+* Producción de páginas web dinámicas
+* Rapidez de publicación
 
-[Robo del CPD]: http://barrapunto.com/articles/08/05/07/1141243.shtml "Robo del CPD"
+# Desventajas
 
-# Acceso de personas al recinto
+* Carga lenta
+* Fallos de seguridad
+* Poco originales
 
-* DNI al entrar y tarjeta de visitante
-* Tarjetas magnéticas
-* Accesos biométricos
-* Cámaras
-* Registros de visita
+# Tipos por licencia
 
-# Alarma contra intrusos
+* Código fuente abierto
+* Código fuente propietario
 
-* {.fragment} Módulo central
-* {.fragment} Detectores
-* {.fragment} Sistemas inalámbricos o de cableado
-* {.fragment} Baterías autónomas o de emergencia
-* {.fragment} Contactos magnéticos (puertas o ventanas)
-* {.fragment} Avisador telefónico
-* {.fragment} Pulsadores de emergencia
-* {.fragment} La alarma
+# Tipos por lenguaje
 
-# Ejemplo - Securitas Direct
+* PHP
+* JSP
+* ASP.NET
+* Python
+* Ruby On Rails
+* Y más...
 
-[Web Securitas Direct]
-[Web Securitas Direct]: https://www.securitasdirect.es/es/alarmas-negocios "password"
+# Tipos por uso
 
-# Instalación eléctrica
+* {.fragment} Blogs
+* {.fragment} Foros
+* {.fragment} Galerías de imágenes
+* {.fragment} Portales de información
+* {.fragment} Wikis
+* {.fragment} Aulas virtuales
+* {.fragment} Comercio electrónico
 
-* {.fragment} Red eléctrica externa
-* {.fragment} Red eléctrica interna (Potencia suficiente P=V*I)
-* {.fragment} Personas
+# Wordpress
 
-# Protección frente a cortes de electricidad
+* {.fragment} Al inicio blogs
+* {.fragment} PHP, MySQL y Apache
+* {.fragment} GPL
 
-* {.fragment} Grupo electrógeno
-* {.fragment} SAI
-* {.fragment} Luces de emergencia
+# Qué aprenderemos
 
-# Condiciones ambientales: Humedad y temperatura
+* {.fragment} Instalación
+* {.fragment} Administración
+* {.fragment} Gestión de usuarios
+* {.fragment} Plantillas
+* {.fragment} Plugins
+* {.fragment} Actualización
+* {.fragment} Copias de seguridad
+* {.fragment} Seguridad
 
-* Personas: Entre 20 y 25ºC
-* Ordenadores: Entre 9 y 33 ºC
-* Salas frías: solo para ordenadores
-  - 20-30ºC. Humedad entre 15% y 80%
-  - Más de 70ºC o 30ºC 90% no funcionan
+# Cómo documentamos
 
-# Refrigeración en CPD
+* Gitbook
 
-* {.fragment} Climatización por falso suelo
-* {.fragment} Climatización InRow
-* {.fragment} Climatización de precisión complementaria para servidores de alta densidad
+# Tarea
 
-# Polvo
-* Ventilación
-* Aislamiento integral
-* Pureza del aire
-
-# Agua
-* Sistemas de desviación
-* Sistemas de salvaguarda
-* Sistemas de detección
-
-# Fuego
-
-* Barreras
-* Vías de evacuación
-* Extintores
-
-# Ejemplo - CPD Google
-
-[Vídeo explicativo]
-[Vídeo explicativo]: https://youtu.be/XZmGGAbHqa0 "password"
-
-# Ejercicio - Estudio CPD
-
-Estudia el CPD del siguiente enlace y encuentra una manera de acceder a sus datos, o al menos algún SPOF:
-
-[https://goo.gl/9lq5ce]
-[https://goo.gl/9lq5ce]: https://goo.gl/9lq5ce "password"
+* Preparar máquina virtual con ubuntu server
+* Descargar wordpress
 
 # Créditos
 
