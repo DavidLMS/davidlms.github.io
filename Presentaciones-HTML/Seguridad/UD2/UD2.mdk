@@ -106,6 +106,39 @@ Estudia el CPD del siguiente enlace y encuentra una manera de acceder a sus dato
 [https://goo.gl/9lq5ce]
 [https://goo.gl/9lq5ce]: https://goo.gl/9lq5ce "password"
 
+# CPD
+
+Si ya sabes lo que es...
+
+# Infraestructura
+
+* {.fragment} Construcción antisísmica
+* {.fragment} Aislamiento térmico -> [Facebook]
+* {.fragment} Paredes (polvo y fuego)
+* {.fragment} Suelos (carga y agua)
+
+[Facebook]: http://www.xataka.com/empresas-y-economia/nuestro-muro-de-facebook-esta-muy-fresquito-zuckerberg-nos-ensena-su-futurista-centro-de-datos-cerca-del-artico "CPD Facebook"
+
+# Acceso
+
+* {.fragment} Personal de seguridad
+* {.fragment} Control de acceso a zonas interiores
+* {.fragment} Lectores de matrículas
+* {.fragment} Blindar las puertas en las áreas críticas
+* {.fragment} Sistemas biométricos
+* {.fragment} Control de acceso peronal y/o electrónico
+
+# Redundancia
+
+* {.fragment} CPD de respaldo
+* {.fragment} Diferentes proveedores de internet
+* {.fragment} Control de la temperatura
+* {.fragment} Caso de fuego
+* {.fragment} Acometida eléctrica
+
+# Sistemas de control de acceso
+
+
 # Créditos
 
 Presentación a partir de un material elaborado por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía
