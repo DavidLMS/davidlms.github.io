@@ -138,6 +138,36 @@ Si ya sabes lo que es...
 
 # Sistemas de control de acceso
 
+¿Necesitan conexión a internet?
+
+* Independientes
+* Dependientes
+
+# Personal de vigilancia y control
+
+Diferente legislación:
+
+* Propia empresa
+* Empresa privada
+
+# Dispositivos de control de acceso
+
+* {.fragment} Tarjetas
+  - De contacto
+  - De proximidad (RFID)
+* {.fragment} Teclados
+* {.fragment} LLaves electrónicas de contacto
+
+# Reconocimiento de personas
+
+* {.fragment} Rasgos personales -> Entidades:
+  - Algo que tienes
+  - Algo que sabes
+  - Algo que eres
+* {.fragment} Rasgos fisiológicos
+* {.fragment} Rasgos del comportamiento
+
+# Propiedades de los rasgos biométricos
 
 # Créditos
 
