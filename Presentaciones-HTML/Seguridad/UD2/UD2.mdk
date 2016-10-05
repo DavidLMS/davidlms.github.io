@@ -169,6 +169,36 @@ Diferente legislación:
 
 # Propiedades de los rasgos biométricos
 
+* {.fragment} Universalidad
+* {.fragment} Unicidad
+* {.fragment} Permanencia
+* {.fragment} Perennidad
+* {.fragment} Mensurabilidad
+
+# Se caracterizan
+
+* {.fragment} Rendimiento
+* {.fragment} Aceptabilidad
+* {.fragment} Evitabilidad
+
+# Variables
+
+* {.fragment} Tasa de falso rechazo
+* {.fragment} Tasa de falsa aceptación
+* {.fragment} Tiempo de verificación / desempeño
+
+# Los más habituales
+
+* {.fragment} Huellas (0.5)
+* {.fragment} Manos (1)
+* {.fragment} Ojos (2). La más alta fiablidad
+* {.fragment} Voz (1.5)
+
+# Políticas de seguridad
+
+[Ejemplo politica]
+[Ejemplo politica]: http://www.inci.gov.co/normatividad/politicas-lineamientos-manuales/522-politica-de-seguridad-informatica "Acceder"
+
 # Créditos
 
 Presentación a partir de un material elaborado por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía
