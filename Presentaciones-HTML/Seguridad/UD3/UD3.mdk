@@ -1,6 +1,6 @@
 [INCLUDE=presentation]
 Title         : Seguridad Informática
-Sub Title     : 2 - Seguridad en el entorno físico
+Sub Title     : 4 - Criptografía
 Author        : David Romero
 Affiliation   : La Salle Sgdo. Corazón de Jesús
 Email         : dromeros@lasalleandalucia.net
@@ -9,195 +9,61 @@ Beamer Theme  : singapore
 
 [TITLE]
 
-#Para pensar
-<div>
-  <blockquote>
-	“La seguridad de una empresa es tan fuerte como el punto donde menos está segura.”
-<br><br>Chema Alonso, experto en seguridad
-</blockquote>
-</div>
+#¿Recordamos?
 
-# Seguridad Informática
-Disciplina que se encarga de proveer a los sistemas informáticos de una serie de elementos (normas, métodos, procedimientos) para conseguir que estos sean más fiables.
+* Integridad
+* No repudio
+* Confidencialidad
+* {.fragment} Autenticidad
+* {.fragment} Privacidad
 
-# SPOF
+# Criptografía
+Cifrar: Transformar el mensaje para que solo pueda ser leído por remitente y destinatario
 
-* Single Point Of Failure
-* Todos los elementos asegurados
-* [Robo del CPD]
+# Cifrados sencillos
 
-[Robo del CPD]: http://barrapunto.com/articles/08/05/07/1141243.shtml "Robo del CPD"
+* Sustitución
+* {.fragment} Transposición
+* {.fragment} Enigma utilizaba ambos. Clave nueva cada día
 
-# Acceso de personas al recinto
+# Un poco de historia
 
-* DNI al entrar y tarjeta de visitante
-* Tarjetas magnéticas
-* Accesos biométricos
-* Cámaras
-* Registros de visita
+* Método de la escítala
+* {.fragment} Método Polybios
+* {.fragment} Cifrado César
 
-# Alarma contra intrusos
+# ¿Copiamos al César?
 
-* {.fragment} Módulo central
-* {.fragment} Detectores
-* {.fragment} Sistemas inalámbricos o de cableado
-* {.fragment} Baterías autónomas o de emergencia
-* {.fragment} Contactos magnéticos (puertas o ventanas)
-* {.fragment} Avisador telefónico
-* {.fragment} Pulsadores de emergencia
-* {.fragment} La alarma
+Elabora un programa en Python que cifre o descifre un mensaje encriptado con el cifrado César
 
-# Ejemplo - Securitas Direct
+Pista: Busca el libro Hacking Secret Ciphers with Python
 
-[Web Securitas Direct]
-[Web Securitas Direct]: https://www.securitasdirect.es/es/alarmas-negocios "password"
+# ¿Hackeamos al César?
 
-# Instalación eléctrica
+Elabora un programa en Python que descifre un mensaje con un cifrado César de cualquier nivel utilizando la técnica de fuerza bruta
 
-* {.fragment} Red eléctrica externa
-* {.fragment} Red eléctrica interna (Potencia suficiente P=V*I)
-* {.fragment} Personas
+# Técnicas criptográficas
 
-# Protección frente a cortes de electricidad
+¿Qué podría pasar si no encriptamos los mensajes en la red?
 
-* {.fragment} Grupo electrógeno
-* {.fragment} SAI
-* {.fragment} Luces de emergencia
+# Criptografía simétrica
 
-# Condiciones ambientales: Humedad y temperatura
+* Misma clave para cifrar y descifrar, de forma inversa
+* {.fragment} Más conocidos: DES (56 bits), 3DES, RC2, RC4, RC5 (2048 bits)
+* {.fragment} Seguridad en función de la longitud de la clave
 
-* Personas: Entre 20 y 25ºC
-* Ordenadores: Entre 9 y 33 ºC
-* Salas frías: solo para ordenadores
-  - 20-30ºC. Humedad entre 15% y 80%
-  - Más de 70ºC o 30ºC 90% no funcionan
+# Esquema criptografía simétrica
 
-# Refrigeración en CPD
+~ Center
+![simetrica]
+~
 
-* {.fragment} Climatización por falso suelo
-* {.fragment} Climatización InRow
-* {.fragment} Climatización de precisión complementaria para servidores de alta densidad
+[simetrica]: images/simetrica.PNG "simetrica" { width:auto; max-width:90%;}
 
-# Polvo
-* Ventilación
-* Aislamiento integral
-* Pureza del aire
+# Inconvenientes de criptografía simétrica
 
-# Agua
-* Sistemas de desviación
-* Sistemas de salvaguarda
-* Sistemas de detección
-
-# Fuego
-
-* Barreras
-* Vías de evacuación
-* Extintores
-
-# Ejemplo - CPD Google
-
-[Vídeo explicativo]
-[Vídeo explicativo]: https://youtu.be/XZmGGAbHqa0 "password"
-
-# Ejercicio - Estudio CPD
-
-Estudia el CPD del siguiente enlace y encuentra una manera de acceder a sus datos, o al menos algún SPOF:
-
-[https://goo.gl/9lq5ce]
-[https://goo.gl/9lq5ce]: https://goo.gl/9lq5ce "password"
-
-# CPD
-
-Si ya sabes lo que es...
-
-# Infraestructura
-
-* {.fragment} Construcción antisísmica
-* {.fragment} Aislamiento térmico -> [Facebook]
-* {.fragment} Paredes (polvo y fuego)
-* {.fragment} Suelos (carga y agua)
-
-[Facebook]: http://www.xataka.com/empresas-y-economia/nuestro-muro-de-facebook-esta-muy-fresquito-zuckerberg-nos-ensena-su-futurista-centro-de-datos-cerca-del-artico "CPD Facebook"
-
-# Acceso
-
-* {.fragment} Personal de seguridad
-* {.fragment} Control de acceso a zonas interiores
-* {.fragment} Lectores de matrículas
-* {.fragment} Blindar las puertas en las áreas críticas
-* {.fragment} Sistemas biométricos
-* {.fragment} Control de acceso peronal y/o electrónico
-
-# Redundancia
-
-* {.fragment} CPD de respaldo
-* {.fragment} Diferentes proveedores de internet
-* {.fragment} Control de la temperatura
-* {.fragment} Caso de fuego
-* {.fragment} Acometida eléctrica
-
-# Sistemas de control de acceso
-
-¿Necesitan conexión a internet?
-
-* Independientes
-* Dependientes
-
-# Personal de vigilancia y control
-
-Diferente legislación:
-
-* Propia empresa
-* Empresa privada
-
-# Dispositivos de control de acceso
-
-* {.fragment} Tarjetas
-  - De contacto
-  - De proximidad (RFID)
-* {.fragment} Teclados
-* {.fragment} LLaves electrónicas de contacto
-
-# Reconocimiento de personas
-
-* {.fragment} Rasgos personales -> Entidades:
-  - Algo que tienes
-  - Algo que sabes
-  - Algo que eres
-* {.fragment} Rasgos fisiológicos
-* {.fragment} Rasgos del comportamiento
-
-# Propiedades de los rasgos biométricos
-
-* {.fragment} Universalidad
-* {.fragment} Unicidad
-* {.fragment} Permanencia
-* {.fragment} Perennidad
-* {.fragment} Mensurabilidad
-
-# Se caracterizan
-
-* {.fragment} Rendimiento
-* {.fragment} Aceptabilidad
-* {.fragment} Evitabilidad
-
-# Variables
-
-* {.fragment} Tasa de falso rechazo
-* {.fragment} Tasa de falsa aceptación
-* {.fragment} Tiempo de verificación / desempeño
-
-# Los más habituales
-
-* {.fragment} Huellas (0.5)
-* {.fragment} Manos (1)
-* {.fragment} Ojos (2). La más alta fiablidad
-* {.fragment} Voz (1.5)
-
-# Políticas de seguridad
-
-[Ejemplo politica]
-[Ejemplo politica]: http://www.inci.gov.co/normatividad/politicas-lineamientos-manuales/522-politica-de-seguridad-informatica "Acceder"
+* ¿Cómo enviamos la clave?
+* ¿Cuántas claves son necesarias?
 
 # Créditos
 
