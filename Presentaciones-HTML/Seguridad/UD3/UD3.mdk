@@ -42,6 +42,15 @@ Pista: Busca el libro Hacking Secret Ciphers with Python
 
 Elabora un programa en Python que descifre un mensaje con un cifrado César de cualquier nivel utilizando la técnica de fuerza bruta
 
+# Proyectos de cifrado
+
+Implementa y hackea en python los siguientes cifrados:
+
+* {.fragment} Cifrado afín
+* {.fragment} Cifrado por sustitución simple
+* {.fragment} Cifrado de Vigenère
+* {.fragment} Cifrado por transposición
+
 # Técnicas criptográficas
 
 ¿Qué podría pasar si no encriptamos los mensajes en la red?
@@ -110,6 +119,30 @@ Elabora un programa en Python que descifre un mensaje con un cifrado César de c
 
 [firmadigital]: images/firmadigital.PNG "firmadigital" { width:auto; max-width:90% }
 
+# Sobres digitales
+
+* Clave pública computacionalmente lenta
+* Criptografía simétrica pero criptografía pública para enviar clave
+
+# Esquema de sobres digitales
+
+~ Center
+![hibrida]
+~
+
+[hibrida]: images/hibrida.PNG "hibrida" { width:auto; max-width:90% }
+
+# Certificados digitales
+
+# PKI
+
+# Tutorial certificado digital
+
+# Práctica guiada PGP
+
+# Esteganografía
+
+# Proyectos esteganografía
 
 # Créditos
 
