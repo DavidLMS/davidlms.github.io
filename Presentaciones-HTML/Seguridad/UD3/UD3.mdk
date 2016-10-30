@@ -134,13 +134,42 @@ Implementa y hackea en python los siguientes cifrados:
 
 # Certificados digitales
 
+* Documento que te identifica
+* {.fragment} SSL en páginas web
+* {.fragment} Tercera parte de confianza
+
+# Esquema certificado digital
+
+~ Center
+![certificadodigital]
+~
+
+[certificadodigital]: images/certificadodigital.PNG "certificadodigital" { width:auto; max-width:90% }
+
+# Esquema Tercera Parte de Confianza
+
+~ Center
+![TTP]
+~
+
+[TTP]: images/TTP.PNG "TTP" { width:auto; max-width:90% }
+
+
 # PKI
+
+* Infraestructura de clave pública:
+  - Autoridades de certificación
+  - Autoridades de registro
+  - Otro tipo de autoridades (repositorios para almacenar certificados...)
+  - Software asociado
 
 # Tutorial certificado digital
 
 # Práctica guiada PGP
 
 # Esteganografía
+
+
 
 # Proyectos esteganografía
 
