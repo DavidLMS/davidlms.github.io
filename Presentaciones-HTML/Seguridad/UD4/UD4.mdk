@@ -169,9 +169,28 @@ Implementa y hackea en python los siguientes cifrados:
 
 # Esteganografía
 
+* ¿Y si escondemos el mensaje?
+* {.fragment} Un poco de historia: tinta invisible
+* {.fragment} ¿Quién puede estar utilizándolo?
 
+# Técnicas es esteganografía
+
+* Inserción en el Bit Menos Significativo (LSB)
+* {.fragment} Documentos
+* {.fragment} Imágenes
+* {.fragment} Vídeo
+* {.fragment} Audio
+
+# Estegoanálisis
+
+* Alguna forma habrá de parar esto
 
 # Proyectos esteganografía
+
+* {.fragment} 1. Aplicación de esteganografía a un documento
+* {.fragment} 2. Aplicación de esteganografía a un audio
+* {.fragment} 3. Aplicación de esteganografía a una imagen
+* {.fragment} 4. Estegoanálisis
 
 # Créditos
 
