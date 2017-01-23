@@ -1,6 +1,6 @@
 [INCLUDE=presentation]
 Title         : Seguridad Informática
-Sub Title     : 5 - Amenazas y seguridad del software
+Sub Title     : 6 - Redes Seguras
 Author        : David Romero
 Affiliation   : La Salle Sgdo. Corazón de Jesús
 Email         : dromeros@lasalleandalucia.net
@@ -9,52 +9,77 @@ Beamer Theme  : singapore
 
 [TITLE]
 
-#Fraudes informáticos y robos de información
+# A  nivel local
 
-* {.fragment} Información que compartes
-* {.fragment} Desde IP hasta...
-* {.fragment} Cualquiera podría realizar un DOS por ejemplo
+# Protocolos seguros
 
-# Práctica: Ataque DDOS
+* HTTPS (HTTP+SSL)
+* SSH
 
-* Instala Kali Linux
-* Ataque a un Ubuntu Server con LAMP y un Wordpress
-* [https://youtu.be/-6LZbd9fU0I][httpsyoutube-6LZ]
+# En redes cableadas
 
-[httpsyoutube-6LZ]: https://youtu.be/-6LZbd9fU0I "Vídeo tutorial"
+* {.fragment} VPN (Virtual Private Network)
+* {.fragment} IDS (Sistema Detector de Intrusos)
+* {.fragment} Tener en cuenta los servicios (rendimiento y seguridad)
 
-# Trabajo: ¿Cómo lo evitamos?
+# En redes inalámbricas (Wi-Fi)
 
-# Amenazas
+* {.fragment} WEP
+* {.fragment} WPA y WPA2
+* {.fragment} WPA personal
+  * {.fragment} TKIP
+  * {.fragment} AES
+* {.fragment} WPA empresarial (a nivel de enlace)
 
-* Dos grandes tipos:
-* {.fragment} Código malicioso
-* {.fragment} Ingeniería social
+# Firewall
 
-# Código malicioso
+* Bloqueo de puertos
+* Política restrictiva
+* Política permisiva
 
-* Virus
-* {.fragment} Gusano
-* {.fragment} Gusano de internet
-* {.fragment} Troyano
-* {.fragment} Spyware
-* {.fragment} Virus de macro
-* {.fragment} Botnet
+# A nivel de servidor
 
-# Práctica virus
+# Seguridad en las capas
 
-# Práctica gusano
+|-------------|-----------------|------------------------------------------------------------|
+| Niveles OSI | Capas TCP/IP    | Seguridad                                                  |
++-------------|:---------------:+------------------------------------------------------------+
+| Físico      | Acceso a la red |SAI, Control de acceso al medio, Copias de seguridad        |
+| Enlace      | "               | Filtrado por MAC, cifrado en redes inalámbricas            |
+| Red         | Internet        | Control de acceso por IP, filtros de correo, IDS, Firewall |
+| Transporte  | Transporte      | Control de puertos, PROXY e IDS                            |
+| Sesión/Presentación/Aplicación   | Aplicación  | Configuración del navegador, Firewall de HOST, IDS                                                           |
+|-------------|-----------------|------------------------------------------------------------|
+{  }
 
-# Práctica Troyano
+# Cortafuegos
 
-# Seminario sobre botnets
+* {.fragment} Hardware o software
+* {.fragment} Definir reglas
+* {.fragment} A nivel de red o a nivel de aplicación
 
-# Ingeniería social
+# Tipos de cortafuegos
 
+* {.fragment} A nivel de red
+  * Analiza cabeceras TCP/IP y extrae parámetros para reglas
+* {.fragment} Política permisiva o restrictiva
+* {.fragment} Perimetrales (router, HOST) o de sistema
+*{.fragment} A nivel de aplicación
+  * Para filtrar a nivel de aplicación, por ejemplo, ciertos comandos FTP
 
-# Créditos
+# Arquitecturas de cortafuegos
 
-Presentación a partir de un material elaborado por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía
+* Screening Router
+  * Router como pasarela de toda la red
+![SEGI06_CONT_R27_AR_SCRE_RO_1]
+
+[SEGI06_CONT_R27_AR_SCRE_RO_1]: images/SEGI06_CONT_R27_AR_SCRE_RO_1.jpg "SEGI06_CONT_R27_AR_SCRE_RO_1" { width:auto; max-width:90% }
+
+# Arquitecturas de cortafuegos
+
+* Dual-Homed HOST
+  * Dos o más tarjetas de red
+
 
 ~ Center
 
