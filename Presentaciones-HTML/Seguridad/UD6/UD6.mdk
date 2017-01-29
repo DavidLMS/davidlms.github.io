@@ -64,7 +64,7 @@ Beamer Theme  : singapore
   * Analiza cabeceras TCP/IP y extrae parámetros para reglas
 * {.fragment} Política permisiva o restrictiva
 * {.fragment} Perimetrales (router, HOST) o de sistema
-*{.fragment} A nivel de aplicación
+* {.fragment} A nivel de aplicación
   * Para filtrar a nivel de aplicación, por ejemplo, ciertos comandos FTP
 
 # Arquitecturas de cortafuegos 1
@@ -106,6 +106,53 @@ Beamer Theme  : singapore
 ~
 
 # Prueba de instalar y configurar Endian Firewall
+
+# Redes Privadas Virtuales (VPN)
+
+* Accede a una LAN desde fuera de ella
+* {.fragment} Virtual, Private y Network
+* {.fragment} Hardware (Firewall, Gateway o Servidor)
+* {.fragment} Software (SO o aplicaciones específicas)
+* {.fragment} Cumplen confidencialidad, no repudio, integridad y autenticidad
+
+# Protocolos más populares VPN
+
+* {.fragment} PPTP: Encapsula paquetes PPP en IP. Windows lo implementa.
+* {.fragment} L2TO: Extensión de PPTP utilizada por los ISP.
+* {.fragment} IPSec: Extensión directa de IP para proporcionar todos los aspectos de seguridad.
+
+# Analogía VPN
+
+* {.fragment} Islas LAN en el océano de Internet
+* {.fragment} Se puede viajar en Ferry pero es público
+* {.fragment} Se pueden construir puentes (líneas arrendadas)
+* {.fragment} Las VPN serían submarinos
+
+# Beneficios VPN
+
+* {.fragment} Conexiones extendidas sin líneas dedicadas
+* {.fragment} Mayor seguridad en el intercambio de datos
+* {.fragment} Flexibilidad geográfica para los empleados
+* {.fragment} Ahorro de tiempo y dinero en desplazamientos
+* {.fragment} Mejora de la productividad en empleados remotos
+
+# Construir una VPN Linux a Linux
+
+[Video explicativo]
+[Video explicativo]: https://www.youtube.com/watch?v=FrZlsRo5t0I "VPN Linux a Linux"
+
+# Tipos de VPN
+
+* {.fragment} VPN de acceso remoto (para conexiones a la LAN. Necesita servidor y cliente)
+* {.fragment} VPN punto a punto (LAN a LAN. Entre sucursales con cientos de empleados)
+
+# ¿Cómo funciona?
+
+* {.fragment} Túnel
+* {.fragment} Paquete dentro de paquete (encapsulación)
+* {.fragment} Interfaces de túnel (entrada y salida)
+
+# Configura Endian para crear una VPN utilizando IPsec
 
 # Créditos
 
