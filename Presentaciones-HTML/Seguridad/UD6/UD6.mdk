@@ -154,6 +154,53 @@ Beamer Theme  : singapore
 
 # Configura Endian para crear una VPN utilizando IPsec
 
+# Proxy
+
+* {.fragment} Intermediario entre tu red interna e Internet
+* {.fragment} Necesaria configuración del usuario pero transparente
+* {.fragment} Redirigir peticiones, diferente al cortafuegos
+* {.fragment} Proxy caché
+* {.fragment} Anonimato
+
+# Características
+
+* {.fragment} Definir permisos usuarios a la red externa
+* {.fragment} Los usuarios comparten IP en el exterior
+* {.fragment} Se puede auditar el uso de Internet
+* {.fragment} Almacenamiento de páginas recientes (caché)
+
+# Ventajas
+
+* {.fragment} Control de usuarios
+* {.fragment} Menos equipamiento
+* {.fragment} Mejor respuesta
+* {.fragment} Selección de la información
+* {.fragment} Pérdida de identidad
+
+# Desventajas
+
+* {.fragment} Sobrecarga
+* {.fragment} Intromisión
+* {.fragment} Falta de actualidad -> Solución
+* {.fragment} Problemas en algunos servicios (TCP/IP)
+
+# Proxy web/caché
+
+* {.fragment} Usuario solicita URL al Proxy -> Proxy comprueba versión caché y del servidor -> Si no coinciden actualiza y envía
+* {.fragment} Ventajas: Disminuye el tráfico, mejora el tiempo de respuesta, aumenta los usuarios, selecciona y bloque contenidos
+* {.fragment} Desventajas: Puede no actualizar, puede impedir acceso a puertos y protocolos, hay que configurarlo para que no almacene datos personales
+
+# Software para proxy
+
+* Windows: WinGate, FreePROXY
+* Linux: SQUID
+
+# Configura Endian para usar un PROXY con reglas y como caché
+
+
+
+ 
+
 # Créditos
 
 ~ Center

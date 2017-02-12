@@ -799,6 +799,71 @@
 </li></ul>
 </section>
 <section id="sec-configura-endian-para-crear-una-vpn-utilizando-ipsec" class="section section1" data-section-depth="1"><h2 id="heading-sec-configura-endian-para-crear-una-vpn-utilizando-ipsec" class="h1" data-heading-depth="1" style="display:block">Configura Endian para crear una VPN utilizando IPsec</h2></section>
+<section id="sec-proxy" class="section section1" data-section-depth="1"><h2 id="heading-sec-proxy" class="h1" data-heading-depth="1" style="display:block">Proxy</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li fragment">Intermediario entre tu red interna e Internet
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Necesaria configuración del usuario pero transparente
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Redirigir peticiones, diferente al cortafuegos
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Proxy caché
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Anonimato
+</li></ul>
+</section>
+<section id="sec-caractersticas" class="section section1" data-section-depth="1"><h2 id="heading-sec-caractersticas" class="h1" data-heading-depth="1" style="display:block">Características</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li fragment">Definir permisos usuarios a la red externa
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Los usuarios comparten IP en el exterior
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Se puede auditar el uso de Internet
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Almacenamiento de páginas recientes (caché)
+</li></ul>
+</section>
+<section id="sec-ventajas" class="section section1" data-section-depth="1"><h2 id="heading-sec-ventajas" class="h1" data-heading-depth="1" style="display:block">Ventajas</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li fragment">Control de usuarios
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Menos equipamiento
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Mejor respuesta
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Selección de la información
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Pérdida de identidad
+</li></ul>
+</section>
+<section id="sec-desventajas" class="section section1" data-section-depth="1"><h2 id="heading-sec-desventajas" class="h1" data-heading-depth="1" style="display:block">Desventajas</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li fragment">Sobrecarga
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Intromisión
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Falta de actualidad -&gt; Solución
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Problemas en algunos servicios (TCP/IP)
+</li></ul>
+</section>
+<section id="sec-proxy-webcach" class="section section1" data-section-depth="1"><h2 id="heading-sec-proxy-webcach" class="h1" data-heading-depth="1" style="display:block">Proxy web/caché</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li fragment">Usuario solicita URL al Proxy -&gt; Proxy comprueba versión caché y del servidor -&gt; Si no coinciden actualiza y envía
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Ventajas: Disminuye el tráfico, mejora el tiempo de respuesta, aumenta los usuarios, selecciona y bloque contenidos
+</li>
+<li class="li ul-li list-star-li compact-li fragment">Desventajas: Puede no actualizar, puede impedir acceso a puertos y protocolos, hay que configurarlo para que no almacene datos personales
+</li></ul>
+</section>
+<section id="sec-software-para-proxy" class="section section1" data-section-depth="1"><h2 id="heading-sec-software-para-proxy" class="h1" data-heading-depth="1" style="display:block">Software para proxy</h2>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">Windows: WinGate, FreePROXY
+</li>
+<li class="li ul-li list-star-li compact-li">Linux: SQUID
+</li></ul>
+</section>
+<section id="sec-configura-endian-para-usar-un-proxy-con-reglas-y-como-cach" class="section section1" data-section-depth="1"><h2 id="heading-sec-configura-endian-para-usar-un-proxy-con-reglas-y-como-cach" class="h1" data-heading-depth="1" style="display:block">Configura Endian para usar un PROXY con reglas y como caché</h2></section>
 <section id="sec-crditos" class="section section1" data-section-depth="1"><h2 id="heading-sec-crditos" class="h1" data-heading-depth="1" style="display:block">Créditos</h2>
 <div class="center align-center" style="text-align:center">
 
