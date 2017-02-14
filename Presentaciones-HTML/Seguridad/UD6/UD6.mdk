@@ -211,6 +211,7 @@ En función de qué sistema vigilan:
 * de HOST. Protege un único equipo, comportamiento como antivirus.
 
 En función de qué técnicas emplean:
+
 * Detección de anomalías. Conociendo el comportamiento normal, evitar falsos positivos.
 * Detección de usos indebidos. Base de datos con los ataques conocidos.
 
