@@ -197,6 +197,35 @@ Beamer Theme  : singapore
 
 # Configura Endian para usar un PROXY con reglas y como caché
 
+# Sistemas Detectores de Intrusos IDS
+
+* Software que vigila el sistema y nos avisa de ataques
+* Firewall puede cerrar puertos pero no detecta actividad sospechosa en ellos
+* Detecta instrusiones o intentos de intrusión
+
+# Clasificación de sistemas IDS
+
+En función de qué sistema vigilan:
+
+* de Red. "Sensor", analiza el tráfico de una red.
+* de HOST. Protege un único equipo, comportamiento como antivirus.
+
+En función de qué técnicas emplean:
+* Detección de anomalías. Conociendo el comportamiento normal, evitar falsos positivos.
+* Detección de usos indebidos. Base de datos con los ataques conocidos.
+
+# Arquitectura de sistemas IDS
+
+* Tener en cuenta la topología de la red
+* Comunicación con firewall para crear nuevas reglas
+* HIDS examinan logs del sistema y de aplicaciones
+
+# Ejemplos de IDS
+
+* Snort. Sniffer para sistemas Unix y Windows para redes de tráfico moderado.
+* Tripwire. Comprobador de integridad para ficheros y directorios.
+
+# ¿Por qué no activar IPS en Endian?
 
 
  
