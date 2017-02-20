@@ -230,17 +230,28 @@ En función de qué técnicas emplean:
 
 # Zona desmilitarizada (DMZ)
 
-* Zona segura entre la red interna y la red externa
-* Conexiones entrantes permitidas desde red interna y externa, pero salida a la red interna no
-* Dos cortafuegos, o un cortafuegos con "tres patas"
+* {.fragment} Zona segura entre la red interna y la red externa
+* {.fragment} Conexiones entrantes permitidas desde red interna y externa, pero salida a la red interna no
+* {.fragment} Dos cortafuegos, o un cortafuegos con "tres patas"
 
 # Diagrama DMZ
 
+![Demilitarized_Zone_Diagram]
+
+[Demilitarized_Zone_Diagram]: images/Demilitarized_Zone_Diagram.png "Demilitarized_Zone_Diagram" { width:auto; max-width:90% }
+
+
 # Usos de la DMZ
+
+* {.fragment} Servidores que necesitan ser accedidos desde la red externa
+* {.fragment} Correo electrónico, web, DNS...
 
 # DMZ Host
 
-# DMZ en Endian
+* En enrutadores domésticos
+* Una IP que tiene todos los puertos abiertos
+
+# Configura un Endian completo, incluyendo una DMZ (Tres adaptadores de red)
  
 
 # Créditos
