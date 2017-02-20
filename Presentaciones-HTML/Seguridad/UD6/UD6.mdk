@@ -228,7 +228,19 @@ En función de qué técnicas emplean:
 
 # ¿Por qué no activar IPS en Endian?
 
+# Zona desmilitarizada (DMZ)
 
+* Zona segura entre la red interna y la red externa
+* Conexiones entrantes permitidas desde red interna y externa, pero salida a la red interna no
+* Dos cortafuegos, o un cortafuegos con "tres patas"
+
+# Diagrama DMZ
+
+# Usos de la DMZ
+
+# DMZ Host
+
+# DMZ en Endian
  
 
 # Créditos
