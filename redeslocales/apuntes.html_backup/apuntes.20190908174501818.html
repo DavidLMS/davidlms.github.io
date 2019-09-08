@@ -9563,7 +9563,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190908174420262" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Contar en binario]] [[Pasar de binario a decimal]] [[Pasar de decimal a binario]]" modified="20190908175400944" title="$:/StoryList">
+<div created="20190908174420262" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Pasar de decimal a binario]]" modified="20190908174420262" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12386,7 +12386,7 @@ Es importante que aprendas a:
 
 * [[Pasar de decimal a binario]]</pre>
 </div>
-<div author="David Romero" created="20190907225922132" modified="20190908175415634" tags="[[2. Sistema binario]]" title="Contar en binario">
+<div author="David Romero" created="20190907225922132" modified="20190908165746623" tags="[[2. Sistema binario]]" title="Contar en binario">
 <pre>''Contar en binario'' es tan sencillo como contar en decimal. La ''única diferencia'' es, que en lugar de tener ''diez'' números (0, 1, 2, 3, 4, 5, 6, 7, 8 y 9), tenemos solamente ''dos'' (0 y 1). 
 
 Para empezar a contar pondremos:
@@ -12427,7 +12427,7 @@ Ahora intenta completar la tabla ''sin mirar la solución'', sacando el patrón.
 
 &lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
 
-!!!Pulsa ''aquí'' para revelar la solución
+!!!Pulsa aquí para revelar la solución
 
 &lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot;&gt;
@@ -12446,7 +12446,7 @@ Ahora intenta completar la tabla ''sin mirar la solución'', sacando el patrón.
 
 &lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt;&gt;
 
-!!!Pulsa ''aquí'' para revelar la tabla hasta el 15
+!!!Pulsa aquí para revelar la tabla hasta el 15
 
 &lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt; text=&quot;&quot;&gt;
@@ -12503,7 +12503,7 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div created="20190907233408572" modified="20190907233419339" tags="IP" title="IPv4">
 <pre></pre>
 </div>
-<div created="20190907225943256" modified="20190908175357737" tags="[[2. Sistema binario]]" title="Pasar de binario a decimal">
+<div created="20190907225943256" modified="20190908173517413" tags="[[2. Sistema binario]]" title="Pasar de binario a decimal">
 <pre>Para la materia Redes Locales, solamente es necesario que aprendamos a convertir números binarios de ''8 bits'' (8 números, ya que 1 bit se corresponde con un 1 o con un 0) al sistema decimal.
 
 Partimos de la siguiente tabla que, si hacemos los ejercicios suficientes, acabaremos aprendiéndonos de memoria:
@@ -12524,7 +12524,7 @@ Ahora intenta convertir el número ''binario 101011 a decimal''.
 
 &lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt;&gt;
 
-!!!Pulsa ''aquí'' para revelar la solución
+!!!Pulsa aquí para revelar la solución
 
 &lt;/$button&gt;
 &lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt; text=&quot;&quot;&gt;
@@ -12541,70 +12541,37 @@ Son muy pocos números, así que una vez hayas practicado lo suficiente, te anim
 <div created="20190908173155411" modified="20190908173222011" tags="[[Ejercicio interactivo]] [[Pasar de binario a decimal]]" title="Pasar de binario a decimal - Ejercicio interactivo">
 <pre>&lt;iframe src=&quot;https://h5p.org/h5p/embed/589154&quot; width=&quot;1090&quot; height=&quot;300&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;script src=&quot;https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre>
 </div>
-<div created="20190907225951455" modified="20190908175346051" tags="[[2. Sistema binario]]" title="Pasar de decimal a binario">
-<pre>Lo último que vamos a aprender de binario es hacer el paso inverso al anterior: ''convertir un número decimal en binario''.
+<div created="20190907225951455" modified="20190908174501635" tags="[[2. Sistema binario]]" title="Pasar de decimal a binario">
+<pre>Lo último que vamos a aprender de binario es hacer el paso inverso al anterior: convertir un número decimal en binario.
 
-Para hacerlo, podemos partir de la ''misma tabla'' con la que ya estamos familiarizados:
+Para hacerlo, podemos partir de la misma tabla con la que ya estamos familiarizados:
 
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | - | - | - | - | - | - | - | - |
 
-Vamos a hacer ''un ejemplo con el número 3''4. Si lo queremos pasar a binario hacemos lo siguiente:
+Vamos a hacer un ejemplo con el número 34. Si lo queremos pasar a binario hacemos lo siguiente:
 
-* ''Nos preguntamos''… ¿Podemos restarle 128? ''La respuesta es no'', porque el 34 es menor. Entonces ''ponemos un 0'' en su casilla.
+* Nos preguntamos… ¿Podemos restarle 128? La respuesta es no, porque el 34 es menor. Entonces ponemos un 0 en su casilla.
 
-|centered|k
+
+{{centered{
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | 0 |  |  |  |  |  |  |  |
+}}}
 
-* Pasa igual con el 64, por lo que ponemos otro 0 debajo. ''Como el 32 si es menor'', ponemos en la casilla del 32 ''un 1 y se lo restamos'': 34 - 32 = 2. Ahora continuaremos comparando con ''el número 2''.
+* Pasa igual con el 64, por lo que ponemos otro 0 debajo. Como el 32 si es menor, ponemos en la casilla del 32 un 1 y se lo restamos: 34 - 32 = 2. Ahora continuaremos comparando con el número 2.
 
-|centered|k
+
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | 0 | 0 | 1 |  |  |  |  |  |
 
-* No podemos restar el 16, 8 o 4 porque son mayores que el número 2. Sin embargo, ''el mismo 2 sí lo podemos restar'', y ya llegamos a 0. Así que ''ponemos a 0 el resto'' de huecos que nos quedan a la derecha. En este caso, el hueco debajo del 1.
+* No podemos restar el 16, 8 o 4 porque son mayores que el número 2. Sin embargo, el mismo 2 sí lo podemos restar, y ya llegamos a 0. Así que ponemos a 0 el resto de huecos que nos quedan a la derecha. En este caso, el hueco debajo del 1.
 
-|centered|k
+
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 |
 
-* Por lo tanto, ''el 34 decimal es el 100010 en binario''. Si lo ponemos en 8 bits: 00100010.
-
-Si lo has entendido, prueba ahora a convertir en binario ''el número 168''.
-
-&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt;&gt;
-
-!!!Pulsa ''aquí'' para revelar la solución
-
-&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt; text=&quot;&quot;&gt;
-
-* Podemos restarle 128:
-168 - 128 = 40
-
-|centered|k
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-| 1 |  |  |  |  |  |  |  |
-
-* El 64 lo ponemos a 0 porque no se lo podemos restar a 40, pero el 32 sí:
-40 - 32 = 8
-
-|centered|k
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-| 1 | 0 | 1 |  |  |  |  |  |
-
-* El 16 lo ponemos a 0 porque no se lo podemos restar a 8, pero el 8 sí.
-8 - 8 = 0. El resto de posiciones las ponemos a 0 también.
-
-|centered|k
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-| 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 |
-
-* Por lo tanto, ''el número 168 en decimal es el 10101000 en binario''.
-
-&lt;/$reveal&gt;
-</pre>
+* Por lo tanto, el 34 en binario es 100010. Si lo ponemos en 8 bits: 00100010.</pre>
 </div>
 <div created="20190907221943499" modified="20190908163436416" tags="" title="Tabla de contenidos">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
