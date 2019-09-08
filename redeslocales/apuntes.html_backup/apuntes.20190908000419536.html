@@ -189,8 +189,6 @@ Error message and password prompt
 
 <li>$:/state/toc/Tabla de contenidos/Protocolos/IP-IPv4-115813501</li>
 
-<li>$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501</li>
-
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
@@ -210,10 +208,6 @@ Error message and password prompt
 <li>Cálculos en IPv4</li>
 
 <li>Contar en binario</li>
-
-<li>Contar en binario - Ejercicio interactivo</li>
-
-<li>Contar en binario - Vídeo explicativo</li>
 
 <li>Introducción</li>
 
@@ -9479,7 +9473,7 @@ Error message and password prompt
 <div created="20190907222108111" modified="20190907232538812" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20190907234521526" modified="20190908080414185" title="$:/state/tab--1963855381">
+<div created="20190907234521526" modified="20190907235235848" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
 <div created="20190907220431965" modified="20190907220443937" title="$:/state/tab--2112689675">
@@ -9488,14 +9482,14 @@ Error message and password prompt
 <div created="20190907220440377" modified="20190907220442973" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/Stylesheets</pre>
 </div>
-<div created="20190907220449851" modified="20190908080407729" title="$:/state/tab-1749438307">
+<div created="20190907220449851" modified="20190907235233064" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20190907221955795" modified="20190907234624147" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20190907220257393" modified="20190908080358419" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20190907220257393" modified="20190908000136221" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20190907222721080" modified="20190907232909461" title="$:/state/toc/Tabla de contenidos-Protocolos-115813501">
 <pre>open</pre>
@@ -9512,10 +9506,7 @@ Error message and password prompt
 <div created="20190907233423986" modified="20190907233423986" title="$:/state/toc/Tabla de contenidos/Protocolos/IP-IPv4-115813501">
 <pre>open</pre>
 </div>
-<div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
-<pre>open</pre>
-</div>
-<div created="20190908075014028" list="Introducción [[Tabla de contenidos]] [[Contar en binario]] [[Contar en binario - Vídeo explicativo]] [[Contar en binario - Ejercicio interactivo]]" modified="20190908080406421" title="$:/StoryList">
+<div created="20190908000336076" list="Introducción [[Tabla de contenidos]] [[Contar en binario]]" modified="20190908000336076" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9576,7 +9567,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20190907220339202" modified="20190908080409977" title="$:/theme">
+<div created="20190907220339202" modified="20190907235057856" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.20">
@@ -12313,113 +12304,33 @@ select {
 
 * [[Pasar de decimal a binario]]</pre>
 </div>
-<div author="David Romero" created="20190907225922132" modified="20190908082751502" tags="[[Sistema binario]]" title="Contar en binario">
-<pre>''Contar en binario'' es tan sencillo como contar en decimal. La ''única diferencia'' es, que en lugar de tener ''diez'' números (0, 1, 2, 3, 4, 5, 6, 7, 8 y 9), tenemos solamente ''dos'' (0 y 1). 
+<div author="David Romero" created="20190907225922132" modified="20190908000419368" tags="[[Sistema binario]]" title="Contar en binario">
+<pre>&lt;script src=&quot;https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+Contar en binario es tan sencillo como contar en decimal. La única diferencia es que en lugar de tener diez números (0, 1, 2, 3, 4, 5, 6, 7, 8 y 9) tenemos solamente dos (0 y 1). 
 
 Para empezar a contar pondremos:
 
 |!Binario |!Decimal |
-| 0 | 0 |
-| 1 | 1 |
-| | 2 |
-| | 3 |
-| | 4 |
-| | 5 |
+|0 |0 |
+|1 |1 |
+| |2|
+| |3|
+| |4|
+| |5|
 
-Bien... ''Los dos primeros son iguales'' en binario y en decimal. ¡Esto parece fácil!
+Bien... Los dos primeros son iguales en binario y en decimal. ¡Esto parece fácil!
 
-¿Qué haríamos para poner el siguiente número en decimal? Le sumaríamos 1 al número 1, ¿verdad? 1 + 1 = 2. ¿Por qué 2? Porque es el siguiente número en la lista de los números decimales (0, 1, 2, 3, 4, 5, 6, 7, 8 y 9). Sin embargo, cuando en decimal llegamos al 9, nos quedamos sin números disponibles. ¿Qué es lo que pasa entonces? Pues que el 9 se transforma en el primer número de la lista (0) y ese número que no hemos podido sumar, lo sumamos en la cifra de delante. Así se forma el diez (10).
+Para poner el siguiente, tendremos que añadir 1. 1+1 = 0 y me llevo 1. Por lo que el siguiente será:
 
-En binario ''ocurre exactamente igual'', lo único que en este caso el último número de la lista es el 1. Si no le podemos sumar un 1 al número 1, ponemos el primer número de la lista (0) y lo sumamos en la cifra de delante. Así obtenemos el 10. Exacto, el 2 en decimal se corresponde con el 10 en binario (que por cierto no se lee &quot;diez&quot;, sino &quot;''uno cero''&quot;).
+10
 
-|!Binario |!Decimal |
-| 0 | 0 |
-| 1 | 1 |
-| 10 | 2 |
-| | 3 |
-| | 4 |
-| | 5 |
+Y el siguiente:
 
-Hacemos lo mismo con el siguiente número. Ahora sí podemos sumar 1 al 0, por lo que el siguiente será el 11 (&quot;''uno uno''&quot;) equivalente al 3 en decimal.
+11
 
-|!Binario |!Decimal |
-| 0 | 0 |
-| 1 | 1 |
-| 10 | 2 |
-| 11 | 3 |
-| | 4 |
-| | 5 |
+Intenta sacar el patrón. En este caso, el 11 se correspondería con el 3 decimal.
 
-Ahora intenta completar la tabla ''sin mirar la solución'', sacando el patrón.
-
-&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt;&gt;
-
-!!Pulsa aquí para revelar la solución
-
-&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup1&quot;&gt;&gt; text=&quot;&quot;&gt;
-
-|!Binario |!Decimal |
-| 0 | 0 |
-| 1 | 1 |
-| 10 | 2 |
-| 11 | 3 |
-| 100 | 4 |
-| 101 | 5 |
-
-&lt;/$reveal&gt;
-
-¿''Te atreves'' a llegar hasta el 15?
-
-&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt;&gt;
-
-!!Pulsa aquí para revelar la tabla hasta el 15
-
-&lt;/$button&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup2&quot;&gt;&gt; text=&quot;&quot;&gt;
-
-|!Binario |!Decimal |
-| 0 | 0 |
-| 1 | 1 |
-| 10 | 2 |
-| 11 | 3 |
-| 100 | 4 |
-| 101 | 5 |
-| 110 | 6 |
-| 111 | 7 |
-| 1000 | 8 |
-| 1001 | 9 |
-| 1010 | 10 |
-| 1011 | 11 |
-| 1100 | 12 |
-| 1101 | 13 |
-| 1110 | 14 |
-| 1111 | 15 |
-
-&lt;/$reveal&gt;
-
-Solo te voy a contar ''dos cosas'' más:
-
-# En el mundo de las Redes Locales, solamente tendremos que saber contar en binario hasta ''el número 255''. ¿Quieres saber por qué? Todo a su debido tiempo.
-
-# No sé si ya te has dado cuenta, pero de cara a detectar posibles errores en el futuro, hay un detalle a tener presente. Todos los números decimales ''pares en binario acaban en 0'' y todos los números decimales ''impares en binario acaban en 1''. ¡Recuérdalo!
-
-Ahora ya estás preparado para entender la siguiente cita:
-
-&lt;&lt;&lt;
-Hay 10 tipos de personas, las que saben binario y las que no.
-&lt;&lt;&lt;
-
-Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'':
-
-* [[Contar en binario - Ejercicio interactivo]]
-* [[Contar en binario - Vídeo explicativo]]</pre>
-</div>
-<div author="David Romero" created="20190908075749938" modified="20190908080453396" tags="[[Contar en binario]]" title="Contar en binario - Ejercicio interactivo">
-<pre>&lt;iframe src=&quot;https://h5p.org/h5p/embed/588760&quot; width=&quot;1090&quot; height=&quot;830&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;script src=&quot;https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre>
-</div>
-<div author="David Romero" created="20190908080230025" modified="20190908080443798" tags="[[Contar en binario]]" title="Contar en binario - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cyPZPawAx7U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+&lt;iframe src=&quot;https://h5p.org/h5p/embed/588760&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;&lt;script src=&quot;https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre>
 </div>
 <div author="David Romero" created="20190907220243618" modified="20190907235336576" tags="[[Tabla de contenidos]]" title="Introducción">
 <pre>Bienvenidos a estos apuntes en permanente construcción, espero que te ayuden en tu camino hacia el aprendizaje del funcionamiento de las Redes Locales.
