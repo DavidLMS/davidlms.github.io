@@ -237,6 +237,8 @@ Error message and password prompt
 
 <li>Contar en binario - Vídeo explicativo</li>
 
+<li>Draft of 'Pasar de binario a decimal'</li>
+
 <li>Ejercicio interactivo</li>
 
 <li>IP</li>
@@ -9569,7 +9571,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190909154903890" list="[[Pasar de binario a decimal]] [[1. Sobre el contenido]] [[Tabla de contenidos]]" modified="20190909154903890" title="$:/StoryList">
+<div created="20190909151952803" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Pasar de decimal a binario]] [[Pasar de decimal a binario - Ejercicio interactivo]] [[Draft of 'Pasar de binario a decimal']] [[Contar en binario]]" modified="20190909152134129" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12500,6 +12502,46 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190908080230025" modified="20190908163723754" tags="[[Vídeo explicativo]] [[Contar en binario]]" title="Contar en binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cyPZPawAx7U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
+<div author="David Romero" created="20190907225943256" draft.of="Pasar de binario a decimal" draft.title="Pasar de binario a decimal" modified="20190909152100301" tags="[[2. Sistema binario]]" title="Draft of 'Pasar de binario a decimal'">
+<pre>Para la materia Redes Locales, solamente es necesario que aprendamos a convertir números binarios de ''8 bits'' (8 números, ya que 1 bit se corresponde con un 1 o con un 0) al sistema decimal.
+
+Partimos de la siguiente tabla que, si hacemos los ejercicios suficientes, acabaremos aprendiéndonos de memoria:
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| - | - | - | - | - | - | - | - |
+
+Estos números te sonaran muchísimo, porque se repiten una y otra vez en informática. Son ''las potencias de 2 en orden decreciente''. Concretamente, desde 2^^7^^ (128) hasta 2^^0^^ (1).
+							
+Cuando queramos convertir un número binario a decimal, solamente lo tenemos que poner en la segunda fila de la tabla, ''rellenando con ceros a la izquierda'' los huecos que queden. Por ejemplo, si queremos convertir el 1001:
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
+
+Solamente tenemos que ''sumar los números de la primera fila que tengan un 1 debajo''. En este caso: 8+1 = 9. Por lo tanto el número 1001 en binario se corresponde con el 9 decimal.
+
+Ahora intenta convertir el número ''binario 101011 a decimal''.
+
+&lt;$button class=&quot;tc-btn-invisible&quot; popup=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt;&gt;
+
+!!!Pulsa ''aquí'' para revelar la solución
+
+&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/temp/popup&quot;&gt;&gt; text=&quot;&quot;&gt;
+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| 0 | 0 | ''1'' | 0 | ''1'' | 0 | ''1'' | ''1'' |
+
+Sumamos 32 + 8 + 2 + 1 = ''43''
+
+&lt;/$reveal&gt;
+
+Son muy pocos números, así que una vez hayas practicado lo suficiente, te animo a intentar hacer la ''suma mentalmente''.
+
+Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'':
+
+* [[Pasar de binario a decimal - Ejercicio interactivo]]
+* [[Pasar de binario a decimal - Vídeo explicativo]]</pre>
+</div>
 <div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
 <pre></pre>
 </div>
@@ -12509,7 +12551,7 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div created="20190907233408572" modified="20190907233419339" tags="IP" title="IPv4">
 <pre></pre>
 </div>
-<div author="David Romero" created="20190907225943256" modified="20190909154905327" tags="[[2. Sistema binario]]" title="Pasar de binario a decimal">
+<div author="David Romero" created="20190907225943256" modified="20190909152030990" tags="[[2. Sistema binario]]" title="Pasar de binario a decimal">
 <pre>Para la materia Redes Locales, solamente es necesario que aprendamos a convertir números binarios de ''8 bits'' (8 números, ya que 1 bit se corresponde con un 1 o con un 0) al sistema decimal.
 
 Partimos de la siguiente tabla que, si hacemos los ejercicios suficientes, acabaremos aprendiéndonos de memoria:
