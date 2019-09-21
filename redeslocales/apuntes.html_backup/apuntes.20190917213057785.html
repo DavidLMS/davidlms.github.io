@@ -199,10 +199,6 @@ Error message and password prompt
 
 <li>$:/state/toc/Tabla de contenidos/3. Protocolos/IP-IPv4-115813501</li>
 
-<li>$:/state/toc/Tabla de contenidos/3. Protocolos/IP/IPv4-IPv4 - Dirección de red, dirección de difusión y direcciones disponibles-115813501</li>
-
-<li>$:/state/toc/Tabla de contenidos/3. Protocolos/IP/IPv4-IPv4 - Tamaño de una red-115813501</li>
-
 <li>$:/state/toc/Tabla de contenidos/Protocolos-IP-115813501</li>
 
 <li>$:/state/toc/Tabla de contenidos/Protocolos-IPv4-115813501</li>
@@ -245,15 +241,11 @@ Error message and password prompt
 
 <li>IPv4</li>
 
-<li>IPv4 - Dirección de red, dirección de difusión y direcciones disponibles</li>
+<li>IPv4 - Dirección de difusión</li>
 
-<li>IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo</li>
+<li>IPv4 - Dirección de red</li>
 
-<li>IPv4 - La máscara de red - Vídeo explicativo</li>
-
-<li>IPv4 - Número de dispositivos en una red - Vídeo explicativo</li>
-
-<li>IPv4 - Qué es una IP - Vídeo explicativo</li>
+<li>IPv4 - Direcciones disponibles en una red</li>
 
 <li>IPv4 - Tamaño de una red</li>
 
@@ -9546,8 +9538,8 @@ margin:0 auto;
 <div created="20190907221955795" modified="20190907234624147" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20190907220257393" modified="20190921102027135" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20190907220257393" modified="20190908174417494" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20190908163613341" modified="20190908163613341" title="$:/state/toc/Tabla de contenidos-2. Sistema binario-115813501">
 <pre>open</pre>
@@ -9573,12 +9565,6 @@ margin:0 auto;
 <div created="20190908163855771" modified="20190917213018248" title="$:/state/toc/Tabla de contenidos/3. Protocolos/IP-IPv4-115813501">
 <pre>open</pre>
 </div>
-<div created="20190921102748211" modified="20190921102800889" title="$:/state/toc/Tabla de contenidos/3. Protocolos/IP/IPv4-IPv4 - Dirección de red, dirección de difusión y direcciones disponibles-115813501">
-<pre>open</pre>
-</div>
-<div created="20190921102746006" modified="20190921102746006" title="$:/state/toc/Tabla de contenidos/3. Protocolos/IP/IPv4-IPv4 - Tamaño de una red-115813501">
-<pre>open</pre>
-</div>
 <div created="20190907233422949" modified="20190907233422949" title="$:/state/toc/Tabla de contenidos/Protocolos-IP-115813501">
 <pre>open</pre>
 </div>
@@ -9591,7 +9577,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190921101802313" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] IPv4 [[IPv4 - Tamaño de una red]] [[IPv4 - Número de dispositivos en una red - Vídeo explicativo]] [[IPv4 - La máscara de red - Vídeo explicativo]] [[IPv4 - Qué es una IP - Vídeo explicativo]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo]]" modified="20190921102647443" title="$:/StoryList">
+<div created="20190917174731839" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] IP IPv6 IPv4 [[IPv4 - Direcciones disponibles en una red]] [[IPv4 - Dirección de difusión]] [[IPv4 - Tamaño de una red]] [[IPv4 - Dirección de red]]" modified="20190917212851264" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12528,7 +12514,7 @@ Actualmente, conviven dos tipos de IP, cada uno con sus propias características
 * [[IPv4]]
 * [[IPv6]]</pre>
 </div>
-<div created="20190907233408572" modified="20190921102213971" tags="IP" title="IPv4">
+<div created="20190907233408572" modified="20190917212839735" tags="IP" title="IPv4">
 <pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
 
 Ejemplo de una IPv4 en notación binaria:
@@ -12559,15 +12545,12 @@ Al conjunto de IPv4 y máscara de red se le suele llamar configuración IP. Por 
 
 ''192.168.1.128/23''
 
-Puedes ver vídeos explicativos sobre qué es una IP y qué es la máscara de red en los siguientes enlaces:
-
-* [[Qué es una IP|IPv4 - Qué es una IP - Vídeo explicativo]]
-* [[La máscara de red|IPv4 - La máscara de red - Vídeo explicativo]]
-
 A partir de la IPv4 y la máscara de red, podemos obtener mucha información de la red a la que pertenece el dispositivo:
 
 * [[Número de equipos posible en la red (tamaño)|IPv4 - Tamaño de una red]]
-* [[Dirección de la red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]
+* [[Dirección de la red|IPv4 - Dirección de red]]
+* [[Dirección de difusión (o broadcast) de la red|IPv4 - Dirección de difusión]]
+* [[Direcciones disponibles para los equipos|IPv4 - Direcciones disponibles en una red]]
 
 Subredes:
 
@@ -12576,26 +12559,19 @@ Subredes:
 
 </pre>
 </div>
-<div author="David Romero" created="20190917212602115" modified="20190921102645540" tags="IPv4" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles">
+<div created="20190917212747550" modified="20190917212749416" tags="IPv4" title="IPv4 - Dirección de difusión">
+<pre></pre>
+</div>
+<div author="David Romero" created="20190917212602115" modified="20190917212737161" tags="IPv4" title="IPv4 - Dirección de red">
 <pre>
-Direcciones inválidas
 
-[[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo]]</pre>
+Direcciones inválidas</pre>
 </div>
-<div author="David Romero" created="20190921102659706" modified="20190921102739670" tags="[[Vídeo explicativo]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0uH7I94XpLs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+<div created="20190917212756240" modified="20190917212757778" tags="IPv4" title="IPv4 - Direcciones disponibles en una red">
+<pre></pre>
 </div>
-<div author="David Romero" created="20190921102327559" modified="20190921102356145" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - La máscara de red - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3BSHvgvaCxE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190921102526440" modified="20190921102605739" tags="[[Vídeo explicativo]] [[IPv4 - Tamaño de una red]]" title="IPv4 - Número de dispositivos en una red - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7xfO8Pm43Ug&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190921102233004" modified="20190921102318887" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - Qué es una IP - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/T0NNdM6bdu0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190917212640838" modified="20190921102508851" tags="IPv4" title="IPv4 - Tamaño de una red">
-<pre>[[Número de dispositivos en una red|IPv4 - Número de dispositivos en una red - Vídeo explicativo]]</pre>
+<div author="David Romero" created="20190917212640838" modified="20190917212659373" tags="IPv4" title="IPv4 - Tamaño de una red">
+<pre></pre>
 </div>
 <div created="20190917212858023" modified="20190917213011130" tags="IP" title="IPv6">
 <pre>Formato IPv6
