@@ -1,0 +1,109 @@
+[INCLUDE=presentation]
+Title         : Aplicaciones Web
+Sub Title     : La materia más práctica jamás vista
+Author        : David Romero
+Affiliation   : La Salle Sgdo. Corazón de Jesús
+Email         : dromeros@lasalleandalucia.net
+Reveal Theme  : beige
+Beamer Theme  : singapore
+
+[TITLE]
+
+# ¿Eso qué es lo que es?
+
+# ¿Cuáles son los contenidos?
+Según la ley, no me des coba
+
+# Contenidos (I)
+
+* Instalación de gestores de contenidos
+  - Instalación en sistemas operativos libres y propietarios. 
+  - Creación de usuarios y grupos de usuarios. 
+  - Utilización del interfaz gráfico. 
+  - Personalización del entorno. 
+  - Funcionalidades proporcionadas por el gestor de contenidos. 
+  - Sindicación. 
+  - Funcionamiento de los gestores de contenidos. 
+  - Actualizaciones del gestor de contenidos. 
+  - Configuración de módulos y menús. 
+
+# Contenidos (II)
+
+* Instalación de sistemas de gestión de aprendizaje a distancia
+  - Elementos lógicos: comunicación, materiales y actividades. 
+  - Instalación en sistemas operativos libres y propietarios. 
+  - Modos de registro. Interfaz gráfico asociado. 
+  - Personalización del entorno. 
+  - Navegación y edición. 
+  - Creación de cursos siguiendo especificaciones. 
+  - Gestión de usuarios y grupos. 
+  - Activación de funcionalidades 
+
+# Contenidos (III)
+
+* Instalación de servicios de gestión de archivos web
+  - Instalación. 
+  - Navegación y operaciones básicas. 
+  - Administración del gestor. 
+  - Usuarios y permisos. 
+  - Tipos de usuario. 
+  - Creación de recursos compartidos. 
+
+# Contenidos (y IV)
+
+* Instalación de aplicaciones de ofimática web
+  - Instalación. 
+  - Utilización de las aplicaciones instaladas. 
+  - Gestión de usuarios y permisos asociados. 
+  - Comprobación de la seguridad. 
+
+* Instalación de aplicaciones web de escritorio
+  - Aplicaciones de correo web. 
+  - Instalación. 
+  - Gestión de usuarios. 
+
+# Y esto se traduce en
+
+*	UD1: Tecnología web
+*	UD2: Gestores de contenidos
+*	UD3: Sistemas de gestión de aprendizaje a distancia
+*	UD4: Servicios de gestión de archivos web
+*	UD5: Aplicaciones de ofimática web
+*	UD6: Aplicaciones web de escritorio
+
+# Cómo aprendemos
+
+* Sesiones formativas a decidir por el alumnado.
+* Proyectos de implantación.
+* Proyectos multidisplinares (App Web y Seguridad).
+* Permanecer curiosos.
+
+# ¿Y mi nota?
+
+* Asistencia obligatoria al 75% de horas lectivas para evaluación continua.
+* 10% Asistencia y actitud frente a la asignatura.
+* 50% Trabajos de clase.
+* 30% Exámenes escritos conceptuales.
+* 10% Prueba de competencias en el final del trimestre.
+* Mínimo un 4 en cada parte para hacer media.
+* Trabajo no entregado, entregado tarde o no asistencia a un exámen supondrá un 0.
+
+# Gracias :-)
+¿Alguna pregunta?
+
+<!-- begin merge (remove this line to resolve the conflict) -->
+~ Begin Remote
+# Un vídeo para asustar...
+~ End Remote
+# Un vídeo orientativo
+<!-- end merge -->
+
+[Youtube]
+[Youtube]: https://www.youtube.com/watch?v=mg0T_Gb_Z1w "Youtube"
+
+# Demostrad lo que sabéis
+
+kahoot.it
+
+[Kahoot]
+[Kahoot]: https://play.kahoot.it/#/k/fb194978-ced6-4ab5-aeda-fd9e530eb6d2 "Kahoot"

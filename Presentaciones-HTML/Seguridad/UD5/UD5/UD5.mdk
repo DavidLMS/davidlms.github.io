@@ -1,0 +1,96 @@
+[INCLUDE=presentation]
+Title         : Seguridad Informática
+Sub Title     : 5 - Amenazas y seguridad del software
+Author        : David Romero
+Affiliation   : La Salle Sgdo. Corazón de Jesús
+Email         : dromeros@lasalleandalucia.net
+Reveal Theme  : night
+Beamer Theme  : singapore
+
+[TITLE]
+
+#Fraudes informáticos y robos de información
+
+* {.fragment} Información que compartes
+* {.fragment} Desde IP hasta...
+* {.fragment} Cualquiera podría realizar un DOS por ejemplo
+
+# Práctica: Ataque DDOS
+
+* Instala Kali Linux
+* Ataque a un Ubuntu Server con LAMP y un Wordpress
+* [https://youtu.be/-6LZbd9fU0I][httpsyoutube-6LZ]
+
+[httpsyoutube-6LZ]: https://youtu.be/-6LZbd9fU0I "Vídeo tutorial"
+
+# Trabajo: ¿Cómo lo evitamos?
+
+# Amenazas
+
+* Dos grandes tipos:
+* {.fragment} Código malicioso
+* {.fragment} Ingeniería social
+
+# Código malicioso
+
+* Virus
+* {.fragment} Gusano
+* {.fragment} Gusano de internet
+* {.fragment} Troyano
+* {.fragment} Spyware
+* {.fragment} Virus de macro
+* {.fragment} Botnet
+
+# Práctica virus
+
+# Práctica gusano
+
+# Seminario sobre botnets
+
+# Ingeniería social
+
+# Tipos de atacantes
+
+* {.fragment} Hackers de sombrero blanco
+* {.fragment} Hackers de sombrero negro
+  * {.fragment} script kiddies
+  * {.fragment} phreakers
+  * {.fragment} crackers
+* {.fragment} Hacktivistas
+* {.fragment} No confundir: troll
+
+# Vías de ataque al software
+
+* {.fragment} Redes P2P
+* {.fragment} Páginas web
+* {.fragment} Nombres de dominio
+* {.fragment} Redes sociales
+* {.fragment} Web 2.0
+
+# Prevención y monitorización
+
+* {.fragment} Control de acceso a la información
+* {.fragment} Antivirus y antimalware
+* {.fragment} Congelación
+* {.fragment} Seguimiento de LOGs
+
+# Créditos
+
+Presentación a partir de un material elaborado por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía
+
+~ Center
+
+![EducacionCulturaYDeporte]
+
+[EducacionCulturaYDeporte]: images/EducacionCulturaYDeporte.jpg "EducacionCulturaYDeporte" { width:auto; max-width:90% }
+
+![Junta_Andalucia]
+
+[Junta_Andalucia]: images/Junta_Andalucia.jpg "Junta_Andalucia" { width:auto; max-width:90% }
+
+
+![by-nc-sa.eu_petit]
+
+[by-nc-sa.eu_petit]: images/by-nc-sa.eu_petit.png "by-nc-sa.eu_petit" { width:auto; max-width:90% }
+
+~
