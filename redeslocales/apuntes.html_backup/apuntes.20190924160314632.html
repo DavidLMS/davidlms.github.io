@@ -13780,7 +13780,7 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190924160717539" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<div author="David Romero" created="20190922175152283" modified="20190924160300943" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
 <pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
 
 Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
@@ -13796,15 +13796,7 @@ Donde N es el número de bits que se cogen de la porción de host.
 Podemos partir de dos supuestos: uno en el que tengamos claro el número de redes que queremos y otro en el que tengamos claro el número de dispositivos que debe tener cada subred. Resolveremos en las siguientes secciones un ejemplo de cada supuesto.
 
 !! 1 - Queremos un número de subredes concreto
-
-Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular 3 subredes.
-
-Primer paso: Buscamos un número que, al elevarlo a dos, nos de un número mayor o igual que el número de subredes que queremos calcular.
-
-$$
-2^{x} \geq 3
-$$
-
+!! 
 !! 2 - Queremos subredes con un número de dispositivos concreto</pre>
 </div>
 <div author="David Romero" created="20190922175210387" modified="20190922175217603" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - VLSM">

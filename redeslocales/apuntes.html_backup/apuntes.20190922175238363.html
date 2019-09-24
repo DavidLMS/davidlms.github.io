@@ -9979,7 +9979,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190924154810719" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Tamaño de una red]] [[IPv4 - Subredes - Subnetting]] IPv4 [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]] [[IPv4 - Qué es una IP - Vídeo explicativo]] [[IPv4 - Subredes]]" modified="20190924160013642" title="$:/StoryList">
+<div created="20190922114214444" list="[[IPv4 - Subredes]] [[IPv4 - Subredes - VLSM]] [[IPv4 - Subredes - Subnetting]] [[1. Sobre el contenido]] [[Tabla de contenidos]] IPv4 [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo]] [[IPv4 - Tamaño de una red]]" modified="20190922175203154" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13780,37 +13780,13 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190924160717539" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
-<pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
-
-Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
-
-Cuantos más bits cojamos de la porción de host para las subredes, más subredes haremos y menos dispositivos tendremos en cada una. El número de subredes se calcula con la siguiente fórmula:
-
-$$
-2^{N}
-$$
-
-Donde N es el número de bits que se cogen de la porción de host.
-
-Podemos partir de dos supuestos: uno en el que tengamos claro el número de redes que queremos y otro en el que tengamos claro el número de dispositivos que debe tener cada subred. Resolveremos en las siguientes secciones un ejemplo de cada supuesto.
-
-!! 1 - Queremos un número de subredes concreto
-
-Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular 3 subredes.
-
-Primer paso: Buscamos un número que, al elevarlo a dos, nos de un número mayor o igual que el número de subredes que queremos calcular.
-
-$$
-2^{x} \geq 3
-$$
-
-!! 2 - Queremos subredes con un número de dispositivos concreto</pre>
+<div author="David Romero" created="20190922175152283" modified="20190922175200427" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<pre></pre>
 </div>
 <div author="David Romero" created="20190922175210387" modified="20190922175217603" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - VLSM">
 <pre></pre>
 </div>
-<div author="David Romero" created="20190917212640838" modified="20190924160022637" tags="IPv4" title="IPv4 - Tamaño de una red">
+<div author="David Romero" created="20190917212640838" modified="20190922115208081" tags="IPv4" title="IPv4 - Tamaño de una red">
 <pre>''Calcular el número de dispositivos'' que podemos conectar en una red es tan sencillo como aplicar la siguiente fórmula:
 
 $$
