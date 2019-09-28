@@ -9988,7 +9988,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928081312086" title="$:/StoryList">
+<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928074849880" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13789,7 +13789,7 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190928081310236" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<div author="David Romero" created="20190922175152283" modified="20190928080339053" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
 <pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
 
 Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
@@ -13873,56 +13873,7 @@ Partimos de la fórmula:
 
 $$
 2^{x} - 2 \geq 200
-$$
-
-Es decir, tendremos que buscar un número que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el 8:
-
-$$
-2^{8} - 2 = 256 -2 = 254 \geq 200
-$$
-
-Por lo tanto, tendremos que crear subredes para 254 dispositivos. El número 8 que hemos hayado nos indica cuántos bits necesitamos para los dispositivos.
-
-Si estamos partiendo de una red /23 y necesitamos 8 bits para los dispositivos, sabiendo que una dirección completa tiene 32 bits, nos queda 1 solo bit para calcular las subredes:
-
-$$
-32 - 23 - 8 = 1
-$$
-
-A partir de este momento, el ejercicio termina de resolverse exactamente igual que el supuesto anterior cuando calculamos los números de bits necesarios para las subredes.
-
-En este caso, para formar las subredes vamos a ampliar la máscara de red original con un bit más. Cambiando el valor de ese bit, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula $2^{1} = 2$, con un bit podremos formar hasta dos subredes, ya que las combinaciones posibles son:
-
-&lt;center&gt;0&lt;/center&gt;
-
-&lt;center&gt;1&lt;/center&gt;
-
-La dirección de red 192.168.10.0 en binario es:
-''11000000.10101000.0000101''0.00000000
-
-En negrita están los bits que no cambian conforme a la máscara de red original (/23). Como hemos calculado que necesitaremos un bit para formar las subredes, la máscara de red se ampliará:
-
-$$
-23 + 1 = 24
-$$
-
-La dirección de red de la primera subred será:
-11000000.10101000.0000101''0''.00000000
-
-En decimal: ''192.168.10.0/24''
-
-Es decir, la dirección IP es la misma que la dirección de red original, pero ampliando la máscara de red.
-
-La dirección de red de la segunda subred será:
-11000000.10101000.0000101''1''.00000000
-
-En decimal: ''192.168.11.0/24''
-
-Estas dos direcciones de red constituyen la solución pedida en el ejercicio.
-
-Si quieres puedes ver esta misma explicación en un vídeo explicativo:
-
-* [[Vídeo explicativo de subnetting|IPv4 - Subredes - Subnetting - Vídeo explicativo]]</pre>
+$$</pre>
 </div>
 <div author="David Romero" created="20190927123741238" modified="20190927124059682" tags="[[IPv4 - Subredes - Subnetting]]" title="IPv4 - Subredes - Subnetting - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/12aA4vyFiE4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
@@ -14090,7 +14041,7 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190909151644037" modified="20190909151706970" tags="[[Vídeo explicativo]] [[Pasar de decimal a binario]]" title="Pasar de decimal a binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IpxNHH88HRU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20190907221943499" modified="20190928081248203" tags="" title="Tabla de contenidos">
+<div created="20190907221943499" modified="20190908163436416" tags="" title="Tabla de contenidos">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;&lt;toc-selective-expandable 'Tabla de contenidos' &quot;sort[title]&quot;&gt;&gt;

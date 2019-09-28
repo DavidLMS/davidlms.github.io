@@ -443,6 +443,8 @@ Error message and password prompt
 
 <li>Contar en binario - Vídeo explicativo</li>
 
+<li>Draft of 'IPv4 - Subredes - Subnetting'</li>
+
 <li>Ejercicio interactivo</li>
 
 <li>IP</li>
@@ -9988,7 +9990,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928081312086" title="$:/StoryList">
+<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Draft of 'IPv4 - Subredes - Subnetting']]" modified="20190928074849880" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13672,124 +13674,7 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190908080230025" modified="20190908163723754" tags="[[Vídeo explicativo]] [[Contar en binario]]" title="Contar en binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cyPZPawAx7U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
-<pre></pre>
-</div>
-<div author="David Romero" created="20190907220239941" modified="20190917210739870" tags="[[3. Protocolos]]" title="IP">
-<pre>Son las siglas de //Internet Protocol// (Protocolo de Internet) y funciona en la capa 3. Aunque eso nos importa poco ahora.
-
-Ya deberías saber que en una red los dispositivos se envían de unos a otros paquetes de información. Cada uno de los dispositivos de una red se identifica por un número llamado IP. Cuando un dispositivo quiere enviar un paquete a otro, necesita conocer la IP del destinatario.
-
-Todos los dispositivos de una misma red comparten otro número llamado máscara de red. La máscara de red indica los límites de la red y, por lo tanto, nos aporta información sobre su tamaño.
-
-Actualmente, conviven dos tipos de IP, cada uno con sus propias características:
-
-* [[IPv4]]
-* [[IPv6]]</pre>
-</div>
-<div author="David Romero" created="20190907233408572" modified="20190922172121680" tags="IP" title="IPv4">
-<pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
-
-Ejemplo de una IPv4 en notación binaria:
-
-''11000000.10101000.00000001.10000000''
-
-Ejemplo de la misma IPv4 en notación decimal:
-
-''192.168.1.128''
-
-Cada vez que escribimos la IPv4 de un dispositivo, deberíamos indicar también ''su máscara de red''. La máscara de red en IPv4 se parece en formato a una IPv4, con la diferencia de que siempre consiste en un ''número determinado de unos'' seguidos de ceros.
-
-Ejemplo de una máscara de red en notación binaria:
-
-''11111111.11111111.11111110.00000000''
-
-Ejemplo de la misma máscara de red en notación decimal:
-
-''255.255.254.0''
-
-La máscara de red normalmente se indica en notación CIDR, esta notación es tan sencilla como indicar el número de unos que hay en la misma. El ejemplo anterior en notación CIDR sería:
-
-''/23''
-
-Como puedes comprobar es bastante sencillo convertir de una notación a otra.
-
-La máscara de red en notación CIDR aporta una información muy importante también: ''el número de bits dedicados a la red''. ¿Esto qué significa? Pues que si la máscara de red es /23, quiere decir que los 23 primeros bits de la dirección IP van a ser ''iguales para todos los dispositivos'' de la misma red. Si variamos los 9 bits que quedan a la derecha (hasta los 32), formaremos las direcciones IP ''de los distintos dispositivos'' de la red. Quizás lo entiendas mejor con un pequeño ''esquema'':
-
-&lt;center&gt;[img[./images/porcionhostyred.png]]&lt;/center&gt;
-
-Al conjunto de IPv4 y máscara de red se le suele llamar ''configuración IP''. Por lo tanto, la configuración IP de un dispositivo podría ser:
-
-''192.168.1.128/23''
-
-Puedes ver ''vídeos explicativos'' sobre qué es una IP y qué es la máscara de red en los siguientes enlaces:
-
-* [[Qué es una IPv4|IPv4 - Qué es una IP - Vídeo explicativo]]
-* [[La máscara de red|IPv4 - La máscara de red - Vídeo explicativo]]
-
-A partir de la IPv4 y la máscara de red, podemos obtener mucha información de la red a la que pertenece el dispositivo:
-
-* [[Número de equipos posible en la red (tamaño)|IPv4 - Tamaño de una red]]
-* [[Dirección de la red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]
-
-Una vez conozcas los aspectos fundamentales de una IPv4, te recomiendo que aprendas a crear [[subredes|IPv4 - Subredes]].</pre>
-</div>
-<div author="David Romero" created="20190917212602115" modified="20190922171823833" tags="IPv4" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles">
-<pre>Existen dos direcciones en una red especiales, que no se les pueden asignar a ningún dispositivo: ''la dirección de red y la dirección de difusión o broadcas''t.
-
-La ''dirección de red'' se utiliza para ''identificar una red''. Será necesaria para que los routers o enrutadores sepan el camino por dónde dirigir los paquetes.
-
-La ''dirección de difusión o broadcast'' se utiliza para ''enviar información a toda la red'', es decir, si se envía un paquete a esa dirección le llegará a todos los dispositivos de la red.
-
-Para ''calcular'' ambas direcciones, basta con poner todos los bits de la ''porción de host a 0'' (y se obtiene la dirección de red) o ''ponerlos todos a 1'' (se obtiene la dirección de difusión). Veámoslo con un ''ejemplo'':
-
-Dada la configuración de red ''192.168.10.50/22'', vamos a calcular la dirección de red y la dirección de difusión. Para ello, ''pasamos a binario la IP'':
-
-''11000000.10101000.000010''10.00110010
-
-Se han marcado en negrita los primeros 22 bits, que se corresponden con un 1 en la máscara de red. Recuerdo que esos son los bits que definen la red y permanecerán ''igual'' en todos los dispositivos.
-
-Para calcular la dirección de red, ''vamos a poner a 0'' todos los bits a la derecha del bit 22:
-
-11000000.10101000.000010''00.00000000''
-
-Si pasamos esa dirección a decimal, nos queda ''192.168.8.0. Esa es la dirección de red.''
-
-Para calcular la dirección de difusión o broadcast, ''vamos a poner a 1'' todos los bits a la derecha del bit 22:
-
-11000000.10101000.000010''11.11111111''
-
-Si pasamos esa dirección a decimal, nos queda ''192.168.11.255. Esa es la dirección de difusión.''
-
-Todas los números binarios que podemos poner en los últimos 10 bits que no sean todos ceros o todos unos, se corresponden con las IP que pueden tener todos los dispositivos de la red. Así, ''el primer equipo de la red'' tendrá la IP 192.168.8.1 (la ''siguiente'' IP a la dirección de red) y ''el último'' (si están ocupadas todas las direcciones) tendrá la IP 192.168.11.254 (la ''anterior'' IP a la dirección de difusión).
-
-Para saber si una ''dirección de red es válida'', únicamente es necesario ''poner a 0'' todos los bits de la porción de host. Si el resultado es ''la misma'' dirección, es que la dirección ''es válida''.
-
-Puedes ver este apartado en forma de vídeo explicativo:
-
-[[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo]]</pre>
-</div>
-<div author="David Romero" created="20190921102659706" modified="20190921102739670" tags="[[Vídeo explicativo]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0uH7I94XpLs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190921102327559" modified="20190921102356145" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - La máscara de red - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3BSHvgvaCxE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190921102526440" modified="20190921102605739" tags="[[Vídeo explicativo]] [[IPv4 - Tamaño de una red]]" title="IPv4 - Número de dispositivos en una red - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7xfO8Pm43Ug&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190921102233004" modified="20190921102318887" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - Qué es una IP - Vídeo explicativo">
-<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/T0NNdM6bdu0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
-</div>
-<div author="David Romero" created="20190922171936198" modified="20190922175143369" tags="IPv4" title="IPv4 - Subredes">
-<pre>A menudo nos interesa dividir una red grande en otras redes más pequeñas. Nos puede ser útil para ofrecer distintos servicios a perfiles diferentes, para compartir recursos solo entre departamentos específicos, para mejorar el rendimiento... etc.
-
-Los métodos por los que podemos dividir una red IPv4 son:
-
-* [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
-* [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
-</div>
-<div author="David Romero" created="20190922175152283" modified="20190928081310236" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<div author="David Romero" created="20190922175152283" draft.of="IPv4 - Subredes - Subnetting" draft.title="IPv4 - Subredes - Subnetting" modified="20190928081244787" tags="[[IPv4 - Subredes]]" title="Draft of 'IPv4 - Subredes - Subnetting'">
 <pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
 
 Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
@@ -13922,7 +13807,255 @@ Estas dos direcciones de red constituyen la solución pedida en el ejercicio.
 
 Si quieres puedes ver esta misma explicación en un vídeo explicativo:
 
-* [[Vídeo explicativo de subnetting|IPv4 - Subredes - Subnetting - Vídeo explicativo]]</pre>
+* [[Vídeo explicativo de subnetting||IPv4 - Subredes - Subnetting - Vídeo explicativo]]</pre>
+</div>
+<div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
+<pre></pre>
+</div>
+<div author="David Romero" created="20190907220239941" modified="20190917210739870" tags="[[3. Protocolos]]" title="IP">
+<pre>Son las siglas de //Internet Protocol// (Protocolo de Internet) y funciona en la capa 3. Aunque eso nos importa poco ahora.
+
+Ya deberías saber que en una red los dispositivos se envían de unos a otros paquetes de información. Cada uno de los dispositivos de una red se identifica por un número llamado IP. Cuando un dispositivo quiere enviar un paquete a otro, necesita conocer la IP del destinatario.
+
+Todos los dispositivos de una misma red comparten otro número llamado máscara de red. La máscara de red indica los límites de la red y, por lo tanto, nos aporta información sobre su tamaño.
+
+Actualmente, conviven dos tipos de IP, cada uno con sus propias características:
+
+* [[IPv4]]
+* [[IPv6]]</pre>
+</div>
+<div author="David Romero" created="20190907233408572" modified="20190922172121680" tags="IP" title="IPv4">
+<pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
+
+Ejemplo de una IPv4 en notación binaria:
+
+''11000000.10101000.00000001.10000000''
+
+Ejemplo de la misma IPv4 en notación decimal:
+
+''192.168.1.128''
+
+Cada vez que escribimos la IPv4 de un dispositivo, deberíamos indicar también ''su máscara de red''. La máscara de red en IPv4 se parece en formato a una IPv4, con la diferencia de que siempre consiste en un ''número determinado de unos'' seguidos de ceros.
+
+Ejemplo de una máscara de red en notación binaria:
+
+''11111111.11111111.11111110.00000000''
+
+Ejemplo de la misma máscara de red en notación decimal:
+
+''255.255.254.0''
+
+La máscara de red normalmente se indica en notación CIDR, esta notación es tan sencilla como indicar el número de unos que hay en la misma. El ejemplo anterior en notación CIDR sería:
+
+''/23''
+
+Como puedes comprobar es bastante sencillo convertir de una notación a otra.
+
+La máscara de red en notación CIDR aporta una información muy importante también: ''el número de bits dedicados a la red''. ¿Esto qué significa? Pues que si la máscara de red es /23, quiere decir que los 23 primeros bits de la dirección IP van a ser ''iguales para todos los dispositivos'' de la misma red. Si variamos los 9 bits que quedan a la derecha (hasta los 32), formaremos las direcciones IP ''de los distintos dispositivos'' de la red. Quizás lo entiendas mejor con un pequeño ''esquema'':
+
+&lt;center&gt;[img[./images/porcionhostyred.png]]&lt;/center&gt;
+
+Al conjunto de IPv4 y máscara de red se le suele llamar ''configuración IP''. Por lo tanto, la configuración IP de un dispositivo podría ser:
+
+''192.168.1.128/23''
+
+Puedes ver ''vídeos explicativos'' sobre qué es una IP y qué es la máscara de red en los siguientes enlaces:
+
+* [[Qué es una IPv4|IPv4 - Qué es una IP - Vídeo explicativo]]
+* [[La máscara de red|IPv4 - La máscara de red - Vídeo explicativo]]
+
+A partir de la IPv4 y la máscara de red, podemos obtener mucha información de la red a la que pertenece el dispositivo:
+
+* [[Número de equipos posible en la red (tamaño)|IPv4 - Tamaño de una red]]
+* [[Dirección de la red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]
+
+Una vez conozcas los aspectos fundamentales de una IPv4, te recomiendo que aprendas a crear [[subredes|IPv4 - Subredes]].</pre>
+</div>
+<div author="David Romero" created="20190917212602115" modified="20190922171823833" tags="IPv4" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles">
+<pre>Existen dos direcciones en una red especiales, que no se les pueden asignar a ningún dispositivo: ''la dirección de red y la dirección de difusión o broadcas''t.
+
+La ''dirección de red'' se utiliza para ''identificar una red''. Será necesaria para que los routers o enrutadores sepan el camino por dónde dirigir los paquetes.
+
+La ''dirección de difusión o broadcast'' se utiliza para ''enviar información a toda la red'', es decir, si se envía un paquete a esa dirección le llegará a todos los dispositivos de la red.
+
+Para ''calcular'' ambas direcciones, basta con poner todos los bits de la ''porción de host a 0'' (y se obtiene la dirección de red) o ''ponerlos todos a 1'' (se obtiene la dirección de difusión). Veámoslo con un ''ejemplo'':
+
+Dada la configuración de red ''192.168.10.50/22'', vamos a calcular la dirección de red y la dirección de difusión. Para ello, ''pasamos a binario la IP'':
+
+''11000000.10101000.000010''10.00110010
+
+Se han marcado en negrita los primeros 22 bits, que se corresponden con un 1 en la máscara de red. Recuerdo que esos son los bits que definen la red y permanecerán ''igual'' en todos los dispositivos.
+
+Para calcular la dirección de red, ''vamos a poner a 0'' todos los bits a la derecha del bit 22:
+
+11000000.10101000.000010''00.00000000''
+
+Si pasamos esa dirección a decimal, nos queda ''192.168.8.0. Esa es la dirección de red.''
+
+Para calcular la dirección de difusión o broadcast, ''vamos a poner a 1'' todos los bits a la derecha del bit 22:
+
+11000000.10101000.000010''11.11111111''
+
+Si pasamos esa dirección a decimal, nos queda ''192.168.11.255. Esa es la dirección de difusión.''
+
+Todas los números binarios que podemos poner en los últimos 10 bits que no sean todos ceros o todos unos, se corresponden con las IP que pueden tener todos los dispositivos de la red. Así, ''el primer equipo de la red'' tendrá la IP 192.168.8.1 (la ''siguiente'' IP a la dirección de red) y ''el último'' (si están ocupadas todas las direcciones) tendrá la IP 192.168.11.254 (la ''anterior'' IP a la dirección de difusión).
+
+Para saber si una ''dirección de red es válida'', únicamente es necesario ''poner a 0'' todos los bits de la porción de host. Si el resultado es ''la misma'' dirección, es que la dirección ''es válida''.
+
+Puedes ver este apartado en forma de vídeo explicativo:
+
+[[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo]]</pre>
+</div>
+<div author="David Romero" created="20190921102659706" modified="20190921102739670" tags="[[Vídeo explicativo]] [[IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]" title="IPv4 - Dirección de red, dirección de difusión y direcciones disponibles - Vídeo explicativo">
+<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0uH7I94XpLs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+</div>
+<div author="David Romero" created="20190921102327559" modified="20190921102356145" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - La máscara de red - Vídeo explicativo">
+<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3BSHvgvaCxE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+</div>
+<div author="David Romero" created="20190921102526440" modified="20190921102605739" tags="[[Vídeo explicativo]] [[IPv4 - Tamaño de una red]]" title="IPv4 - Número de dispositivos en una red - Vídeo explicativo">
+<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7xfO8Pm43Ug&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+</div>
+<div author="David Romero" created="20190921102233004" modified="20190921102318887" tags="[[Vídeo explicativo]] IPv4" title="IPv4 - Qué es una IP - Vídeo explicativo">
+<pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/T0NNdM6bdu0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+</div>
+<div author="David Romero" created="20190922171936198" modified="20190922175143369" tags="IPv4" title="IPv4 - Subredes">
+<pre>A menudo nos interesa dividir una red grande en otras redes más pequeñas. Nos puede ser útil para ofrecer distintos servicios a perfiles diferentes, para compartir recursos solo entre departamentos específicos, para mejorar el rendimiento... etc.
+
+Los métodos por los que podemos dividir una red IPv4 son:
+
+* [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
+* [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
+</div>
+<div author="David Romero" created="20190922175152283" modified="20190928081118932" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
+
+Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
+
+Cuantos más bits cojamos de la porción de host para las subredes, más subredes haremos y menos dispositivos tendremos en cada una. El número de subredes se calcula con la siguiente fórmula:
+
+$$
+2^{N}
+$$
+
+Donde N es el número de bits que se cogen de la porción de host.
+
+Podemos partir de dos supuestos: uno en el que tengamos claro el número de redes que queremos y otro en el que tengamos claro el número de dispositivos que debe tener cada subred. Resolveremos en las siguientes secciones un ejemplo de cada supuesto.
+
+!! 1 - Queremos un número de subredes concreto
+
+Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular 3 subredes con el mayor número de dispositivos posible.
+
+Para comenzar, buscamos un número que, al elevarlo a dos, nos de un número mayor o igual que el número de subredes que queremos calcular.
+
+$$
+2^{x} \geq 3
+$$
+
+En este caso, el primer número que cumple la inecuación es el 2:
+
+$$
+2^{2} = 4 \geq 3
+$$
+
+Esto quiere decir que para formar las subredes vamos a ampliar la máscara de red original con dos bits más. Cambiando el valor de esos dos bits, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula, con dos bits podremos formar hasta cuatro subredes, ya que las combinaciones posibles son:
+
+&lt;center&gt;00&lt;/center&gt;
+
+&lt;center&gt;01&lt;/center&gt;
+
+&lt;center&gt;10&lt;/center&gt;
+
+&lt;center&gt;11&lt;/center&gt;
+
+La dirección de red 192.168.10.0 en binario es:
+''11000000.10101000.0000101''0.00000000
+
+En negrita están los bits que no cambian conforme a la máscara de red original (/23). Como hemos calculado que necesitaremos dos bits para formar las subredes, la máscara de red se ampliará:
+
+$$
+23 + 2 = 25
+$$
+
+La dirección de red de la primera subred será:
+11000000.10101000.0000101''0.0''0000000
+
+En decimal: ''192.168.10.0/25''
+
+Es decir, la dirección IP es la misma que la dirección de red original, pero ampliando la máscara de red.
+
+La dirección de red de la segunda subred será:
+11000000.10101000.0000101''0.1''0000000
+
+En decimal: ''192.168.10.128/25''
+
+La dirección de red de la tercera subred será:
+11000000.10101000.0000101''1.0''0000000
+
+En decimal: ''192.168.11.0/25''
+
+Como solamente nos han pedido tres subredes, con eso estaría completado el ejercicio, aunque aún podríamos tener una cuarta subred:
+11000000.10101000.0000101''1.1''0000000
+
+En decimal: ''192.168.11.128/25''
+
+Por lo tanto, se forman tantas subredes como nos diga la fórmula a partir de la modificación de los bits calculados con todas las variaciones posibles.
+
+!! 2 - Queremos subredes con un número de dispositivos concreto
+
+Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular todas las subredes posibles para 200 dispositivos.
+
+El procedimiento es muy parecido al anterior, pero en este caso, en lugar de empezar calculando los bits destinados a las subredes, calcularemos los bits que necesitaremos en la porción de host para cada una de éstas.
+
+Partimos de la fórmula:
+
+$$
+2^{x} - 2 \geq 200
+$$
+
+Es decir, tendremos que buscar un número que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el 8:
+
+$$
+2^{8} - 2 = 256 -2 = 254 \geq 200
+$$
+
+Por lo tanto, tendremos que crear subredes para 254 dispositivos. El número 8 que hemos hayado nos indica cuántos bits necesitamos para los dispositivos.
+
+Si estamos partiendo de una red /23 y necesitamos 8 bits para los dispositivos, sabiendo que una dirección completa tiene 32 bits, nos queda 1 solo bit para calcular las subredes:
+
+$$
+32 - 23 - 8 = 1
+$$
+
+A partir de este momento, el ejercicio termina de resolverse exactamente igual que el supuesto anterior cuando calculamos los números de bits necesarios para las subredes.
+
+En este caso, para formar las subredes vamos a ampliar la máscara de red original con un bit más. Cambiando el valor de ese bit, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula $2^{1} = 2$, con un bit podremos formar hasta dos subredes, ya que las combinaciones posibles son:
+
+&lt;center&gt;0&lt;/center&gt;
+
+&lt;center&gt;1&lt;/center&gt;
+
+La dirección de red 192.168.10.0 en binario es:
+''11000000.10101000.0000101''0.00000000
+
+En negrita están los bits que no cambian conforme a la máscara de red original (/23). Como hemos calculado que necesitaremos un bit para formar las subredes, la máscara de red se ampliará:
+
+$$
+23 + 1 = 24
+$$
+
+La dirección de red de la primera subred será:
+11000000.10101000.0000101''0''.00000000
+
+En decimal: ''192.168.10.0/24''
+
+Es decir, la dirección IP es la misma que la dirección de red original, pero ampliando la máscara de red.
+
+La dirección de red de la segunda subred será:
+11000000.10101000.0000101''1''.00000000
+
+En decimal: ''192.168.11.0/24''
+
+Estas dos direcciones de red constituyen la solución pedida en el ejercicio.</pre>
 </div>
 <div author="David Romero" created="20190927123741238" modified="20190927124059682" tags="[[IPv4 - Subredes - Subnetting]]" title="IPv4 - Subredes - Subnetting - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/12aA4vyFiE4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
