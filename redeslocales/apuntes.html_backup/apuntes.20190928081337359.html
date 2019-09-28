@@ -9988,7 +9988,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928084456192" title="$:/StoryList">
+<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928081312086" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13687,7 +13687,7 @@ Actualmente, conviven dos tipos de IP, cada uno con sus propias características
 * [[IPv4]]
 * [[IPv6]]</pre>
 </div>
-<div author="David Romero" created="20190907233408572" modified="20190928084507945" tags="IP" title="IPv4">
+<div author="David Romero" created="20190907233408572" modified="20190922172121680" tags="IP" title="IPv4">
 <pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
 
 Ejemplo de una IPv4 en notación binaria:
@@ -13789,40 +13789,38 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190928084543432" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
-<pre>Todas las subredes que se calculen con este método tendrán la ''misma máscara'' y, por lo tanto, el ''mismo número de dispositivos''.
+<div author="David Romero" created="20190922175152283" modified="20190928081310236" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<pre>Todas las subredes que se calculen con este método tendrán la misma máscara y, por lo tanto, el mismo número de dispositivos.
 
-Este método consiste en coger ''algunos bits extras de la porción de host'' para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
+Este método consiste en coger algunos bits extras de la porción de host para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
 
-&lt;center&gt;[img[./images/porcionhostyredconsubredes.png]]&lt;/center&gt;
-
-Cuantos más bits cojamos de la porción de host para las subredes, ''más subredes'' haremos y ''menos dispositivos'' tendremos en cada una. El número de subredes se calcula con la siguiente ''fórmula'':
+Cuantos más bits cojamos de la porción de host para las subredes, más subredes haremos y menos dispositivos tendremos en cada una. El número de subredes se calcula con la siguiente fórmula:
 
 $$
 2^{N}
 $$
 
-Donde N es el ''número de bits'' que se cogen de la porción de host.
+Donde N es el número de bits que se cogen de la porción de host.
 
-Podemos partir de dos supuestos: uno en el que tengamos claro ''el número de redes'' que queremos y otro en el que tengamos claro ''el número de dispositivos'' que debe tener cada subred. Resolveremos en las siguientes secciones un ejemplo de cada supuesto.
+Podemos partir de dos supuestos: uno en el que tengamos claro el número de redes que queremos y otro en el que tengamos claro el número de dispositivos que debe tener cada subred. Resolveremos en las siguientes secciones un ejemplo de cada supuesto.
 
 !! 1 - Queremos un número de subredes concreto
 
-Ejemplo: Partimos de la red ''192.168.10.0/23'' y queremos calcular ''3 subredes'' con el mayor número de dispositivos posible.
+Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular 3 subredes con el mayor número de dispositivos posible.
 
-Para comenzar, ''buscamos un número'' que, al elevarlo a dos, nos de un número mayor o igual que el número de subredes que queremos calcular.
+Para comenzar, buscamos un número que, al elevarlo a dos, nos de un número mayor o igual que el número de subredes que queremos calcular.
 
 $$
 2^{x} \geq 3
 $$
 
-En este caso, el primer número que cumple la inecuación es el ''2'':
+En este caso, el primer número que cumple la inecuación es el 2:
 
 $$
 2^{2} = 4 \geq 3
 $$
 
-Esto quiere decir que para formar las subredes vamos a ampliar la máscara de red original ''con dos bits'' más. Cambiando el valor de esos dos bits, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula, con dos bits podremos formar ''hasta cuatro subredes'', ya que las combinaciones posibles son:
+Esto quiere decir que para formar las subredes vamos a ampliar la máscara de red original con dos bits más. Cambiando el valor de esos dos bits, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula, con dos bits podremos formar hasta cuatro subredes, ya que las combinaciones posibles son:
 
 &lt;center&gt;00&lt;/center&gt;
 
@@ -13835,30 +13833,30 @@ Esto quiere decir que para formar las subredes vamos a ampliar la máscara de re
 La dirección de red 192.168.10.0 en binario es:
 ''11000000.10101000.0000101''0.00000000
 
-En negrita están los bits que no cambian conforme a la máscara de red original (''/23''). Como hemos calculado que necesitaremos dos bits para formar las subredes, la máscara de red ''se ampliará'':
+En negrita están los bits que no cambian conforme a la máscara de red original (/23). Como hemos calculado que necesitaremos dos bits para formar las subredes, la máscara de red se ampliará:
 
 $$
 23 + 2 = 25
 $$
 
-La dirección de red de la ''primera subred'' será:
+La dirección de red de la primera subred será:
 11000000.10101000.0000101''0.0''0000000
 
 En decimal: ''192.168.10.0/25''
 
 Es decir, la dirección IP es la misma que la dirección de red original, pero ampliando la máscara de red.
 
-La dirección de red de la ''segunda subred'' será:
+La dirección de red de la segunda subred será:
 11000000.10101000.0000101''0.1''0000000
 
 En decimal: ''192.168.10.128/25''
 
-La dirección de red de la ''tercera subred'' será:
+La dirección de red de la tercera subred será:
 11000000.10101000.0000101''1.0''0000000
 
 En decimal: ''192.168.11.0/25''
 
-Como solamente nos han pedido tres subredes, con eso ''estaría completado'' el ejercicio, aunque aún podríamos tener una ''cuarta subred'':
+Como solamente nos han pedido tres subredes, con eso estaría completado el ejercicio, aunque aún podríamos tener una cuarta subred:
 11000000.10101000.0000101''1.1''0000000
 
 En decimal: ''192.168.11.128/25''
@@ -13867,33 +13865,33 @@ Por lo tanto, se forman tantas subredes como nos diga la fórmula a partir de la
 
 !! 2 - Queremos subredes con un número de dispositivos concreto
 
-Ejemplo: Partimos de la red ''192.168.10.0/23'' y queremos calcular todas las subredes posibles para ''200 dispositivos''.
+Ejemplo: Partimos de la red 192.168.10.0/23 y queremos calcular todas las subredes posibles para 200 dispositivos.
 
-El procedimiento es muy parecido al anterior, pero en este caso, en lugar de empezar calculando los bits destinados a las subredes, ''calcularemos los bits que necesitaremos en la porción de host'' para cada una de éstas.
+El procedimiento es muy parecido al anterior, pero en este caso, en lugar de empezar calculando los bits destinados a las subredes, calcularemos los bits que necesitaremos en la porción de host para cada una de éstas.
 
-Partimos de la ''fórmula'':
+Partimos de la fórmula:
 
 $$
 2^{x} - 2 \geq 200
 $$
 
-Es decir, tendremos que ''buscar un número'' que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el ''8'':
+Es decir, tendremos que buscar un número que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el 8:
 
 $$
 2^{8} - 2 = 256 -2 = 254 \geq 200
 $$
 
-Por lo tanto, tendremos que crear subredes para ''254 dispositivos''. El número 8 que hemos hayado nos indica ''cuántos bits'' necesitamos para los dispositivos.
+Por lo tanto, tendremos que crear subredes para 254 dispositivos. El número 8 que hemos hayado nos indica cuántos bits necesitamos para los dispositivos.
 
-Si estamos partiendo de una red ''/23'' y necesitamos ''8 bits'' para los dispositivos, sabiendo que una dirección completa tiene 32 bits, nos queda 1 solo bit para calcular las subredes:
+Si estamos partiendo de una red /23 y necesitamos 8 bits para los dispositivos, sabiendo que una dirección completa tiene 32 bits, nos queda 1 solo bit para calcular las subredes:
 
 $$
 32 - 23 - 8 = 1
 $$
 
-A partir de este momento, el ejercicio termina de resolverse ''exactamente igual'' que el supuesto anterior cuando calculamos los números de bits necesarios para las subredes.
+A partir de este momento, el ejercicio termina de resolverse exactamente igual que el supuesto anterior cuando calculamos los números de bits necesarios para las subredes.
 
-En este caso, para formar las subredes ''vamos a ampliar la máscara de red original'' con un bit más. Cambiando el valor de ese bit, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula $2^{1} = 2$, ''con un bit podremos formar hasta dos subredes'', ya que las combinaciones posibles son:
+En este caso, para formar las subredes vamos a ampliar la máscara de red original con un bit más. Cambiando el valor de ese bit, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula $2^{1} = 2$, con un bit podremos formar hasta dos subredes, ya que las combinaciones posibles son:
 
 &lt;center&gt;0&lt;/center&gt;
 
@@ -13902,27 +13900,27 @@ En este caso, para formar las subredes ''vamos a ampliar la máscara de red orig
 La dirección de red 192.168.10.0 en binario es:
 ''11000000.10101000.0000101''0.00000000
 
-En negrita están los bits que no cambian conforme a la máscara de red original (''/23''). Como hemos calculado que necesitaremos ''un bit'' para formar las subredes, la máscara de red se ampliará:
+En negrita están los bits que no cambian conforme a la máscara de red original (/23). Como hemos calculado que necesitaremos un bit para formar las subredes, la máscara de red se ampliará:
 
 $$
 23 + 1 = 24
 $$
 
-La dirección de red de la ''primera subred'' será:
+La dirección de red de la primera subred será:
 11000000.10101000.0000101''0''.00000000
 
 En decimal: ''192.168.10.0/24''
 
 Es decir, la dirección IP es la misma que la dirección de red original, pero ampliando la máscara de red.
 
-La dirección de red de la ''segunda subred'' será:
+La dirección de red de la segunda subred será:
 11000000.10101000.0000101''1''.00000000
 
 En decimal: ''192.168.11.0/24''
 
-Estas dos direcciones de red constituyen ''la solución pedida'' en el ejercicio.
+Estas dos direcciones de red constituyen la solución pedida en el ejercicio.
 
-Si quieres puedes ver esta misma explicación en un ''vídeo explicativo'':
+Si quieres puedes ver esta misma explicación en un vídeo explicativo:
 
 * [[Vídeo explicativo de subnetting|IPv4 - Subredes - Subnetting - Vídeo explicativo]]</pre>
 </div>

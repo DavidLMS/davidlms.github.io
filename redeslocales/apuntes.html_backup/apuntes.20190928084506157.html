@@ -443,6 +443,8 @@ Error message and password prompt
 
 <li>Contar en binario - Vídeo explicativo</li>
 
+<li>Draft of 'IPv4'</li>
+
 <li>Ejercicio interactivo</li>
 
 <li>IP</li>
@@ -9988,7 +9990,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190928074849880" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928084456192" title="$:/StoryList">
+<div created="20190928074849880" list="[[Draft of 'IPv4']] [[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]]" modified="20190928084456192" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13672,6 +13674,53 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190908080230025" modified="20190908163723754" tags="[[Vídeo explicativo]] [[Contar en binario]]" title="Contar en binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cyPZPawAx7U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
+<div author="David Romero" created="20190907233408572" draft.of="IPv4" draft.title="IPv4" modified="20190928084459326" tags="IP" title="Draft of 'IPv4'">
+<pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
+
+Ejemplo de una IPv4 en notación binaria:
+
+''11000000.10101000.00000001.10000000''
+
+Ejemplo de la misma IPv4 en notación decimal:
+
+''192.168.1.128''
+
+Cada vez que escribimos la IPv4 de un dispositivo, deberíamos indicar también ''su máscara de red''. La máscara de red en IPv4 se parece en formato a una IPv4, con la diferencia de que siempre consiste en un ''número determinado de unos'' seguidos de ceros.
+
+Ejemplo de una máscara de red en notación binaria:
+
+''11111111.11111111.11111110.00000000''
+
+Ejemplo de la misma máscara de red en notación decimal:
+
+''255.255.254.0''
+
+La máscara de red normalmente se indica en notación CIDR, esta notación es tan sencilla como indicar el número de unos que hay en la misma. El ejemplo anterior en notación CIDR sería:
+
+''/23''
+
+Como puedes comprobar es bastante sencillo convertir de una notación a otra.
+
+La máscara de red en notación CIDR aporta una información muy importante también: ''el número de bits dedicados a la red''. ¿Esto qué significa? Pues que si la máscara de red es /23, quiere decir que los 23 primeros bits de la dirección IP van a ser ''iguales para todos los dispositivos'' de la misma red. Si variamos los 9 bits que quedan a la derecha (hasta los 32), formaremos las direcciones IP ''de los distintos dispositivos'' de la red. Quizás lo entiendas mejor con un pequeño ''esquema'':
+
+&lt;center&gt;[img[./images/porcionhostyred.png]]&lt;/center&gt;
+
+Al conjunto de IPv4 y máscara de red se le suele llamar ''configuración IP''. Por lo tanto, la configuración IP de un dispositivo podría ser:
+
+''192.168.1.128/23''
+
+Puedes ver ''vídeos explicativos'' sobre qué es una IP y qué es la máscara de red en los siguientes enlaces:
+
+* [[Qué es una IPv4|IPv4 - Qué es una IP - Vídeo explicativo]]
+* [[La máscara de red|IPv4 - La máscara de red - Vídeo explicativo]]
+
+A partir de la IPv4 y la máscara de red, podemos obtener mucha información de la red a la que pertenece el dispositivo:
+
+* [[Número de equipos posible en la red (tamaño)|IPv4 - Tamaño de una red]]
+* [[Dirección de la red, dirección de difusión y direcciones disponibles|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]]
+
+Una vez conozcas los aspectos fundamentales de una IPv4, te recomiendo que aprendas a crear [[subredes|IPv4 - Subredes]].</pre>
+</div>
 <div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
 <pre></pre>
 </div>
@@ -13687,7 +13736,7 @@ Actualmente, conviven dos tipos de IP, cada uno con sus propias características
 * [[IPv4]]
 * [[IPv6]]</pre>
 </div>
-<div author="David Romero" created="20190907233408572" modified="20190928084507945" tags="IP" title="IPv4">
+<div author="David Romero" created="20190907233408572" modified="20190922172121680" tags="IP" title="IPv4">
 <pre>Una IPv4 está formada por ''32 bits'' (1 bit puede ser un 0 o un 1), dividida en ''cuatro octetos'' (conjuntos de 8 bits) separados por un punto. Los ordenadores y demás dispositivos trabajan internamente con las IPv4 en notación binaria. Sin embargo, al comunicarse con nosotros se transforman a notación decimal para ''facilitar'' nuestra gestión de las mismas.
 
 Ejemplo de una IPv4 en notación binaria:
@@ -13789,12 +13838,10 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190928084543432" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<div author="David Romero" created="20190922175152283" modified="20190928084013103" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
 <pre>Todas las subredes que se calculen con este método tendrán la ''misma máscara'' y, por lo tanto, el ''mismo número de dispositivos''.
 
 Este método consiste en coger ''algunos bits extras de la porción de host'' para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
-
-&lt;center&gt;[img[./images/porcionhostyredconsubredes.png]]&lt;/center&gt;
 
 Cuantos más bits cojamos de la porción de host para las subredes, ''más subredes'' haremos y ''menos dispositivos'' tendremos en cada una. El número de subredes se calcula con la siguiente ''fórmula'':
 
