@@ -149,8 +149,6 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/language</li>
 
-<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
-
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/print</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme</li>
@@ -519,11 +517,8 @@ margin:0 auto;
 <div created="20190907220308851" modified="20190907220330442" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/language">
 <pre>hide</pre>
 </div>
-<div created="20190929220403433" modified="20190929220403433" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
+<div created="20190929214225521" modified="20190929214225521" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/print">
 <pre>show</pre>
-</div>
-<div created="20190929214225521" modified="20190929220354385" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/print">
-<pre>hide</pre>
 </div>
 <div created="20190907220336042" modified="20190907220346298" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme">
 <pre>hide</pre>
@@ -9949,7 +9944,7 @@ margin:0 auto;
 <div created="20190907221955795" modified="20190907234624147" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20190907220257393" modified="20190929220352272" title="$:/state/tab/sidebar--595412856">
+<div created="20190907220257393" modified="20190929214200579" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20190908163613341" modified="20190908163613341" title="$:/state/toc/Tabla de contenidos-2. Sistema binario-115813501">
@@ -10003,7 +9998,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20190929212349933" list="" modified="20190929220254339" title="$:/StoryList">
+<div created="20190929212349933" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[IPv4 - Subredes - Subnetting]] [[IPv4 - Subredes - VLSM]]" modified="20190929213533777" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13804,7 +13799,7 @@ Los métodos por los que podemos dividir una red IPv4 son:
 * [[Subnetting o división básica|IPv4 - Subredes - Subnetting]]
 * [[VLSM (Variable Length Subnet Mask)|IPv4 - Subredes - VLSM]]</pre>
 </div>
-<div author="David Romero" created="20190922175152283" modified="20190929215858708" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
+<div author="David Romero" created="20190922175152283" modified="20190928084654079" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - Subnetting">
 <pre>Todas las subredes que se calculen con este método tendrán la ''misma máscara'' y, por lo tanto, el ''mismo número de dispositivos''.
 
 Este método consiste en coger ''algunos bits extras de la porción de host'' para variarlos y formar las distintas subredes. Se puede ver de forma visual en el siguiente esquema:
@@ -13834,7 +13829,7 @@ $$
 En este caso, el primer número que cumple la inecuación es el ''2'':
 
 $$
-2^{2} = 4 \gt 3
+2^{2} = 4 \geq 3
 $$
 
 Esto quiere decir que para formar las subredes vamos a ampliar la máscara de red original ''con dos bits'' más. Cambiando el valor de esos dos bits, obtendremos las distintas direcciones de red de las subredes. Tal y como nos indica la fórmula, con dos bits podremos formar ''hasta cuatro subredes'', ya que las combinaciones posibles son:
@@ -13895,7 +13890,7 @@ $$
 Es decir, tendremos que ''buscar un número'' que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el ''8'':
 
 $$
-2^{8} - 2 = 256 -2 = 254 \gt 200
+2^{8} - 2 = 256 -2 = 254 \geq 200
 $$
 
 Por lo tanto, tendremos que crear subredes para ''254 dispositivos''. El número 8 que hemos hayado nos indica ''cuántos bits'' necesitamos para los dispositivos.
@@ -13944,80 +13939,25 @@ Si quieres puedes ver esta misma explicación en un ''vídeo explicativo'':
 <div author="David Romero" created="20190927123741238" modified="20190927124059682" tags="[[IPv4 - Subredes - Subnetting]]" title="IPv4 - Subredes - Subnetting - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/12aA4vyFiE4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div author="David Romero" created="20190922175210387" modified="20190929220241280" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - VLSM">
-<pre>La división de redes mediante [[Subnetting|IPv4 - Subredes - Subnetting]] presenta un ''problema importante''. Si necesitamos redes ''de tamaño muy diverso'', se desperdician muchas direcciones IP. Si, por ejemplo, queremos una red para 1000 equipos y otras dos para 100 equipos, mediante [[Subnetting|IPv4 - Subredes - Subnetting]] tendremos que crear tres subredes con capacidad para 1000 equipos, ''desperdiciando'' más de 900 direcciones en dos subredes.
+<div author="David Romero" created="20190922175210387" modified="20190929214313138" tags="[[IPv4 - Subredes]]" title="IPv4 - Subredes - VLSM">
+<pre>La división de redes mediante [[Subnetting|IPv4 - Subredes - Subnetting]] presenta un problema importante. Si necesitamos redes de tamaño muy diverso, se desperdician muchas direcciones IP. Si, por ejemplo, queremos una red para 1000 equipos y otras dos para 100 equipos, mediante [[Subnetting|IPv4 - Subredes - Subnetting]] tendremos que crear tres subredes con capacidad para 1000 equipos, desperdiciando más de 900 direcciones en dos subredes.
 
-Por eso, para crear subredes de distinto tamaño, ''es mucho más eficiente'' el método ''VLSM'' (Variable Length Subnet Mask o Máscara de Red de Longitud Variable). Este procedimiento permite ''adaptar'' cada subred creada al número de dispositivos necesario.
+Por eso, para crear subredes de distinto tamaño, es mucho más eficiente el método VLSM (Variable Length Subnet Mask o Máscara de Red de Longitud Variable). Este procedimiento permite adaptar cada subred creada al número de dispositivos necesario.
 
-En este método, ''calcularemos la máscara de red'' necesaria para cada una de las subredes de forma'' individual'', reservaremos todas las IP correspondientes a la máscara de red calculada y ''partiremos de la siguiente IP disponible'' para calcular la siguiente red. Lo vamos a ver mejor con un ejercicio de ejemplo a continuación.
+En este método, calcularemos la máscara de red necesaria para cada una de las subredes de forma individual, reservaremos todas las IP correspondientes a la máscara de red calculada y partiremos de la siguiente IP disponible para calcular la siguiente red. Lo vamos a ver mejor con un ejercicio de ejemplo a continuación.
 
-''Ejemplo'': Partiendo de la red ''192.168.128.0/17'', necesitamos crear una subred para ''100'' dispositivos, otra para ''1000'' y una última para ''500''.
+Ejemplo: Partiendo de la red 192.168.128.0/17, necesitamos crear una subred para 100 dispositivos, otra para 1000 y una última para 500.
 
-Lo ''primero'' que haremos es ordenar las subredes a calcular de ''mayor a menor''. Si las calculamos en ese orden, evitaremos obtener ''direcciones de red inválidas'' en subredes sucesivas. Por lo tanto, quedan de la siguiente forma:
+Lo primero que haremos es ordenar las subredes a calcular de mayor a menos. Si las calculamos en ese orden, evitaremos obtener direcciones de red inválidas en subredes sucesivas. Por lo tanto, quedan de la siguiente forma:
 
-* ''Primera subred'': 1000 equipos.
+* Primera subred: 1000 equipos.
 
-* ''Segunda subred'': 500 equipos.
+* Segunda subred: 500 equipos.
 
-* ''Tercera subred'': 100 equipos.
+* Tercera subred: 100 equipos.
 
-Comenzamos calculando la primera subred. La dirección de red es ''la misma'' que la red de la que partimos, 192.168.128.0. La máscara de red la calculamos en función de la ''fórmula'' que ya conocemos del número de equipos:
+Comenzamos calculando la primera subred.
 
-$$
-2^{x} - 2 \geq 1000
-$$
-
-Es decir, tendremos que ''buscar un número'' que al elevarlo a dos y restarle dos, el resultado sea mayor o igual al número de dispositivos que queremos en cada subred. En este caso, el primer número que cumple la inecuación es el ''10'':
-
-$$
-2^{10} - 2 = 1024 -2 = 1022 \gt 1000
-$$
-
-Por lo tanto, la primera subred será para ''1022 dispositivos''. El número 10 que hemos hayado nos indica ''cuántos bits'' necesitamos para los dispositivos. Ese número se lo ''restaremos a 32'' para hallar la máscara de red:
-
-$$
-32 - 10 = 22
-$$
-
-Ya tenemos la configuración de red de la ''primera subred: 192.168.128.0/22''. Procederemos ahora a calcular la [[dirección de difusión o broadcast|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]], que en este caso es ''192.168.131.255/22''.
-
-''La siguiente'' a la dirección de difusión, es decir, 192.168.132.0 será la dirección de red de la segunda subred. La máscara la calculamos siguiendo el ''mismo procedimiento'' anterior, esta vez para 500 equipos:
-
-$$
-2^{x} - 2 \geq 500
-$$
-
-$$
-2^{9} - 2 = 1024 -2 = 510 \gt 500
-$$
-
-Por lo tanto, la segunda subred será para ''510 dispositivos''.  El 9 se lo ''restaremos a 32 ''para hallar la máscara de red:
-
-$$
-32 - 9 = 23
-$$
-
-Con lo que obtenemos la configuración de red de la ''segunda subred: 192.168.132.0/23''. Procederemos ahora a calcular la [[dirección de difusión o broadcast|IPv4 - Dirección de red, dirección de difusión y direcciones disponibles]], que en este caso es ''192.168.133.255/23''.
-
-Por último, ''la siguiente'' a la dirección de difusión, es decir, 192.168.134.0 será la dirección de red de la tercera y última subred. ''Volvemos a calcular'' la nueva máscara, esta vez para 100 dispositivos:
-
-$$
-2^{x} - 2 \geq 100
-$$
-
-$$
-2^{7} - 2 = 128 -2 = 126 \gt 100
-$$
-
-Por lo que la tercera subred será para ''126 dispositivos''.  El 7 se lo ''restaremos a 32'' para hallar la máscara de red:
-
-$$
-32 - 7 = 25
-$$
-
-La dirección de red completa de la ''tercera subred es 192.168.134.0/25'' y la dirección de difusión ''192.168.134.127/25''.
-
-Como puedes comprobar, el mismo procedimiento ''se repite'' una y otra vez para calcular todas las subredes necesarias.
 
 Si quieres puedes ver esta misma explicación en un ''vídeo explicativo'':
 
