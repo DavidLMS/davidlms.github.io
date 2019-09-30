@@ -12434,20 +12434,20 @@ Podemos clasificar el acceso remoto en ''tres métodos'':
 <div author="David Romero" created="20190917174052329" modified="20190917174118605" tags="[[Tabla de contenidos]]" title="9. Interconexión de redes locales y redes públicas">
 <pre></pre>
 </div>
-<div author="David Romero" created="20190922202433940" modified="20190930212136469" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante interfaz gráfica">
-<pre>Cuando accedemos remotamente a un equipo mediante este procedimiento, ''visualizaremos'' en nuestro dispositivo (el cliente) la pantalla gráfica del servidor, como si lo ''tuviéramos delante'' y le conectáramos un monitor.
+<div author="David Romero" created="20190922202433940" modified="20190930203355657" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante interfaz gráfica">
+<pre>Cuando accedemos remotamente a un equipo mediante este procedimiento, visualizaremos en nuestro dispositivo (el cliente) la pantalla gráfica del servidor, como si lo tuviéramos delante y le conectáramos un monitor.
 
 &lt;center&gt;[img[images/esquemaaccesoremotografico.png]]&lt;/center&gt;
 
-Los ''protocolos'' más conocidos son:
+Los protocolos más conocidos son:
 
-* Remote Desktop Protocol (''RDP''). Es un protocolo propietario de ''Microsoft'', utilizado para controlar remotamente sistemas Windows. A no ser que sea Windows Server, ''únicamente'' se permite la conexión de un cliente. En esta conexión ''no se ve lo que está haciendo un usuario'' en el servidor, sino que abre una nueva sesión para el cliente. Por defecto, utiliza el puerto TCP 3389 para la conexión.
+* Remote Desktop Protocol (RDP).
 
-* ''X Window-System'' (X11 o simplemente X). Creado como un servidor de interfaz gráfica para sistemas ''Unix''. Permite el acceso a ''varios clientes'' al mismo tiempo. El principal propósito de su diseño fue la implementación de clientes ligeros. Un ''cliente ligero'' es un dispositivo con el mínimo hardware necesario para acceder de forma remota a una máquina con recursos suficientes para el trabajo que se debe realizar.
+* X Window-System.
 
-* ''RFB'' (VNC). Es un protocolo simple que permite controlar sistemas Windows, Unix o macOS. Es utilizado por VNC, una implementación de acceso remoto gráfico ''independiente del sistema operativo'' y construida sobre Java. Por defecto, utiliza el puerto TCP 5900. ''Permite'' visualizar desde el cliente lo que está realizando un usuario en el servidor, por lo que es muy útil en soporte técnico a distancia.
+* RFB (VNC).
 
-Algunos de los ''programas'' más conocidos para controlar remotamente un ordenador de forma gráfica son:
+Algunos de los programas más conocidos para controlar remotamente un ordenador de forma gráfica son:
 
 * [[Ultra VNC|https://www.uvnc.com/]]
 
@@ -12461,13 +12461,8 @@ Algunos de los ''programas'' más conocidos para controlar remotamente un ordena
 
 * [[LogMeIn|https://www.logmein.com/es]]
 
-Puedes ver una ''comparativa'' de software de este tipo muy completa en el siguiente [[enlace|https://en.wikipedia.org/wiki/Comparison_of_remote_desktop_software]].
-
-''Piensa'' en las ventajas y desventajas de usar este tipo de acceso remoto. Voy a darte un ejemplo de cada una. Te invito a completarlo con al menos dos ventajas y dos desventajas más.
-
-''Ventaja'': Podemos ver exactamente a dónde puede acceder o qué está viendo un cliente para facilitar la teleasistencia.
-
-''Desventaja'': La latencia de la red puede provocar un retraso en la interacción que la haga bastante pesada.</pre>
+Puedes ver una comparativa de software de este tipo muy completa en el siguiente [[enlace|https://en.wikipedia.org/wiki/Comparison_of_remote_desktop_software]].
+</pre>
 </div>
 <div author="David Romero" created="20190922202407643" modified="20190922202426527" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante terminal">
 <pre></pre>
