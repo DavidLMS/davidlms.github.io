@@ -279,8 +279,6 @@ Error message and password prompt
 
 <li>Seguridad en el acceso remoto</li>
 
-<li>SSH</li>
-
 <li>Tabla de contenidos</li>
 
 <li>Vídeo explicativo</li>
@@ -9601,7 +9599,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20191006165701813" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Seguridad en el acceso remoto]] SSH" modified="20191006165754244" title="$:/StoryList">
+<div created="20191006155853236" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Seguridad en el acceso remoto]] [[Acceso remoto mediante interfaz gráfica]] [[Acceso remoto mediante terminal]] [[Acceso remoto mediante web]]" modified="20191006155906321" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12740,43 +12738,14 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190909151644037" modified="20190909151706970" tags="[[Vídeo explicativo]] [[Pasar de decimal a binario]]" title="Pasar de decimal a binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IpxNHH88HRU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div author="David Romero" created="20190922203216055" modified="20191006165748551" tags="[[2. Acceso remoto]]" title="Seguridad en el acceso remoto">
+<div author="David Romero" created="20190922203216055" modified="20191006162618473" tags="[[2. Acceso remoto]]" title="Seguridad en el acceso remoto">
 <pre>Para los administradores de sistemas, ''la seguridad en el acceso remoto es algo fundamental''. Normalmente activamos el acceso a través de una ''red pública'', por lo que nuestra comunicación debe asegurarse todo lo posible.
 
-Una de las opciones ''más seguras es [[SSH|SSH]]'', ya que la comunicación se encripta utilizando una combinación de claves simétricas y asimétricas. Por lo tanto, cualquier agente que vigile esa conexión, únicamente accederá a información ininteligible.
+Una de las opciones ''más seguras es [[SSH|SSH]]'', ya que la comunicación se encripta utilizando una combinación de claves simétricas y asimétricas.
 
 Otra opción evidente, aunque muy costosa, es tener ''una infraestructura de red dedicada'' y privada entre los servidores y los clientes.
 
 Por último, podemos hacer uso de ''una [[VPN|VPN]]'' para crear un túnel de red privada dentro de la red pública, de forma que podamos conectarnos a los servidores desde los clientes ''como si estuviesen'' en la misma red local.</pre>
-</div>
-<div author="David Romero" created="20191006165814357" modified="20191006170115284" tags="[[Acceso remoto mediante terminal]]" title="SSH">
-<pre>SSH (Secure Shell) es un protocolo de acceso remoto por línea de comandos seguro, en el que la comunicación se encuentra cifrada. Por defecto, la conexión se realiza a través del puerto 22 TCP. 
-
-22 TCP. Añade encriptación SSL con clave privada y pública. (permite scp y sftp).
-		
-		Parámetros básicos.
-		# Puesto de escucha, se puede cambiar por motivos de seguridad: Port 22.
-		# IP de escucha, si el equipo tiene varias IP podemos indicar por cual realizaras la escucha del servicio: ListenAddress 192.168.20.30.
-		# Versión del protocolo: Protocol 2.
-		# Fichero donde se guardan las claves del servidor:
-		HostKey /etc/ssh/ssh_host_rsa_key.
-		HostKey /etc/ssh/ssh_host_dsa_key.
-		# Indica si está permita la conexión del superusuario:
-		PermitRootLogin no.
-		# Permitir el Modo de autentificación mediante clave RSA y clave pública:
-		RSAAuthentication yes.
-		PubkeyAuthentication yes.
-		# Modo de autentificación por host (equipo) no por usuario:
-		HostbasedAuthentication no.
-		# Permitir el túnel del protocolo X-windows por SSH:
-		X11Forwarding yes.
-		# Permitir o denegar el acceso a determinados usuarios o grupos desde determinadas
-		# máquinas, si un usuario no está en la lista de permitidos se deniega:
-		AllowUsers fulano@maquina1 mengano@maquina2.
-		AllowGroups 2esi administradores.
-		# Podemos utilizar la política de denegar:
-		DenyUsers invitado Pepito.
-DenyGroups hacke.</pre>
 </div>
 <div created="20190907221943499" modified="20190908163436416" tags="" title="Tabla de contenidos">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
