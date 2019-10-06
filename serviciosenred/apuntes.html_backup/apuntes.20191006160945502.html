@@ -259,6 +259,8 @@ Error message and password prompt
 
 <li>Contar en binario - Vídeo explicativo</li>
 
+<li>Draft of 'Acceso remoto mediante interfaz gráfica'</li>
+
 <li>Ejercicio interactivo</li>
 
 <li>IP</li>
@@ -9599,7 +9601,7 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20191006155853236" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Seguridad en el acceso remoto]] [[Acceso remoto mediante interfaz gráfica]] [[Acceso remoto mediante terminal]] [[Acceso remoto mediante web]]" modified="20191006155906321" title="$:/StoryList">
+<div created="20191006155853236" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[Seguridad en el acceso remoto]] [[Draft of 'Acceso remoto mediante interfaz gráfica']] [[Acceso remoto mediante terminal]] [[Acceso remoto mediante web]]" modified="20191006155906321" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12434,7 +12436,7 @@ Podemos clasificar el acceso remoto en ''tres métodos'':
 <div author="David Romero" created="20190917174052329" modified="20190917174118605" tags="[[Tabla de contenidos]]" title="9. Interconexión de redes locales y redes públicas">
 <pre></pre>
 </div>
-<div author="David Romero" created="20190922202433940" modified="20191006161822630" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante interfaz gráfica">
+<div author="David Romero" created="20190922202433940" modified="20190930212136469" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante interfaz gráfica">
 <pre>Cuando accedemos remotamente a un equipo mediante este procedimiento, ''visualizaremos'' en nuestro dispositivo (el cliente) la pantalla gráfica del servidor, como si lo ''tuviéramos delante'' y le conectáramos un monitor.
 
 &lt;center&gt;[img[images/esquemaaccesoremotografico.png]]&lt;/center&gt;
@@ -12472,23 +12474,10 @@ Puedes ver una ''comparativa'' de software de este tipo muy completa en el sigui
 <div author="David Romero" created="20190922202407643" modified="20190922202426527" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante terminal">
 <pre></pre>
 </div>
-<div author="David Romero" created="20190922202453146" modified="20191006161950273" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante web">
+<div author="David Romero" created="20190922202453146" modified="20191006160945337" tags="[[2. Acceso remoto]]" title="Acceso remoto mediante web">
 <pre>El acceso remoto ''mediante web'' nos permite controlar un equipo ''a través del navegador'' de un cliente. Existen aplicaciones que nos permiten a través de la web un [[acceso remoto mediante interfaz gráfica|Acceso remoto mediante interfaz gráfica]], que podríamos clasificar como un ''híbrido'' entre estos dos tipos de acceso. Sin embargo, el acceso remoto mediante web estricto ''no nos ofrece el escritorio'' del ordenador remoto, sino ''un panel de control en forma de página web''.
 
 &lt;center&gt;[img[images/webmin.jpg]]&lt;/center&gt;
-
-Los paneles de control remoto a través de la web son muy utilizados sobre todo cuando ''contratamos un hosting'', ya que es la forma predeterminada con la que ''administramos el servidor'' que nos asignan. Normalmente, el software utilizado para ello es ''cpanel''.
-
-&lt;center&gt;[img[images/cpanel.jpg]]&lt;/center&gt;
-
-En la administración de sistemas, el software ''webmin'' es muy conocido y nos permite controlar remotamente un servidor a través de un navegador utilizando una interfaz muy amigable.
-
-''Piensa'' en las ventajas y desventajas de usar este tipo de acceso remoto. Voy a darte un ejemplo de cada una. Te invito a completarlo con al menos dos ventajas y dos desventajas más.
-
-''Ventaja'': Podemos realizar a través de una interfaz configuraciones que serían más complejas a través de la línea de comandos.
-
-''Desventaja'': Debemos aprender a manejar un nuevo entorno, diferente a la interfaz gráfica y la línea de comandos a la que estamos acostumbrados.
-
 </pre>
 </div>
 <div created="20190907222726192" modified="20190907233338003" tags="IPv4" title="Cálculos en IPv4">
@@ -12607,6 +12596,41 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 </div>
 <div author="David Romero" created="20190908080230025" modified="20190908163723754" tags="[[Vídeo explicativo]] [[Contar en binario]]" title="Contar en binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cyPZPawAx7U&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
+</div>
+<div author="David Romero" created="20190922202433940" draft.of="Acceso remoto mediante interfaz gráfica" draft.title="Acceso remoto mediante interfaz gráfica" modified="20191006160835081" tags="[[2. Acceso remoto]]" title="Draft of 'Acceso remoto mediante interfaz gráfica'">
+<pre>Cuando accedemos remotamente a un equipo mediante este procedimiento, ''visualizaremos'' en nuestro dispositivo (el cliente) la pantalla gráfica del servidor, como si lo ''tuviéramos delante'' y le conectáramos un monitor.
+
+&lt;center&gt;[img[images/esquemaaccesoremotografico.png]]&lt;/center&gt;
+
+Los ''protocolos'' más conocidos son:
+
+* Remote Desktop Protocol (''RDP''). Es un protocolo propietario de ''Microsoft'', utilizado para controlar remotamente sistemas Windows. A no ser que sea Windows Server, ''únicamente'' se permite la conexión de un cliente. En esta conexión ''no se ve lo que está haciendo un usuario'' en el servidor, sino que abre una nueva sesión para el cliente. Por defecto, utiliza el puerto TCP 3389 para la conexión.
+
+* ''X Window-System'' (X11 o simplemente X). Creado como un servidor de interfaz gráfica para sistemas ''Unix''. Permite el acceso a ''varios clientes'' al mismo tiempo. El principal propósito de su diseño fue la implementación de clientes ligeros. Un ''cliente ligero'' es un dispositivo con el mínimo hardware necesario para acceder de forma remota a una máquina con recursos suficientes para el trabajo que se debe realizar.
+
+* ''RFB'' (VNC). Es un protocolo simple que permite controlar sistemas Windows, Unix o macOS. Es utilizado por VNC, una implementación de acceso remoto gráfico ''independiente del sistema operativo'' y construida sobre Java. Por defecto, utiliza el puerto TCP 5900. ''Permite'' visualizar desde el cliente lo que está realizando un usuario en el servidor, por lo que es muy útil en soporte técnico a distancia.
+
+Algunos de los ''programas'' más conocidos para controlar remotamente un ordenador de forma gráfica son:
+
+* [[Ultra VNC|https://www.uvnc.com/]]
+
+* [[TightVNC|https://www.tightvnc.com/]]
+
+* [[NoMachine|https://www.nomachine.com/]]
+
+* [[AnyDesk|https://anydesk.com/es]]
+
+* [[TeamViewer|https://www.teamviewer.com/es/]]
+
+* [[LogMeIn|https://www.logmein.com/es]]
+
+Puedes ver una ''comparativa'' de software de este tipo muy completa en el siguiente [[enlace|https://en.wikipedia.org/wiki/Comparison_of_remote_desktop_software]].
+
+''Piensa'' en las ventajas y desventajas de usar este tipo de acceso remoto. Voy a darte un ejemplo de cada una. Te invito a completarlo con al menos dos ventajas y dos desventajas más.
+
+''Ventaja'': Podemos ver exactamente a dónde puede acceder o qué está viendo un cliente para facilitar la teleasistencia.
+
+''Desventaja'': La latencia de la red puede provocar un retraso en la interacción que la haga bastante pesada.</pre>
 </div>
 <div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
 <pre></pre>
@@ -12738,14 +12762,8 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div author="David Romero" created="20190909151644037" modified="20190909151706970" tags="[[Vídeo explicativo]] [[Pasar de decimal a binario]]" title="Pasar de decimal a binario - Vídeo explicativo">
 <pre>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/IpxNHH88HRU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</pre>
 </div>
-<div author="David Romero" created="20190922203216055" modified="20191006162618473" tags="[[2. Acceso remoto]]" title="Seguridad en el acceso remoto">
-<pre>Para los administradores de sistemas, ''la seguridad en el acceso remoto es algo fundamental''. Normalmente activamos el acceso a través de una ''red pública'', por lo que nuestra comunicación debe asegurarse todo lo posible.
-
-Una de las opciones ''más seguras es [[SSH|SSH]]'', ya que la comunicación se encripta utilizando una combinación de claves simétricas y asimétricas.
-
-Otra opción evidente, aunque muy costosa, es tener ''una infraestructura de red dedicada'' y privada entre los servidores y los clientes.
-
-Por último, podemos hacer uso de ''una [[VPN|VPN]]'' para crear un túnel de red privada dentro de la red pública, de forma que podamos conectarnos a los servidores desde los clientes ''como si estuviesen'' en la misma red local.</pre>
+<div author="David Romero" created="20190922203216055" modified="20190922203223422" tags="[[2. Acceso remoto]]" title="Seguridad en el acceso remoto">
+<pre></pre>
 </div>
 <div created="20190907221943499" modified="20190908163436416" tags="" title="Tabla de contenidos">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
