@@ -9822,7 +9822,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20191013071227189" modified="20191013071228062" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
 </div>
-<div created="20190922202411851" modified="20191020193444874" title="$:/state/toc/Tabla de contenidos-2. Acceso remoto-115813501">
+<div created="20190922202411851" modified="20191020173320969" title="$:/state/toc/Tabla de contenidos-2. Acceso remoto-115813501">
 <pre>close</pre>
 </div>
 <div created="20190908163613341" modified="20190908163613341" title="$:/state/toc/Tabla de contenidos-2. Sistema binario-115813501">
@@ -9831,7 +9831,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908163147721" modified="20190908163851307" title="$:/state/toc/Tabla de contenidos-3. Protocolos-115813501">
 <pre>open</pre>
 </div>
-<div created="20191011213635377" modified="20191020194739563" title="$:/state/toc/Tabla de contenidos-3. Servicios de transferencia de ficheros-115813501">
+<div created="20191011213635377" modified="20191020173318848" title="$:/state/toc/Tabla de contenidos-3. Servicios de transferencia de ficheros-115813501">
 <pre>close</pre>
 </div>
 <div created="20190907222721080" modified="20190907232909461" title="$:/state/toc/Tabla de contenidos-Protocolos-115813501">
@@ -9855,7 +9855,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908163855771" modified="20190908163855771" title="$:/state/toc/Tabla de contenidos/3. Protocolos/IP-IPv4-115813501">
 <pre>open</pre>
 </div>
-<div created="20191011213916281" modified="20191020194738928" title="$:/state/toc/Tabla de contenidos/3. Servicios de transferencia de ficheros-FTP-115813501">
+<div created="20191011213916281" modified="20191020173317477" title="$:/state/toc/Tabla de contenidos/3. Servicios de transferencia de ficheros-FTP-115813501">
 <pre>close</pre>
 </div>
 <div created="20190907233422949" modified="20190907233422949" title="$:/state/toc/Tabla de contenidos/Protocolos-IP-115813501">
@@ -9870,7 +9870,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20191020193451011" list="[[1. Sobre el contenido]] [[Tabla de contenidos]]" modified="20191020194641777" title="$:/StoryList">
+<div created="20191020102335581" list="[[1. Sobre el contenido]] [[Tabla de contenidos]]" modified="20191020165941655" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191014205806919" modified="20191014205821144" tags="" title="$:/styles/static">
@@ -12710,7 +12710,7 @@ Podemos clasificar el acceso remoto en ''tres métodos'':
 * [[Mediante interfaz gráfica|Acceso remoto mediante interfaz gráfica]].
 * [[Mediante web|Acceso remoto mediante web]].</pre>
 </div>
-<div author="David Romero" created="20190917173520199" modified="20191020194646786" tags="[[Tabla de contenidos]]" title="3. Servicios de transferencia de ficheros">
+<div author="David Romero" created="20190917173520199" modified="20191020164245999" tags="[[Tabla de contenidos]]" title="3. Servicios de transferencia de ficheros">
 <pre>Un servicio de transferencia de ficheros permite ''intercambiar archivos'' entre uno o varios clientes y un servidor. En resumen, un cliente puede ''solicitar'' al servidor ''subir un archivo'' a una carpeta del mismo o ''descargar alguno'' que se encuentre previamente disponible en el dispositivo.
 
 &lt;center&gt;[img[images/esquemaserviciotransferencia.png]]&lt;/center&gt;
@@ -12941,7 +12941,7 @@ Para seguir aprendiendo y practicar, puedes acceder a los siguientes ''recursos'
 <div color="#19f986" created="20190908163742261" modified="20190908163754822" title="Ejercicio interactivo">
 <pre></pre>
 </div>
-<div author="David Romero" created="20191011213548435" modified="20191020194638168" tags="[[3. Servicios de transferencia de ficheros]]" title="FTP">
+<div author="David Romero" created="20191011213548435" modified="20191020173101226" tags="[[3. Servicios de transferencia de ficheros]]" title="FTP">
 <pre>El ''protocolo FTP'' (File Transfer Protocol) es un ejemplo de protocolo para la ''transferencia de ficheros''. Trabaja en la [[capa de Aplicación|https://davidlms.github.io/redeslocales/apuntes.html#TCP/IP - Capa de Aplicación]], ''usando [[TCP|https://davidlms.github.io/redeslocales/apuntes.html#TCP]]'' para el transporte. Concretamente, utiliza ''dos puertos TCP, uno para [[la conexión de control y otro para la conexión de datos|FTP - Conexión de datos y de control]]''. Es un protocolo que funciona ''independientemente del sistema operativo'' utilizado en el cliente y el servidor.
 
 Para utilizarlo, necesitaremos por tanto'' un cliente FTP'' instalado en el cliente y ''un servicio FT''P instalado en el servidor.
@@ -12974,16 +12974,8 @@ El protocolo [[TFTP|TFTP]] deriva del protocolo FTP, ofreciendo una alternativa 
 <div created="20191013120323447" modified="20191013120329209" tags="FTP" title="FTP - Comandos">
 <pre></pre>
 </div>
-<div created="20191013120240581" modified="20191020194724481" tags="FTP" title="FTP - Conexión de datos y de control">
-<pre>El protocolo FTP necesita establecer ''dos conexiones por dos puertos distintos'' del cliente y el servidor para un pleno funcionamiento:
-
-* La ''conexión de control'' es la ''primera'' que se establece. A través de esta conexión (realizada por defecto con el puerto TCP 21 del servidor), el cliente le envía al servidor los distintos [[comandos|FTP - Comandos]] que indican ''sus peticiones''. Esto incluye los necesarios para gestionar la conexión y establecer posteriormente una conexión de datos.
-
-* La ''conexión de datos'' se establece ''únicamente'' cuando el usuario quiere listar un directorio, descargar o subir un fichero... Es decir, cuando es necesario un intercambio de datos. Se establece por defecto con el puerto TCP 20 del servidor. La conexión ''puede iniciarse'' por el servidor ([[conexión activa|FTP - Modos de conexión]]) o por el cliente ([[conexión pasiva|FTP - Modos de conexión]]). Dependiendo del ''tipo de dato'', la transferencia puede realizarse [[en modo texto o en modo binario|FTP - Transferencia en modo texto y binario]].
-
-Puedes entender las distintas conexiones entre cliente y servidor como carreteras distintas, por las que circulan distinto tipos de vehículos (comandos o datos).
-
-&lt;center&gt;[img[images/ftpconexiones.png]]&lt;/center&gt;</pre>
+<div created="20191013120240581" modified="20191013120247216" tags="FTP" title="FTP - Conexión de datos y de control">
+<pre></pre>
 </div>
 <div created="20191013120255269" modified="20191020173104881" tags="FTP" title="FTP - Modos de conexión">
 <pre>El protocolo [[FTP|FTP]] permite realizar las conexiones ''en modo activo o en modo pasivo''. Básicamente, la diferencia radica en que en el modo activo el ''servidor inicia la conexión de datos'' y en el modo pasivo ''el que inicia la conexión de datos es el cliente''. A continuación veremos un poco más en profundidad cómo se realizan. Para comprender bien el funcionamiento, ''es conveniente'' que tengas claro cuál son las funciones de la [[conexión de control y de datos|FTP - Conexión de datos y de control]] en FTP.
