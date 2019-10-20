@@ -221,8 +221,6 @@ Error message and password prompt
 
 <li>$:/state/toc/Tabla de contenidos-3. Servicios de transferencia de ficheros-115813501</li>
 
-<li>$:/state/toc/Tabla de contenidos-4. Servicio web-115813501</li>
-
 <li>$:/state/toc/Tabla de contenidos-Protocolos-115813501</li>
 
 <li>$:/state/toc/Tabla de contenidos-Sistema binario-115813501</li>
@@ -325,12 +323,6 @@ Error message and password prompt
 
 <li>FTPS</li>
 
-<li>Hosting</li>
-
-<li>HTTP</li>
-
-<li>HTTPS</li>
-
 <li>IP</li>
 
 <li>IPv4</li>
@@ -351,19 +343,11 @@ Error message and password prompt
 
 <li>Seguridad en el acceso remoto</li>
 
-<li>Servidores web más utilizados</li>
-
 <li>SFTP</li>
-
-<li>Sitios virtuales</li>
 
 <li>SSH</li>
 
 <li>Tabla de contenidos</li>
-
-<li>Tecnologías Back-end</li>
-
-<li>Tecnologías Front-end</li>
 
 <li>Telnet</li>
 
@@ -9847,11 +9831,8 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908163147721" modified="20190908163851307" title="$:/state/toc/Tabla de contenidos-3. Protocolos-115813501">
 <pre>open</pre>
 </div>
-<div created="20191011213635377" modified="20191020220601400" title="$:/state/toc/Tabla de contenidos-3. Servicios de transferencia de ficheros-115813501">
-<pre>close</pre>
-</div>
-<div created="20191020213653788" modified="20191020213835803" title="$:/state/toc/Tabla de contenidos-4. Servicio web-115813501">
-<pre>close</pre>
+<div created="20191011213635377" modified="20191020210829873" title="$:/state/toc/Tabla de contenidos-3. Servicios de transferencia de ficheros-115813501">
+<pre>open</pre>
 </div>
 <div created="20190907222721080" modified="20190907232909461" title="$:/state/toc/Tabla de contenidos-Protocolos-115813501">
 <pre>open</pre>
@@ -9874,8 +9855,8 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908163855771" modified="20190908163855771" title="$:/state/toc/Tabla de contenidos/3. Protocolos/IP-IPv4-115813501">
 <pre>open</pre>
 </div>
-<div created="20191011213916281" modified="20191020220600254" title="$:/state/toc/Tabla de contenidos/3. Servicios de transferencia de ficheros-FTP-115813501">
-<pre>close</pre>
+<div created="20191011213916281" modified="20191020194802366" title="$:/state/toc/Tabla de contenidos/3. Servicios de transferencia de ficheros-FTP-115813501">
+<pre>open</pre>
 </div>
 <div created="20190907233422949" modified="20190907233422949" title="$:/state/toc/Tabla de contenidos/Protocolos-IP-115813501">
 <pre>open</pre>
@@ -9889,7 +9870,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20191020213421335" list="[[1. Sobre el contenido]] [[Tabla de contenidos]]" modified="20191020220528992" title="$:/StoryList">
+<div created="20191020193451011" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[FTP - Transferencia en modo texto y binario]] [[FTP - Tipos de acceso y limitaciones]] [[Acceso remoto mediante terminal]] [[FTP - Seguridad]]" modified="20191020210848727" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191014205806919" modified="20191014205821144" tags="" title="$:/styles/static">
@@ -13140,20 +13121,8 @@ Como ''alternativas seguras'' a FTP, podemos enumerar:
 
 * [[SFTP|SFTP]], un protocolo totalmente diferente a FTP basado en SSH.</pre>
 </div>
-<div author="David Romero" created="20191013120310185" modified="20191020220213915" tags="FTP" title="FTP - Tipos de acceso y limitaciones">
-<pre>El acceso a un servidor FTP puede ser de dos tipos:
-
-* ''Anónimo''. Es el tipo de acceso que se suele poner cuando queremos que los archivos del servidor FTP estén ''a disposición del público''. Normalmente este tipo de acceso solo tiene permisos de ''lectura'' en el servidor. Si está activo, solamente es necesario poner el usuario ''anonymous'' y dejar la contraseña ''en blanco'' (o el correo electrónico propio si no permite dejarla en blanco) para entrar al servidor.
-
-* ''Usuario''. Los usuarios creados en el sistema del servidor, podrán acceder usando FTP poniendo ''su nombre de usuario y contraseña''. Tendrán los ''mismos permisos'' de lectura y escritura que accediendo por control remoto o presencialmente al servidor. Existe la opción de ''enjaular'' al usuario, esta expresión significa que el usuario solamente podrá acceder a su carpeta personal, y no podrá acceder al resto de directorios y ficheros del sistema. También podemos configurar una ''shell fantasma'' para que el usuario no pueda acceder por SSH o cualquier otro sistema de control remoto y ejecute comandos en el servidor.
-
-La mayoría de servidores FTP permiten establecer ''distintas limitaciones'', como por ejemplo:
-
-* Número máximo de clientes que pueden conectarse simultáneamente.
-
-* Tasa de transferencia limitada por segundo, para usuarios anónimos o locales.
-
-* Máximas conexiones desde una misma dirección IP.</pre>
+<div created="20191013120310185" modified="20191013120317256" tags="FTP" title="FTP - Tipos de acceso y limitaciones">
+<pre></pre>
 </div>
 <div author="David Romero" created="20191013120338257" modified="20191020212823848" tags="FTP" title="FTP - Transferencia en modo texto y binario">
 <pre>En el protocolo FTP encontramos dos tipos de transferencia de datos:
@@ -13163,15 +13132,6 @@ La mayoría de servidores FTP permiten establecer ''distintas limitaciones'', co
 * ''Binario''. Este es el tipo de transferencia apropiado para los archivos que ''no sean de texto plano'': imágenes, vídeos, archivos de procesadores de texto, ejecutables... etc. La transferencia en este caso es ''bit a bit''.</pre>
 </div>
 <div author="David Romero" created="20191011213846093" modified="20191012075727229" tags="FTP" title="FTPS">
-<pre></pre>
-</div>
-<div created="20191020213759051" modified="20191020213804820" tags="[[4. Servicio web]]" title="Hosting">
-<pre></pre>
-</div>
-<div created="20191020213635994" modified="20191020213644044" tags="[[4. Servicio web]]" title="HTTP">
-<pre></pre>
-</div>
-<div created="20191020213645192" modified="20191020213650368" tags="[[4. Servicio web]]" title="HTTPS">
 <pre></pre>
 </div>
 <div created="20190907220239941" modified="20190908163142634" tags="[[3. Protocolos]]" title="IP">
@@ -13313,13 +13273,7 @@ Otra opción evidente, aunque muy costosa, es tener ''una infraestructura de red
 
 Por último, podemos hacer uso de ''una [[VPN|VPN]]'' para crear un túnel de red privada dentro de la red pública, de forma que podamos conectarnos a los servidores desde los clientes ''como si estuviesen'' en la misma red local.</pre>
 </div>
-<div created="20191020213435848" modified="20191020213504466" tags="[[4. Servicio web]]" title="Servidores web más utilizados">
-<pre></pre>
-</div>
 <div author="David Romero" created="20191011213827047" modified="20191011213845121" tags="FTP" title="SFTP">
-<pre></pre>
-</div>
-<div created="20191020213923579" modified="20191020213930155" tags="[[4. Servicio web]]" title="Sitios virtuales">
 <pre></pre>
 </div>
 <div author="David Romero" created="20191006165814357" modified="20191006210507881" tags="[[Acceso remoto mediante terminal]]" title="SSH">
@@ -13367,12 +13321,6 @@ sudo service ssh status
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20191020213623877" modified="20191020213634748" tags="[[4. Servicio web]]" title="Tecnologías Back-end">
-<pre></pre>
-</div>
-<div created="20191020213518873" modified="20191020213622783" tags="[[4. Servicio web]]" title="Tecnologías Front-end">
-<pre></pre>
-</div>
 <div author="David Romero" created="20191006210535644" modified="20191006213103221" tags="[[Acceso remoto mediante terminal]]" title="Telnet">
 <pre>Es uno de los ''primeros protocolos'' de acceso remoto por línea de comandos utilizado. Es ''muy fácil'' de configurar y además es ''compatible'' con la mayoría de los sistemas. Utiliza por defecto el puerto ''23 TCP''.
 
@@ -13390,8 +13338,8 @@ Nos pedirá el usuario y la contraseña. ''Recuerda'' que ambas credenciales se 
 
 </pre>
 </div>
-<div author="David Romero" created="20191011213812800" modified="20191020220541678" tags="FTP" title="TFTP">
-<pre>TFTP es un protocolo ''muy básico'' de transferencia de ficheros. Ni siquiera ofrece la opción de listar los ficheros en un directorio. A diferencia de [[FTP|FTP]], utiliza [[UDP|https://davidlms.github.io/redeslocales/apuntes.html#UDP]] en lugar de [[UDP|https://davidlms.github.io/redeslocales/apuntes.html#TCP]] para la transferencia. Se ''suele utilizar'' para el envío rápido de pequeños archivos a servidores o copias de seguridad que luego se puedan verificar.</pre>
+<div author="David Romero" created="20191011213812800" modified="20191020102424236" tags="FTP" title="TFTP">
+<pre>[[UDP|https://davidlms.github.io/redeslocales/apuntes.html#UDP]]</pre>
 </div>
 <div created="20191012091356959" modified="20191014210726671" title="UDP" type="text/vnd.tiddlywiki">
 <pre>[[Revísalo en los apuntes de Redes Locales|https://davidlms.github.io/redeslocales/apuntes.html#UDP]]
