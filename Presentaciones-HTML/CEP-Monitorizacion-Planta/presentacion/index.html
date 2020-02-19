@@ -287,52 +287,7 @@
             <!-- end .flex-content-->
           </div>
         </section>
-        <!-- Falta después diapositiva código arduino captura de pantalla funcionando
-        con diagrama Arduino-Raspberry,
-        , foto webcam, foto planta tweet-->
-        <section>
-          <!--.wrap = container 1200px -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Código en Arduino</strong></h3>
-                <p class="text-intro">El código se repite por cada sensor. </p>
-                <p>El formato de impresión de elementos está pensado para interactuar con el programa en Python de la Raspberry Pi.</p>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>#include &lt;DHT.h&gt;
-#define DHTTYPE DHT22
-const int DHTPin1 = 2;
-DHT dht1(DHTPin1, DHTTYPE);
-void setup() {
-  Serial.begin(9600);
-  dht1.begin();
-}
-
-void loop() {
-  float h = dht1.readHumidity();
-  float t = dht1.readTemperature();
-  Serial.print("{\"humidity\":");
-  Serial.print(h);
-  Serial.print(",");
-  Serial.print("\"temperature\":");
-  Serial.print(t);
-  Serial.print(",");
-  Serial.print("\"id\":");
-  Serial.print(1);
-  Serial.println("}\n");
-  delay(300000);
-}
-
-</pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
+        
         <section class="fullscreen">
           <div class="card-50">
             <figure>
@@ -346,49 +301,7 @@ void loop() {
             <!-- end .flex-content-->
           </div>
         </section>
-        <section>
-          <!--.wrap = container 1200px -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Código en Raspberry Pi para conectar con Arduino</strong></h3>
-                <p class="text-intro">Leemos el serial y guardamos la información en la base de datos.</p>
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <pre>#!/usr/bin/env python
-
-import serial
-import json
-import MySQLdb
-
-arduino = serial.Serial('/dev/ttyACM0',9600)
-
-while True:
-    character= arduino.readline()
-    MyJson = character
-    db = MySQLdb.connect("localhost","root","password","basededatos")
-    if character != '\n':
-        try:
-            data=json.loads(character)
-            print data
-            print data['humidity']
-            curs = db.cursor()
-            curs.execute("INSERT INTO registro(fecha,id,hum,temp)values(now(),"+str(data['id'])+','+str(data['humidity'])+","+str(data['temperature'])+")")
-            db.commit()
-        except ValueError:
-            print "Error en el registro de la base de datos"
-
-
-arduino.close()
-</pre>
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
+        
         <section>
           <!--.wrap = container 1200px -->
           <div class="wrap">
