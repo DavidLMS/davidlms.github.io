@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-02-16T10:55:03+01:00",
+  "id": "wireguard-ubuntu-server-20",
+  "duration": 7,
+  "title": "WireGuard en Ubuntu Server 20.04",
+  "authors": "Jay Rogers. Adaptación al castellano por David Romero",
+  "summary": "Cómo instalar y configurar WireGuard en Ubuntu Server 20.04",
+  "source": "wireguard.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "ubuntu server"
+  ],
+  "tags": [
+    "ubuntu"
+  ],
+  "feedback": "mailto:hola@davidlms.com",
+  "url": "wireguard-ubuntu-server-20"
+}
