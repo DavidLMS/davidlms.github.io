@@ -25,60 +25,448 @@
                   id="wireguard-ubuntu-server-20"
                   title="WireGuard en Ubuntu Server 20.04"
                   environment="web"
-                  feedback-link="mailto:hola@davidlms.com">
+                  feedback-link="">
     
-      <google-codelab-step label="Overview" duration="1">
-        <h2 class="checklist" is-upgraded>What You&#39;ll Learn</h2>
-<ul>
-<li>how to set the amount of time each slide will take to finish</li>
-<li>how to include code snippets</li>
-<li>how to hyperlink items</li>
-<li>how to include images</li>
-<li>other stuff</li>
-</ul>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Setting Duration" duration="2">
-        <p>To indicate how long each slide will take to go through, set the <code>Duration</code> under each Heading 2 (i.e. <code>##</code>) to an integer. The integers refer to minutes. If you set <code>Duration: 4</code> then a particular slide will take 4 minutes to complete.</p>
-<p>The total time will automatically be calculated for you and will be displayed on the codelab once you create it.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Code Snippets" duration="3">
-        <p>To include code snippets you can do a few things.</p>
-<ul>
-<li>Inline highlighting can be done using the tiny tick mark on your keyboard: &#34;`&#34;</li>
-<li>Embedded code</li>
-</ul>
-<h2 is-upgraded>JavaScript</h2>
-<pre><code language="language-javascript" class="language-javascript">{ 
-  key1: &#34;string&#34;, 
-  key2: integer,
-  key3: &#34;string&#34;
-}
+      <google-codelab-step label="Introducción" duration="1">
+        <p>En esta guía práctica vamos a ver paso a paso cómo podemos configurar una red VPN con WireGuard en un servidor con Ubuntu Server 20.04. También veremos cómo podemos conectar a ese servidor VPN un cliente móvil y otro cliente de escritorio a través de la red pública, de forma que simulen ser teletrabajadores haciendo uso de los recursos de la red privada de la empresa en la que se encuentra el servidor VPN. Concretamente, el esquema propuesto durante esta guía es el siguiente:</p>
+<p class="image-container"><img alt="Diagrama propuesto para la práctica" src="img/6ad7237677399d8e.png"></p>
+<p>Crearemos un túnel VPN de comunicación segura entre cada uno de los clientes y el servidor.</p>
+<p><strong>Nota importante 1</strong>: Para seguir esta guía necesitas que el servidor que vayas a utilizar tenga una IP pública. Como es poco habitual que esto ocurra en un entorno de prácticas, tienes la opción de configurar un reenvío de puerto. Si lo haces en tu casa, configura en tu router que el puerto 51820 sea redirigido al puerto 51820 de la IP local de tu servidor. Si lo haces en un aula, pide a tu instructor que lo haga cuando quieras hacer la prueba de conexión. Si no fuera posible ninguna de las opciones anteriores, quizás puedas alquilar un servidor público para hacer la prueba. Por ejemplo, servicios en la nube como AWS y Azure ofrecen cuentas con créditos gratuitos para estudiantes.</p>
+<p><strong>Nota importante 2</strong>: Durante la guía, todos los parámetros que haya que sustituir se mostrarán entre corchetes. Por ejemplo, si la IP de tu servidor es 192.168.1.100 y en el comando aparece [IP_SERVIDOR]:</p>
+<pre><code>ping [IP_SERVIDOR]
 </code></pre>
-<h2 is-upgraded>Java</h2>
-<pre><code language="language-java" class="language-java">for (statement 1; statement 2; statement 3) {
-  // code block to be executed
-}
+<p>Tendrás que sustituirlo por tu parámetro sin incluir los corchetes. Por ejemplo:</p>
+<pre><code>ping 192.168.1.100
 </code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Hyperlinking and Embedded Images" duration="0">
-        <p><a href="https://www.youtube.com/user/iamhalsey/playlists" target="_blank">Youtube - Halsey Playlists</a></p>
-<h2 is-upgraded>Images</h2>
-<p class="image-container"><img alt="alt-text-here" src="img/21d27a9b84ac8fa.jpg"></p>
+      <google-codelab-step label="Configurar el servidor VPN" duration="10">
+        <h2 is-upgraded>Actualización del servidor</h2>
+<p>Es importante, antes de instalar cualquier paquete en un servidor, actualizar el sistema y los repositorios:</p>
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade
+</code></pre>
+<p>Es posible que la actualización requiera un reinicio del sistema, para comprobarlo, mostramos el contenido del archivo reboot-required:</p>
+<pre><code>cat /var/run/reboot-required
+</code></pre>
+<p>Si aparece <code>*** System restart required ***</code>, es necesario reiniciar. Puedes hacerlo con el comando:</p>
+<pre><code>sudo reboot
+</code></pre>
+<h2 is-upgraded>Instalar SSH para acceder remotamente al servidor (opcional)</h2>
+<p>Es buena idea instalar el servicio SSH, para poder acceder al servidor desde un cliente y configurarlo más cómodamente. Para ello, ejecutamos el comando:</p>
+<pre><code>sudo apt install ssh
+</code></pre>
+<p>Ahora ya podremos conectarnos al servidor desde una terminal de un cliente en la misma red, poniendo el siguiente comando:</p>
+<pre><code>ssh [USUARIO]@[IP_SERVIDOR]
+</code></pre>
+<p>Sustituyendo [USUARIO] por el nombre de usuario del servidor e [IP_SERVIDOR] por la IP del servidor. También puedes utilizar un software como <a href="https://www.putty.org/" target="_blank">Putty</a> para la conexión.</p>
+<p>Si es la primera vez que te conectas, te preguntará si estás seguro de querer continuar, ya que la clave del servidor no se ha establecido como auténtica previamente:</p>
+<pre><code>The authenticity of host &#39;[IP__SERVIDOR] ([IP_SERVIDOR])&#39; can&#39;t be established.
+ECDSA key fingerprint is SHA256:[FINGERPRINT_SERVIDOR].
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre>
+<p>Escribimos <code>yes</code> y nos pedirá la contraseña del usuario del servidor.</p>
+<p>Ya podremos conectarnos cada vez que lo necesitemos.</p>
+<h2 is-upgraded>Instalar el servidor VPN WireGuard</h2>
+<p>La instalación en esta versión es tan sencilla como ejecutar:</p>
+<pre><code>sudo apt install wireguard
+</code></pre>
+<h2 is-upgraded>Generar las claves del servidor</h2>
+<p>El servidor necesita una clave privada y otra pública para funcionar, así que vamos a generarlas.</p>
+<p>Con el siguiente comando, creamos una carpeta en la que guardar las claves (la opción <code>-p</code> indica a <code>mkdir</code> que, si es necesario, cree todas las carpetas de la ruta que no existan):</p>
+<pre><code>sudo mkdir -p /etc/wireguard/keys
+</code></pre>
+<p>Para generar una clave privada para WireGuard, se utiliza el comando:</p>
+<pre><code>wg genkey
+</code></pre>
+<p>Cada vez que lo ejecutes, se generará una diferente. Puedes copiar esa clave o directamente almacenarla en el archivo server.key con el comando:</p>
+<pre><code>wg genkey &gt; /etc/wireguard/keys/server.key
+</code></pre>
+<p>El comando <code>wg pubkey</code> recibe una clave privada por la entrada estándar y genera su clave pública asociada. Si queremos que genere una clave pública de la clave privada server.key que generamos previamente, podemos hacerlo con el comando:</p>
+<pre><code>cat /etc/wireguard/keys/server.key | wg pubkey
+</code></pre>
+<p>Nos mostrará la clave pública por pantalla. En lugar de copiarla manualmente, podemos escribirla directamente en el archivo server.key.pub como hicimos previamente con la clave privada:</p>
+<pre><code>cat /etc/wireguard/keys/server.key | wg pubkey &gt; /etc/wireguard/keys/server.key.pub
+</code></pre>
+<p>Ya están las claves necesarias generadas. Podemos ver nuestra clave privada ejecutando el comando:</p>
+<pre><code>sudo cat /etc/wireguard/keys/server.key
+</code></pre>
+<p>¡Recuerda no compartir nunca tu clave privada!</p>
+<p>También podemos acceder a ver nuestra clave pública ejecutando:</p>
+<pre><code>sudo cat /etc/wireguard/keys/server.key.pub
+</code></pre>
+<h2 is-upgraded>Determinar la interfaz predeterminada</h2>
+<p>Es necesario conocer el nombre de la interfaz que estamos usando para acceder a Internet, ya que tendremos que escribirlo en la configuración. Si no sabes cuál es, el siguiente comando te lo revelará:</p>
+<pre><code>ip -o -4 route show to default | awk &#39;{print $5}&#39;
+</code></pre>
+<p>El nombre que a mí me muestra es <code>ens3</code>. Anota el tuyo.</p>
+<h2 is-upgraded>Configurar la interfaz para WireGuard</h2>
+<p>WireGuard funciona añadiendo una interfaz de red a nuestro servidor, que es la que utilizará el túnel VPN. La llamaremos <code>wg0</code>.</p>
+<p>Creamos el archivo de configuración de la interfaz:</p>
+<pre><code>sudo nano /etc/wireguard/wg0.conf
+</code></pre>
+<p>Con el siguiente contenido:</p>
+<pre><code>[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+PrivateKey = [CLAVE_PRIVADA_SERVIDOR]
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o [NOMBRE_INTERFAZ_INTERNET] -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o [NOMBRE_INTERFAZ_INTERNET] -j MASQUERADE
+SaveConfig = true
+</code></pre>
+<p>Sustituyendo [CLAVE_PRIVADA_SERVIDOR] por la clave privada que generamos anteriormente, guardada en el archivo server.key y [NOMBRE_INTERFAZ_INTERNET] por el nombre de la interfaz anotado en el paso anterior.</p>
+<p>La IP que está escrita en la directiva <code>Address</code> puede ser cualquiera. Será la IP (y máscara de red) que tendrá configurada la interfaz wg0 para la conexión VPN. Los clientes VPN que conectemos posteriormente, deberán tener en la interfaz de túnel VPN que configuremos una IP de la misma red.</p>
+<p>El puerto escrito en la directiva <code>ListenPort</code> será el puerto a través del cual escuchará el servicio de WireGuard en el servidor.</p>
+<p>Por ejemplo, el contenido de mi archivo queda así:</p>
+<pre><code>[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+PrivateKey = SF5GNe5Afq2xHkb/Trq3/tdgfZIrHcDLCk6yojkCi2B=
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o ens3 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o ens3 -j MASQUERADE
+SaveConfig = true
+</code></pre>
+<p>Pulsamos <code>CTRL+X</code> para salir, escribiendo <code>Y</code> y pulsando la tecla <code>ENTER</code> para guardar los cambios.</p>
+<h2 is-upgraded>Establecer los permisos de acceso a la clave privada y a la configuración</h2>
+<p>Debemos asegurarnos que solamente el usuario administrador pueda acceder a la clave privada. Como está escrita en el archivo server.key y en el archivo wg0.conf, les daremos los permisos necesarios para que solo sean accesibles por ese usuario:</p>
+<pre><code>sudo chmod 600 /etc/wireguard/wg0.conf /etc/wireguard/keys/server.key
+</code></pre>
+<h2 is-upgraded>Encender la interfaz de WireGuard</h2>
+<p>Con el siguiente comando levantamos la interfaz <code>wg0</code> recién creada:</p>
+<pre><code>sudo wg-quick up wg0
+</code></pre>
+<p>Tendrás una salida similar a la siguiente:</p>
+<pre><code>[#] ip link add wg0 type wireguard
+[#] wg setconf wg0 /dev/fd/63
+[#] ip -4 address add 10.0.0.1/24 dev wg0
+[#] ip link set mtu 1420 up dev wg0
+[#] iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o ens3 -j MASQUERADE
+</code></pre>
+<p>Podemos comprobar el estado de la interfaz con el siguiente comando:</p>
+<pre><code>sudo wg show wg0
+</code></pre>
+<p>Aparecerá algo similar a lo siguiente:</p>
+<pre><code>interface: wg0
+  public key: LawXXhHpW3l8KhEklkg5WGaEsEVpmxqmazWusk7A9SU=
+  private key: (hidden)
+  listening port: 51820
+</code></pre>
+<h2 is-upgraded>Iniciar la interfaz de WireGuard automáticamente al arrancar</h2>
+<p>Con el siguiente comando configuramos que se inicie la interfaz de WireGuard cada vez que se encienda el servidor:</p>
+<pre><code>sudo systemctl enable wg-quick@wg0
+</code></pre>
+<h2 is-upgraded>Configurando el tráfico de red y el cortafuegos</h2>
+<h3 is-upgraded>Permitir el reenvío de tráfico</h3>
+<p>Para que WireGuard pueda reenviar los paquetes entre interfaces, es necesario activar la opción. Para ello, abrimos el archivo sysctl.conf:</p>
+<pre><code>sudo nano /etc/sysctl.conf
+</code></pre>
+<p>Tenemos que buscar la línea <code>net.ipv4.ip_forward=1</code> y descomentarla, es decir, borrar la almohadilla (#) que tiene delante. Guardamos el archivo y aplicamos los cambios ejecutando:</p>
+<pre><code>sudo sysctl -p
+</code></pre>
+<h3 is-upgraded>Abrir el puerto de WireGuard y activar el cortafuegos (opcional)</h3>
+<p>Si no tienes el cortafuegos por defecto activado en el servidor, no es necesario que realices estos pasos. Sin embargo, es recomendable abrir solamente los puertos que vayan a utilizarse por seguridad.</p>
+<p>Para abrir el puerto de escucha para WireGuard que configuramos, ejecutamos:</p>
+<pre><code>sudo ufw allow 51820/udp
+</code></pre>
+<p>Si estamos accediendo por SSH, que no se nos olvide abrir también el puerto que estemos utilizando, o perderemos la conexión. Por defecto es el puerto 22:</p>
+<pre><code>sudo ufw allow 22/tcp
+</code></pre>
+<p>Una vez aplicadas las reglas, ya podemos activar el cortafuegos:</p>
+<pre><code>sudo ufw enable
+</code></pre>
+<p>Podemos comprobar que está funcionando con las reglas correctas ejecutando el comando:</p>
+<pre><code>sudo ufw status verbose
+</code></pre>
+<p>Recuerda que si en la red local del servidor hay otros cortafuegos en la ruta de acceso a Internet, también tendrás que abrir el puerto de escucha de WireGuard en ellos. De la misma forma, recuerda que en el caso de que el servidor no tenga una IP pública, configurar el reenvío de puerto necesario.</p>
+<h2 is-upgraded>Añadiendo clientes</h2>
+<p>Ya tenemos el servidor preparado para funcionar. Solamente falta añadir los clientes que queramos conectar. Si ya sabes la clave pública de un cliente al que quieres permitir la conexión y la IP que deseas proporcionarle, en el servidor solamente tendrías que ejecutar el siguiente comando:</p>
+<pre><code>sudo wg set wg0 peer [CLAVE_PUBLICA_CLIENTE] allowed-ips [IP_CLIENTE_VPN]
+</code></pre>
+<p>Sustituyendo [CLAVE_PUBLICA_CLIENTE] por la clave pública del cliente y [IP_CLIENTE_VPN] por la IP que deseas proporcionarle en la conexión VPN. Recuerda que debe pertenecer a la misma red que la IP que le pusiste al servidor en la directiva <code>Address</code> de la configuración.</p>
+<p>¿No sabes cuál es la clave pública de tu cliente? No te preocupes, en los siguientes apartados veremos cómo hacer la conexión paso a paso en un cliente móvil (iOS/Android) o en un cliente de escritorio (macOS/Windows/Ubuntu Desktop).</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Other Stuff" duration="1">
-        <p>Checkout the official documentation here: <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">Codelab Formatting Guide</a></p>
+      <google-codelab-step label="Configurar un cliente móvil" duration="7">
+        <h2 is-upgraded>Crear las claves del cliente</h2>
+<p>Al contrario de lo que sucede en un sistema de escritorio como macOS o Windows, en el caso de iOS y Android no se nos suministran las claves del cliente, por lo que tendremos que generarla nosotros mismos en el servidor.</p>
+<p>Las claves de los clientes puedes almacenarlas en cualquier directorio. En nuestro caso, lo haremos en /etc/wireguard/clients. Si no existe previamente, tendremos que crearlo:</p>
+<pre><code>sudo mkdir -p /etc/wireguard/clients
+</code></pre>
+<p>A continuación, generaremos las claves exactamente de la misma forma que hicimos para generar las del servidor. Les pondremos el nombre que queramos (lo ideal es que te sirva para identificar al cliente). En este caso pondremos de nombre mobile.</p>
+<p>Necesitamos acceder al usuario root para realizar cambios en esa carpeta, para eso ejecutamos:</p>
+<pre><code>sudo su
+</code></pre>
+<p>Generamos la clave privada:</p>
+<pre><code>wg genkey &gt; /etc/wireguard/clients/mobile.key
+</code></pre>
+<p>Y la pública:</p>
+<pre><code>cat /etc/wireguard/clients/mobile.key | wg pubkey &gt; /etc/wireguard/clients/mobile.key.pub
+</code></pre>
+<p>Podemos salir del usuario root ejecutando:</p>
+<pre><code>exit
+</code></pre>
+<p>Ya están las claves del cliente generadas. Podemos ver la clave privada del cliente ejecutando el comando:</p>
+<pre><code>sudo cat /etc/wireguard/clients/mobile.key
+</code></pre>
+<p>¡Recuerda no compartir nunca tu clave privada!</p>
+<p>También podemos ver la clave pública del cliente ejecutando:</p>
+<pre><code>sudo cat /etc/wireguard/clients/mobile.key.pub
+</code></pre>
+<p>Anota la clave privada porque será necesaria para el archivo de configuración del cliente.</p>
+<h2 is-upgraded>Crear un archivo de configuración para el cliente</h2>
+<p>Crearemos el archivo mobile.conf:</p>
+<pre><code>sudo nano /etc/wireguard/clients/mobile.conf
+</code></pre>
+<p>Y le ponemos el siguiente contenido:</p>
+<pre><code>[Interface]
+PrivateKey = [CLAVE_PRIVADA_CLIENTE]
+Address = [IP_VPN_CLIENTE]/24
+DNS = 1.1.1.1, 1.0.0.1
+
+[Peer]
+PublicKey = [CLAVE_PÚBLICA_SERVIDOR]
+AllowedIPs = 0.0.0.0/0
+Endpoint = [IP_PÚBLICA_SERVIDOR]:51820
+</code></pre>
+<p>Sustituyendo [CLAVE_PRIVADA_CLIENTE] por la clave privada del cliente que hemos generado en el paso anterior y almacenado en mobile.key, [IP_VPN_CLIENTE] por la IP que le queramos poner al cliente en la red VPN, [CLAVE_PÚBLICA_SERVIDOR] por la clave pública del servidor que guardamos en server.key.pub y [IP_PÚBLICA_SERVIDOR] por la IP pública del servidor en la WAN.</p>
+<p>Por ejemplo, mi archivo queda así:</p>
+<pre><code>[Interface]
+PrivateKey = qNHXjj5J8t4mVzi0GLsTosAGA8j4wjAIdQQ1W/Zna2a=
+Address = 10.0.0.2/24
+DNS = 1.1.1.1, 1.0.0.1
+
+[Peer]
+PublicKey = LawXXhHpW3l8KhEklkg5WGaEsEVpmxqmazWusk7A9SU=
+AllowedIPs = 0.0.0.0/0
+Endpoint = 83.59.218.164:51820
+</code></pre>
+<p>Ten en cuenta que puedes cambiar los servidores DNS por los que quieras que use el cliente. También puedes añadir más seguridad permitiendo solamente a determinadas IPs que puedan conectarse al servidor con esta configuración en la directiva <code>AllowedIPs</code>. En este caso he dejado que cualquier IP pueda hacerlo.</p>
+<h2 is-upgraded>Permitir el acceso al cliente en el servidor</h2>
+<p>Ahora que ya tienes clara la clave pública y la IP que se le va a asignar al cliente, puedes ejecutar el comando que vimos en el apartado <a href="#añadiendo-clientes" target="_blank">Añadiendo clientes</a> para permitir la conexión al servidor:</p>
+<pre><code>sudo wg set wg0 peer [CLAVE_PUBLICA_CLIENTE] allowed-ips [IP_CLIENTE_VPN]
+</code></pre>
+<p>Sustituyendo [CLAVE_PUBLICA_CLIENTE] por la clave pública del cliente (archivo mobile.key.pub) y [IP_CLIENTE_VPN] por la IP que deseas proporcionarle en la conexión VPN.</p>
+<p>En mi caso quedaría así:</p>
+<pre><code>sudo wg set wg0 peer qtAufkgUm3kmISt3ZpV4kg7Jie9PGRlug/WoBl/TsG7= allowed-ips 10.0.0.2
+</code></pre>
+<h2 is-upgraded>Generar un código QR con la configuración</h2>
+<p>Sería suficiente con pasar el archivo mobile.conf a la app WireGuard del cliente, pero es más sencillo generar un QR con el contenido del archivo para no tener que pasarlo manualmente al móvil.</p>
+<p>Para ello necesitaremos instalar el siguiente paquete:</p>
+<pre><code>sudo apt install qrencode
+</code></pre>
+<p>Tenemos que acceder al usuario root de nuevo para realizar el QR del archivo, para eso ejecutamos:</p>
+<pre><code>sudo su
+</code></pre>
+<p>Y con el siguiente comando generamos el código QR del archivo mobile.conf:</p>
+<pre><code>qrencode -t ansiutf8 &lt; /etc/wireguard/clients/mobile.conf
+</code></pre>
+<p>Ahora ya podremos coger el móvil con el que queramos conectarnos al servidor.</p>
+<h2 is-upgraded>Instalar la app cliente de WireGuard</h2>
+<p>La app de WireGuard está disponible tanto en la <a href="https://play.google.com/store/apps/details?id=com.wireguard.android&hl=es&gl=US" target="_blank">Play Store</a> para Android, como en la <a href="https://apps.apple.com/es/app/wireguard/id1441195209" target="_blank">App Store</a> para iOS (y iPadOS). Así que solamente tienes que buscarla o pulsar en los enlaces y descargarla.</p>
+<h2 is-upgraded>Configurar el cliente VPN en iOS</h2>
+<p>Primero abrimos la app <strong>WireGuard</strong>.</p>
+<p class="image-container"><img alt="Captura de la app WireGuard en la App Store" src="img/fbabcecf5c8b23ca.jpg"></p>
+<p>Pulsamos en <strong>Agregar un túnel</strong>.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard" src="img/1220839ef01bd3d5.jpg"></p>
+<p>A continuación elegimos <strong>Crear desde código QR</strong>.</p>
+<p class="image-container"><img alt="Captura de la pantalla agregando un túnel de la app WireGuard" src="img/cd5c66ed3fb25189.jpg"></p>
+<p><strong>Escaneamos el código QR</strong> con la cámara y le ponemos <strong>un nombre cualquiera</strong> al túnel.</p>
+<p class="image-container"><img alt="Captura de la pantalla escaneando un código QR de la app WireGuard" src="img/4858216bee8dd036.jpg"></p>
+<p>El sistema nos pedirá <strong>permiso</strong> para añadir y activar la configuración VPN.</p>
+<p class="image-container"><img alt="Captura de la pantalla solicitando permisos en la app WireGuard" src="img/97facbc9b1244aa0.jpg"></p>
+<p>Por último, <strong>activamos la configuración añadida</strong> y veremos como aparece la palabra VPN en la información susperior del sistema, indicando que estamos conectados a Internet a través del servidor configurado.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard con el túnel activado" src="img/f54dfa6d398ff094.jpg"></p>
+<p>Puedes ver cómo comprobar que estamos conectados correctamente a la red local del servidor en el apartado <a href="#4" target="_blank">Probando la conexión del cliente</a>.</p>
+<h2 is-upgraded>Configurar el cliente VPN en Android</h2>
+<p>Primero abrimos la app <strong>WireGuard</strong>.</p>
+<p class="image-container"><img alt="Captura de la app WireGuard en la Play Store" src="img/1f33238ba3d67748.png"></p>
+<p>Pulsamos en el <strong>icono +</strong> en azul para añadir una nueva configuración de túnel.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard en Android" src="img/d84e5681c9f8a814.png"></p>
+<p>Elegimos la opción <strong>Escanear desde código QR</strong>.</p>
+<p class="image-container"><img alt="Captura de la pantalla agregando un túnel de la app WireGuard" src="img/34464eccf453bf65.png"></p>
+<p>Damos los <strong>permisos necesarios</strong> a la app para acceder a la cámara.</p>
+<p class="image-container"><img alt="Captura de los permisos para acceder a la cámara en la app WireGuard" src="img/bff52d8575164b03.png"></p>
+<p><strong>Escaneamos el código QR</strong> y le ponemos <strong>un nombre cualquiera</strong> a la configuración del túnel.</p>
+<p class="image-container"><img alt="Captura de la pantalla agregando un túnel de la app WireGuard" src="img/313b31495dd730b7.png"></p>
+<p><strong>Pulsamos en el slider</strong> para activar la configuración VPN que acabamos de añadir y <strong>aceptamos la solicitud de conexión</strong> del sistema Android.</p>
+<p class="image-container"><img alt="Captura de la solicitud de conexión en la app WireGuard" src="img/f9c62a8fbb54c99b.png"></p>
+<p><strong>El túnel estará activado</strong> y en la parte superior aparecerá el icono de una llave para indicarlo.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard con el túnel activado" src="img/7696f3b4ae41fee6.png"></p>
+<p>Puedes ver cómo comprobar que estamos conectados correctamente a la red local del servidor en el apartado <a href="#4" target="_blank">Probando la conexión del cliente</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configurar un cliente de escritorio" duration="1">
+        <h2 is-upgraded>macOS Catalina</h2>
+<p>Primero accedemos a la <strong>App Store</strong> y descargamos la aplicación <strong>Wireguard</strong>.</p>
+<p class="image-container"><img alt="Captura de la app WireGuard en la App Store" src="img/96de48af96591314.png"></p>
+<p>Una vez instalada, la abrimos y pulsamos en el <strong>icono +</strong> para elegir <strong>Add Empty Tunnel...</strong> Nos permitirá configurar un nuevo túnel VPN.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard creando un nuevo túnel" src="img/50be1c06ec2de7bf.png"></p>
+<p>Nos generará automáticamente <strong>la clave pública y la clave privada del cliente</strong>. Apunta la clave pública porque te hará falta en el último paso para permitir el acceso de este cliente en el servidor. Le ponemos <strong>el nombre que queramos</strong>. También podemos marcar que la VPN se active automáticamente cuando estemos conectados mediante Ethernet, Wi-Fi o ambos.</p>
+<p class="image-container"><img alt="Captura de la pantalla añadiendo un nuevo túnel en la app WireGuard" src="img/18734dec80540c23.png"></p>
+<p>Dentro del apartado <code>Interface</code> añadimos la directiva <code>Address</code> con la IP que queremos asignar al cliente (10.0.0.3⁄24 en nuestro esquema) y la directiva DNS, en la que indicaremos los servidores DNS que queremos utilizar cuando tengamos el túnel activado.</p>
+<p>Escribimos un nuevo apartado <code>Peer</code> en el que indicaremos tres directivas:</p>
+<ul>
+<li><code>PublicKey</code>, la clave pública del servidor.</li>
+<li><code>AllowedIPs</code>, IPs permitidas para el servidor, podemos dejar 0.0.0.0/0 para indicar que cualquiera tendrá acceso.</li>
+<li><code>Endpoint</code>, donde indicamos la IP pública del servidor y el puerto.</li>
+</ul>
+<p>En mi caso, el texto queda así:</p>
+<pre><code>[Interface]
+PrivateKey = wEyjkOyB0LsPLYdoOL6u7X8OXxXsK1Om0FKwt5d3Clk=
+Address = 10.0.0.3/24
+DNS = 1.1.1.1, 1.0.0.1
+
+[Peer]
+PublicKey = LawXXhHpW3l8KhEklkg5WGaEsEVpmxqmazWusk7A9SU=
+AllowedIPs = 0.0.0.0/0
+Endpoint = 83.59.218.164:51820
+</code></pre>
+<p class="image-container"><img alt="Captura de la pantalla añadiendo un nuevo túnel con la configuración apropiada en la app WireGuard" src="img/af0c86511c8e6717.png"></p>
+<p>Pulsamos en  <strong>Guardar</strong> y el sistema nos pedirá permiso para añadir la configuración VPN. Le damos a <strong>Permitir</strong>.</p>
+<p class="image-container"><img alt="Captura de la ventana del sistema solicitando que el usuario permita a WireGuard añadir una configuración VPN" src="img/b99ac3515f57bd48.png"></p>
+<p>Ya podremos <strong>activar el túnel</strong>, se marcará con un círculo verde cuando esté activo.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard con el túnel activado" src="img/49402f578d0d4427.png"></p>
+<p>En la barra superior del sistema también aparecerá el icono de WireGuard, y podrás <strong>activar y desactivar</strong> el túnel VPN desde ahí.</p>
+<p class="image-container"><img alt="Captura de la app WireGuard en la barra superior del sistema, permitiendo desactivar y activar el túnel" src="img/33a2078e226c21ca.png"></p>
+<p>Sin embargo, la conexión no funcionará <strong>hasta que no agreguemos el cliente en el servidor</strong>. Para ello, ejecutamos <strong>el siguiente comando en el servidor</strong>:</p>
+<pre><code>sudo wg set wg0 peer [CLAVE_PÚBLICA_CLIENTE] allowed-ips [IP_CLIENTE]
+</code></pre>
+<p>En mi caso sería:</p>
+<pre><code>sudo wg set wg0 peer 7W3cv39FVp26xcxdPz4FuSvCPzovONkolTErJvMEQCY= allowed-ips 10.0.0.3
+</code></pre>
+<p>Puedes ver cómo comprobar que estamos conectados correctamente a la red local del servidor en el apartado <a href="#4" target="_blank">Probando la conexión del cliente</a>.</p>
+<h2 is-upgraded>Windows 10</h2>
+<p>Primero descargamos <strong>el instalador de WireGuard</strong> de la página <a href="https://www.wireguard.com/install/" target="_blank">https://www.wireguard.com/install/</a> y <strong>lo ejecutamos</strong> para instalar la aplicación.</p>
+<p class="image-container"><img alt="Captura de la página web de descarga de WireGuard para Windows" src="img/c9efff42cf08a73e.png"></p>
+<p>Se nos abrirá al concluir la instalación y pulsamos en el botón <strong>Add Tunnel</strong>.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard" src="img/18143f8099330a55.png"></p>
+<p>Elegimos la opción <strong>Add empty tunnel...</strong></p>
+<p class="image-container"><img alt="Captura seleccionando la opción de añadir un nuevo túnel en WireGuard" src="img/8c5da10d914a93b1.png"></p>
+<p>Nos generará automáticamente <strong>la clave pública y la clave privada del cliente</strong>. Apunta la clave pública porque te hará falta en el último paso para permitir el acceso de este cliente en el servidor. Le ponemos <strong>el nombre que queramos</strong>.</p>
+<p class="image-container"><img alt="Captura creando un nuevo túnel en WireGuard" src="img/ffded18beac18073.png"></p>
+<p>Dentro del apartado Interface añadimos la directiva <code>Address</code> con la IP que queremos asignar al cliente (10.0.0.3⁄24 en nuestro esquema) y la directiva DNS, en la que indicaremos los servidores DNS que queremos utilizar cuando tengamos el túnel activado.</p>
+<p>Escribimos un nuevo apartado <code>Peer</code> en el que indicaremos tres directivas:</p>
+<ul>
+<li><code>PublicKey</code>, la clave pública del servidor.</li>
+<li><code>AllowedIPs</code>, IPs permitidas para el servidor, podemos dejar 0.0.0.0/0 para indicar que cualquiera tendrá acceso.</li>
+<li><code>Endpoint</code>, donde indicamos la IP pública del servidor y el puerto.</li>
+</ul>
+<p>En mi caso, el texto queda así:</p>
+<pre><code>[Interface]
+PrivateKey = AEG4c7jJ2L3+IcjsUT9jfjkkGXuJD4vl+As/vAHUz3g=
+Address = 10.0.0.3/24
+DNS = 1.1.1.1, 1.0.0.1
+
+[Peer]
+PublicKey = LawXXhHpW3l8KhEklkg5WGaEsEVpmxqmazWusk7A9SU=
+AllowedIPs = 0.0.0.0/0
+Endpoint = 83.59.218.164:51820
+</code></pre>
+<p class="image-container"><img alt="Captura creando un nuevo túnel en WireGuard con la configuración adecuada" src="img/1cbc4b201b2e5464.png"></p>
+<p>Pulsamos en <strong>Save</strong> y el túnel estará creado sin activar.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard con el túnel desactivado" src="img/7680cf9c4477ae43.png"></p>
+<p>Si le damos a <strong>Activate</strong>, se activará mostrando un icono verde.</p>
+<p class="image-container"><img alt="Captura de la pantalla principal de la app WireGuard con el túnel activado" src="img/66c339e747b77b4e.png"></p>
+<p>En la barra de herramientas inferior también aparecerá el icono de WireGuard, y podrás <strong>activar y desactivar</strong> el túnel VPN desde ahí.</p>
+<p class="image-container"><img alt="Captura de las opciones de WireGuard en la barra de herramientas" src="img/e70f88855ba0b728.png"></p>
+<p>Sin embargo, la conexión no funcionará <strong>hasta que no agreguemos el cliente en el servidor</strong>. Para ello, <strong>ejecutamos el siguiente comando en el servidor</strong>:</p>
+<pre><code>sudo wg set wg0 peer [CLAVE_PÚBLICA_CLIENTE] allowed-ips [IP_CLIENTE]
+</code></pre>
+<p>En mi caso sería:</p>
+<pre><code>sudo wg set wg0 peer 9XhACgL8ZPqKYJuCsKyFEt2nxT3NYki+glRZmMoFiyE= allowed-ips 10.0.0.3
+</code></pre>
+<p>Puedes ver cómo comprobar que estamos conectados correctamente a la red local del servidor en el apartado <a href="#4" target="_blank">Probando la conexión del cliente</a>.</p>
+<h2 is-upgraded>Ubuntu Desktop 20.04</h2>
+<p>El procedimiento de instalación y configuración del cliente en Ubuntu Desktop es bastante similar al servidor. Tendremos que hacerlo desde una <strong>Terminal</strong>.</p>
+<p>Primero <strong>actualizamos el repositorio de paquetes</strong> ejecutando:</p>
+<pre><code>sudo apt-get update
+</code></pre>
+<p>Luego <strong>instalamos el paquete wireguard</strong> ejecutando:</p>
+<pre><code>sudo apt-get install wireguard
+</code></pre>
+<p>A continuación, entramos en el usuario root para evitar problemas de permisos:</p>
+<pre><code>sudo su
+</code></pre>
+<p>Creamos la carpeta para almacenar las claves, cambiamos los permisos por defecto de los archivos con umask para mayor seguridad y generamos la clave pública y privada. Tal y como hicimos en el servidor:</p>
+<pre><code>mkdir -p /etc/wireguard/keys
+umask 077
+wg genkey &gt; /etc/wireguard/keys/client.key
+cat /etc/wireguard/keys/client.key | wg pubkey &gt; /etc/wireguard/keys/client.key.pub
+</code></pre>
+<p>Ejecutando los siguientes comandos, <strong>podrás ver la clave privada y la clave pública generadas</strong>. Anótalas:</p>
+<pre><code>cat /etc/wireguard/keys/client.key
+cat /etc/wireguard/keys/client.key.pub
+</code></pre>
+<p>Ya podremos salir de la sesión del usuario root:</p>
+<pre><code>exit
+</code></pre>
+<p>Ahora <strong>creamos y editamos el archivo /etc/wireguard/wg0.conf</strong> para configurar la interfaz:</p>
+<pre><code>sudo nano /etc/wireguard/wg0.conf
+</code></pre>
+<p>Lo rellenamos con el siguiente contenido:</p>
+<pre><code>[Interface]
+PrivateKey = [CLAVE_PRIVADA_CLIENTE]
+Address = 10.0.0.3/24
+
+[Peer]
+PublicKey = [CLAVE_PUBLICA_SERVIDOR]
+AllowedIPs = 0.0.0.0/0
+Endpoint = [IP_PÚBLICA_SERVIDOR]:51820
+</code></pre>
+<p>Sustituyendo [CLAVE_PRIVADA_CLIENTE] por la clave privada que hemos generado en el archivo client.key, [CLAVE_PUBLICA_SERVIDOR] por la clave pública del servidor (almacenada en el archivo server.key.pub del mismo) y [IP_PÚBLICA_SERVIDOR] por la IP pública del servidor.</p>
+<p>En mi caso, quedaría así:</p>
+<pre><code>[Interface]
+PrivateKey = MGRnwmF3xUSeQ4RjFf2GGrvtlkJ5AHu5uPrI2P++WXY=
+Address = 10.0.0.3/24
+
+[Peer]
+PublicKey = LawXXhHpW3l8KhEklkg5WGaEsEVpmxqmazWusk7A9SU=
+AllowedIPs = 0.0.0.0/0
+Endpoint = 83.59.218.164:51820
+</code></pre>
+<p>A continuación, podemos habilitar la interfaz para que se inicie <strong>cada vez que arranque el sistema</strong>:</p>
+<pre><code>sudo systemctl enable wg-quick@wg0.service
+</code></pre>
+<p>Si queremos levantarla sin reiniciar, <strong>podemos hacerlo manualmente</strong> con el comando:</p>
+<pre><code>sudo systemctl start wg-quick@wg0.service
+</code></pre>
+<p>Podemos <strong>comprobar que está activo el túnel</strong> con el comando:</p>
+<pre><code>sudo wg
+</code></pre>
+<p>Sin embargo, la conexión no funcionará <strong>hasta que no agreguemos el cliente en el servidor</strong>. Para ello, <strong>ejecutamos el siguiente comando en el servidor</strong>:</p>
+<pre><code>sudo wg set wg0 peer [CLAVE_PÚBLICA_CLIENTE] allowed-ips [IP_CLIENTE]
+</code></pre>
+<p>En mi caso sería:</p>
+<pre><code>sudo wg set wg0 peer va0V/c+CwCNLfSUHMNGQi3Vqj6ZGjhj+h116YRabc08= allowed-ips 10.0.0.3
+</code></pre>
+<p>Puedes ver cómo comprobar que estamos conectados correctamente a la red local del servidor en el apartado <a href="#4" target="_blank">Probando la conexión del cliente</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Probando la conexión" duration="1">
+        <p>Podemos comprobar la conexión de varias formas. En el servidor, una vez establecida la conexión con un cliente, al ejecutar el comando:</p>
+<pre><code>sudo wg
+</code></pre>
+<p>Dentro del apartado <strong>peer</strong> con la clave pública del cliente que estemos comprobando, veremos la línea <strong>latest handshake</strong> indicando el tiempo que hace desde que se completó la conexión con éxito.</p>
+<p>En el cliente también podemos comprobar la conexión simplemente haciendo ping a la IP del servidor dentro del túnel VPN. En nuestro ejemplo:</p>
+<pre><code>ping 10.0.0.1
+</code></pre>
+<p>Ten en cuenta que este túnel permite que el cliente acceda a Internet a través del servidor, por lo que si miramos nuestra IP pública en páginas como <a href="https://www.cualesmiip.com" target="_blank">www.cualesmiip.com</a>, veremos que cuando tenemos la conexión VPN activada coincide con la IP pública del servidor.</p>
+<p>Y otra consecuencia importante es que el cliente pasa a estar virtualmente en la misma red local que el servidor. Eso significa que puede acceder a cualquier otro servidor local. Si en la red del servidor tienes otro equipo con una web por ejemplo, podrías acceder a la misma usando un navegador en el cliente y su IP privada. Si en cualquiera de esos servidores hay instalado un servicio SSH, podrías acceder a controlarlos con un cliente SSH usando sus IPs privadas y sin necesidad de que tengan puertos expuestos en la red pública. Incluso podrías configurar el router que proporciona Internet al servidor VPN poniendo su IP privada en un navegador del cliente, mientras esté accesible desde cualquier IP de la red local.</p>
+<p>En resumen, a nivel práctico es como si tuvieras el cliente conectado directamente a la misma red local que el servidor, pero sin estar físicamente en la misma.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Créditos" duration="1">
+        <p>El guión de esta práctica está basado en el curso realizado por <strong>Jay Rogers</strong> en la web de <strong>ServerSide UP</strong>: <a href="https://serversideup.net/courses/gain-flexibility-and-increase-privacy-with-wireguard-vpn/" target="_blank">https://serversideup.net/courses/gain-flexibility-and-increase-privacy-with-wireguard-vpn/</a></p>
+<p>Esta traducción parcial y adaptación ha sido realizada con su permiso expreso sin ánimo de lucro por <a href="https://davidlms.com/" target="_blank">David Romero</a>.</p>
 
 
       </google-codelab-step>
