@@ -62,7 +62,7 @@ summary:focus::after {
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 0 0 5px rgb(51, 66, 153);
+  box-shadow: 0 0 0 5px rgb(63, 153, 51);
 }
 
 summary::-webkit-details-marker {
@@ -70,7 +70,7 @@ summary::-webkit-details-marker {
 }
 
 .control-icon {
-  fill: rgb(53, 51, 153);
+  fill: rgb(80, 153, 51);
   transition: .3s ease;
   pointer-events: none;
 }
