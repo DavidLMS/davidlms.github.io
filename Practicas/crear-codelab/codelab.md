@@ -11,10 +11,11 @@ feedback link: https://github.com/DavidLMS/davidlms.github.io/issues/new?title=E
 ## CodeLab Overview
 Duration: 0:02:00
 
-Are you trying to create easy to use, visually appealing content for the tech community? This CodeLab will show you how to quickly create your own Google CodeLab just like the one you're using right now. 
-When creating a Codelab you have two authoring options: 
-1. Using a Google Doc
-1. Using a markdown file
+¿Quieres crear un contenido similar a este? En este CodeLab aprenderás cómo crear el tuyo en muy poco tiempo.
+
+A la hora de crear un Codelab tenemos dos opciones:
+1. Usar un Documento de Google
+2. Usar un fichero Markdown
 
 In this codelab we are going to use the second option and author our codelab using a markdown file. This gives us the flexibility of using our markdown file for other things and also storing it in our github repo with any code that might be used for a tutorial. 
 
