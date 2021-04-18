@@ -4,7 +4,7 @@ categories: Ubuntu Server
 tags: ubuntu
 status: Published
 authors: [Jay Rogers](https://serversideup.net/courses/gain-flexibility-and-increase-privacy-with-wireguard-vpn/). Adaptación al castellano por [David Romero](https://davidlms.com)
-feedback link: mailto:hola@davidlms.com
+feedback link: https://github.com/DavidLMS/davidlms.github.io/issues/new?title=Error+en+gu%C3%ADa+Wireguard+en+Ubuntu+Server
 
 # WireGuard en Ubuntu Server 20.04
 ## Introducción
