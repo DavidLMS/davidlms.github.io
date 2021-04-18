@@ -25,9 +25,9 @@
                   id="wireguard-ubuntu-server-20"
                   title="WireGuard en Ubuntu Server 20.04"
                   environment="web"
-                  feedback-link="https://github.com/DavidLMS/davidlms.github.io/issues/new?title=Error+en+gu%c3%ada+Wireguard+en+Ubuntu+Server">
+                  feedback-link="">
     
-      <google-codelab-step label="Introducción" duration="1">
+      <google-codelab-step label="Introducción" duration="2">
         <p>En esta guía práctica vamos a ver paso a paso cómo podemos configurar una red VPN con WireGuard en un servidor con Ubuntu Server 20.04. También veremos cómo podemos conectar a ese servidor VPN un cliente móvil y otro cliente de escritorio a través de la red pública, de forma que simulen ser teletrabajadores haciendo uso de los recursos de la red privada de la empresa en la que se encuentra el servidor VPN. Concretamente, el esquema propuesto durante esta guía es el siguiente:</p>
 <p class="image-container"><img alt="Diagrama propuesto para la práctica" src="img/6ad7237677399d8e.png"></p>
 <p>Crearemos un túnel VPN de comunicación segura entre cada uno de los clientes y el servidor.</p>
@@ -42,7 +42,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Configurar el servidor VPN" duration="10">
+      <google-codelab-step label="Configurar el servidor VPN" duration="25">
         <h2 is-upgraded>Actualización del servidor</h2>
 <p>Es importante, antes de instalar cualquier paquete en un servidor, actualizar el sistema y los repositorios:</p>
 <pre><code>sudo apt update &amp;&amp; sudo apt upgrade
@@ -80,7 +80,11 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 <p>Para generar una clave privada para WireGuard, se utiliza el comando:</p>
 <pre><code>wg genkey
 </code></pre>
-<p>Cada vez que lo ejecutes, se generará una diferente. Puedes copiar esa clave o directamente almacenarla en el archivo server.key con el comando:</p>
+<p>Cada vez que lo ejecutes, se generará una diferente. Puedes copiar esa clave o directamente almacenarla en un archivo.</p>
+<p>Necesitamos acceder al usuario root para almacenar la clave en la carpeta que hemos creado, para eso ejecutamos:</p>
+<pre><code>sudo su
+</code></pre>
+<p>Almacenamos la clave en el archivo server.key con el comando:</p>
 <pre><code>wg genkey &gt; /etc/wireguard/keys/server.key
 </code></pre>
 <p>El comando <code>wg pubkey</code> recibe una clave privada por la entrada estándar y genera su clave pública asociada. Si queremos que genere una clave pública de la clave privada server.key que generamos previamente, podemos hacerlo con el comando:</p>
@@ -88,6 +92,9 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 </code></pre>
 <p>Nos mostrará la clave pública por pantalla. En lugar de copiarla manualmente, podemos escribirla directamente en el archivo server.key.pub como hicimos previamente con la clave privada:</p>
 <pre><code>cat /etc/wireguard/keys/server.key | wg pubkey &gt; /etc/wireguard/keys/server.key.pub
+</code></pre>
+<p>Ya no es necesario seguir usando el usuario root, por lo que volvemos al nuestro ejecutando:</p>
+<pre><code>exit
 </code></pre>
 <p>Ya están las claves necesarias generadas. Podemos ver nuestra clave privada ejecutando el comando:</p>
 <pre><code>sudo cat /etc/wireguard/keys/server.key
@@ -189,7 +196,7 @@ SaveConfig = true
 
       </google-codelab-step>
     
-      <google-codelab-step label="Configurar un cliente móvil" duration="7">
+      <google-codelab-step label="Configurar un cliente móvil" duration="20">
         <h2 is-upgraded>Crear las claves del cliente</h2>
 <p>Al contrario de lo que sucede en un sistema de escritorio como macOS o Windows, en el caso de iOS y Android no se nos suministran las claves del cliente, por lo que tendremos que generarla nosotros mismos en el servidor.</p>
 <p>Las claves de los clientes puedes almacenarlas en cualquier directorio. En nuestro caso, lo haremos en /etc/wireguard/clients. Si no existe previamente, tendremos que crearlo:</p>
@@ -300,7 +307,7 @@ Endpoint = 83.59.218.164:51820
 
       </google-codelab-step>
     
-      <google-codelab-step label="Configurar un cliente de escritorio" duration="1">
+      <google-codelab-step label="Configurar un cliente de escritorio" duration="10">
         <h2 is-upgraded>macOS Catalina</h2>
 <p>Primero accedemos a la <strong>App Store</strong> y descargamos la aplicación <strong>Wireguard</strong>.</p>
 <p class="image-container"><img alt="Captura de la app WireGuard en la App Store" src="img/96de48af96591314.png"></p>
@@ -449,7 +456,7 @@ Endpoint = 83.59.218.164:51820
 
       </google-codelab-step>
     
-      <google-codelab-step label="Probando la conexión" duration="1">
+      <google-codelab-step label="Probando la conexión" duration="2">
         <p>Podemos comprobar la conexión de varias formas. En el servidor, una vez establecida la conexión con un cliente, al ejecutar el comando:</p>
 <pre><code>sudo wg
 </code></pre>
@@ -476,7 +483,7 @@ Endpoint = 83.59.218.164:51820
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://davidlms.github.io/Practicas/SERRED/wireguard-ubuntu-server-20/js/codelab-elements.js"></script>
+  <script src="https://davidlms.github.io/Practicas/SERRED/wireguard-ubuntu-server-20/js/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

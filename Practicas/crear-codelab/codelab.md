@@ -4,7 +4,7 @@ id: es-codelab-markdown
 categories: codelab,markdown
 environments: Web
 status: Published
-feedback link: https://github.com/DavidLMS/davidlms.github.io/issues/new?title=Error+en+gu%c3%ada+Crear+un+Codelab
+feedback link: mailto:hola@davidlms.com
 
 # Crear un CodeLab
 
@@ -13,22 +13,17 @@ Duration: 0:02:00
 
 ¿Quieres crear un contenido similar a este? En este CodeLab aprenderás cómo crear el tuyo en muy poco tiempo.
 
-A la hora de crear un Codelab tenemos dos opciones:
+A la hora de crear un CodeLab tenemos dos opciones:
 1. Usar un Documento de Google
 2. Usar un fichero Markdown
 
-In this codelab we are going to use the second option and author our codelab using a markdown file. This gives us the flexibility of using our markdown file for other things and also storing it in our github repo with any code that might be used for a tutorial. 
+En este CodeLab vamos a explorar la segunda opción y crear el nuestro usando un fichero Markdown. Esto nos garantiza la flexibilidad de reutilizar el archivo en otras ocasiones y la posibilidad de almacenarlo en nuestro repositorio de Git con cualquier otro código que pudiese ser útil en un tutorial.
 
-Here is an example image of another CodeLab that I created:
-![image_caption](img/codelabexample.png)
-
-
-**Resources:** 
-* This codelab's original home is located here: [Link to Codelab](https://www.marcd.dev/codelab-4-codelab)
-* The markdown for the original codelab is located here: [codelab.md](https://github.com/Mrc0113/codelab-4-codelab/blob/master/codelab.md)
-* [Google CodeLabs Tools Github](https://github.com/googlecodelabs/tools) - The repo that contains the claat tool we'll be using today
+**Créditos y Recursos:** 
+* Este CodeLab es una adaptación del original de Marc DiPasquale que puedes encontrar aquí: [Enlace al CodeLab](https://www.marcd.dev/codelab-4-codelab)
+* El archivo Markdown del original de Marc DiPasquale está accesible aquí: [codelab.md](https://github.com/Mrc0113/codelab-4-codelab/blob/master/codelab.md)
+* [Google CodeLabs Tools Github](https://github.com/googlecodelabs/tools) - El repositorio que contiene la herramienta claat que vamos a utilizar
 * [Google Group for CodeLab Authors](https://groups.google.com/forum/#!forum/codelab-authors) - great forum for asking questions about codelabs and discussing future functionality
-* [A blog that I used when getting started with Google Codelabs](https://medium.com/@mariopce/tutorial-how-to-make-tutorials-using-google-code-labs-gangdam-style-d62b35476816)
 
 ## Environment Setup
 Duration: 0:04:00
