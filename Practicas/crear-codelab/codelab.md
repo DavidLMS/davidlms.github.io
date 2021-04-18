@@ -8,7 +8,7 @@ feedback link: https://github.com/DavidLMS/davidlms.github.io/issues/new?title=E
 
 # Crear un CodeLab
 
-## CodeLab Overview
+## Introducción
 Duration: 0:02:00
 
 ¿Quieres crear un contenido similar a este? En este CodeLab aprenderás cómo crear el tuyo en muy poco tiempo.
