@@ -4,33 +4,50 @@ id: es-codelab-markdown
 categories: codelab,markdown
 environments: Web
 status: Published
-feedback link: mailto:hola@davidlms.com
+feedback link: https://github.com/DavidLMS/davidlms.github.io/issues/new?title=Error+en+gu%C3%ADa+Crear+un+Codelab
 
 # Crear un CodeLab
 
 ## Introducción
 Duration: 0:02:00
 
-¿Quieres crear un contenido similar a este? En este CodeLab aprenderás cómo crear el tuyo en muy poco tiempo.
+¿Quieres crear un contenido similar a este tutorial? A continuación aprenderás **cómo crear tu propio CodeLab** en muy poco tiempo.
 
 A la hora de crear un CodeLab tenemos dos opciones:
 1. Usar un Documento de Google
 2. Usar un fichero Markdown
 
-En este CodeLab vamos a explorar la segunda opción y crear el nuestro usando un fichero Markdown. Esto nos garantiza la flexibilidad de reutilizar el archivo en otras ocasiones y la posibilidad de almacenarlo en nuestro repositorio de Git con cualquier otro código que pudiese ser útil en un tutorial.
+En este CodeLab vamos a explorar la segunda opción y crear el nuestro usando un **fichero Markdown**. Esto nos garantiza la flexibilidad de reutilizar el archivo en otras ocasiones y la posibilidad de almacenarlo en nuestro repositorio de Git con cualquier otro código que pudiese ser útil en un tutorial.
+
+Este es otro ejemplo de cómo puede quedar un CodeLab generado:
+
+![image_caption](img/codelab-wireguard.png)
 
 **Créditos y Recursos:** 
-* Este CodeLab es una adaptación del original de Marc DiPasquale que puedes encontrar aquí: [Enlace al CodeLab](https://www.marcd.dev/codelab-4-codelab)
+* Este CodeLab **es una adaptación del original de Marc DiPasquale** que puedes encontrar aquí: [Enlace al CodeLab](https://www.marcd.dev/codelab-4-codelab)
 * El archivo Markdown del original de Marc DiPasquale está accesible aquí: [codelab.md](https://github.com/Mrc0113/codelab-4-codelab/blob/master/codelab.md)
 * [Google CodeLabs Tools Github](https://github.com/googlecodelabs/tools) - El repositorio que contiene la herramienta claat que vamos a utilizar
-* [Google Group for CodeLab Authors](https://groups.google.com/forum/#!forum/codelab-authors) - great forum for asking questions about codelabs and discussing future functionality
+* [Google Group for CodeLab Authors](https://groups.google.com/forum/#!forum/codelab-authors) - foro de consulta sobre CodeLabs y discusión sobre futuras funcionalidades
+* Si quieres acceder al archivo Markdown de este CodeLab, puedes hacerlo aquí: [codelab.md](https://github.com/DavidLMS/davidlms.github.io/blob/master/Practicas/crear-codelab/codelab.md)
 
-## Environment Setup
+## Preparación del entorno
 Duration: 0:04:00
 
-In order to create a CodeLab you need *Go* and *claat* (the codelabs command line tool) installed.
+Para crear un CodeLab, necesitas tener instalados *Go* y *claat* (la herramienta por línea de comandos de codelabs).
 
 The instructions below are what worked for me on Mac, but you can also find instructions [here](https://github.com/googlecodelabs/tools/tree/master/claat) 
+
+###Windows
+
+https://github.com/googlecodelabs/tools/releases/tag/v2.2.4
+Basta con descargar el exe y ejecutarlo desde el cmd (capturas realizadas).
+
+###Linux (Probado en Ubuntu)
+
+https://github.com/googlecodelabs/tools/releases/tag/v2.2.4
+Basta con descargar también el ejecutable, darle permisos de ejecución chmod +x y poner el md al lado.
+
+###macOS
 
 #### Install Go 
 

@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-04-18T17:19:55+02:00",
+  "id": "es-codelab-markdown",
+  "duration": 14,
+  "title": "Crear un CodeLab",
+  "summary": "Aprende cómo crear un CodeLab usando Markdown",
+  "source": "codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/DavidLMS/davidlms.github.io/issues/new?title=Error+en+gu%C3%ADa+Crear+un+Codelab",
+  "url": "es-codelab-markdown"
+}
