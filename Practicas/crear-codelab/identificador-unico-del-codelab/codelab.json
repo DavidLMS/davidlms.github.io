@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-07-10T12:21:32+02:00",
+  "id": "identificador-unico-del-codelab",
+  "duration": 15,
+  "title": "Título del CodeLab",
+  "summary": "Resumen del CodeLab",
+  "source": "test1.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://google.com",
+  "url": "identificador-unico-del-codelab"
+}

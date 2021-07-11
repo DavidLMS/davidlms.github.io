@@ -17,11 +17,11 @@ A la hora de crear un CodeLab tenemos dos opciones:
 1. Usar un Documento de Google
 2. Usar un fichero Markdown
 
-En este CodeLab vamos a explorar la segunda opción y crear el nuestro usando un **fichero Markdown**. Esto nos garantiza la flexibilidad de reutilizar el archivo en otras ocasiones y la posibilidad de almacenarlo en nuestro repositorio de Git con cualquier otro código que pudiese ser útil en un tutorial.
+En este CodeLab vamos a explicar la segunda opción y crear el nuestro usando un **fichero Markdown**. Esto nos garantiza la flexibilidad de reutilizar el archivo en otras ocasiones y la posibilidad de almacenarlo en nuestro repositorio de Git con cualquier otro código que pudiese ser útil en un tutorial. No obstante, puedes ver cómo hacerlo a partir de un Documento de Google en este [artículo de Juan Antonio Gómez](https://medium.com/shokmaster/google-codelab-en-5-minutos-5043f4cd21f4).
 
 Este es otro ejemplo de cómo puede quedar un CodeLab generado:
 
-![image_caption](img/codelab-wireguard.png)
+![Práctica de Wireguard con CodeLab](img/codelab-wireguard.png)
 
 **Créditos y Recursos:** 
 * Este CodeLab **es una adaptación del original de Marc DiPasquale** que puedes encontrar aquí: [Enlace al CodeLab](https://www.marcd.dev/codelab-4-codelab)
@@ -35,30 +35,45 @@ Duration: 0:04:00
 
 Para crear un CodeLab, necesitas tener instalados *Go* y *claat* (la herramienta por línea de comandos de codelabs).
 
-The instructions below are what worked for me on Mac, but you can also find instructions [here](https://github.com/googlecodelabs/tools/tree/master/claat) 
+A continuación puedes ver las instrucciones de instalación para los sistemas operativos más populares.
 
 ###Windows
 
-https://github.com/googlecodelabs/tools/releases/tag/v2.2.4
-Basta con descargar el exe y ejecutarlo desde el cmd (capturas realizadas).
+Vamos a la [página de releases de claat](https://github.com/googlecodelabs/tools/releases) y descargamos la versión apropiada. Si tienes Windows de 64 bits, descargamos "claat-windows-amd64.exe".
+
+![Releases de claat](img/codelab.releases.png)
 
 ###Linux (Probado en Ubuntu)
 
-https://github.com/googlecodelabs/tools/releases/tag/v2.2.4
-Basta con descargar también el ejecutable, darle permisos de ejecución chmod +x y poner el md al lado.
+Vamos a la [página de releases de claat](https://github.com/googlecodelabs/tools/releases) y descargamos la versión apropiada. Si tienes Linux de 64 bits, descargamos "claat-linux-amd64".
+
+![Releases de claat](img/codelab.releases.png)
+
+
+
+Abrimos una terminal y accedemos a la carpeta en la que tengamos descargado el ejecutable de claat.
+
+Le damos permisos de ejecución:
+
+``` bash
+sudo chmod +x claat-linux-amd64
+```
+(sustitumos claat-linux-amd64 por nuestra versión)
 
 ###macOS
 
-#### Install Go 
+#### Instala Go 
 
-Install [Go](https://golang.org/dl/) if you don't have it.
-You can use Homebrew if you have it on mac 
+Instala [Go](https://golang.org/dl/) si no lo tienes aún.
+Puedes usar Homebrew si lo tienes en macOS:
+
 ``` bash
 $ brew install go
 ```
 
-#### Setup Go Environment Variables
-Below is what I set on mac, but instructions are [here](https://golang.org/doc/install) for other OS options
+#### Establece las variables de entorno
+
+Ejecuta lo siguiente en una terminal:
 
 ``` bash
 $ export GOPATH=$HOME/Go
@@ -67,166 +82,197 @@ $ export PATH=$PATH:$GOPATH/bin
 $ export PATH=$PATH:$GOROOT/bin
 ```
 
-#### Install claat
-Install claat
+#### Instala claat
+Ejecuta lo siguiente en una terminal:
 ``` bash
 $ go get -u -v -x github.com/googlecodelabs/tools/claat
 ```
 
-You should now have the *claat* command available to you. 
+Ahora deberías tener el comando *claat* disponible en la terminal. 
 ``` bash
 $ claat
 ```
 
-## Create your initial CodeLab
+## Crea tu primer CodeLab
 Duration: 0:05:00
 
-Now that we have the environment setup let's go ahead and create a markdown file where we'll create the actual codelab. 
+Ahora que tenemos el entorno configurado, vamos a crear un fichero markdown en el que escribiremos un CodeLab.
 
-Negative
-: If you're using Windows make sure to set your text editor to use UNIX line endings! 
+### Creación del archivo
+Crea un archivo llamado codelab.md y ábrelo con tu editor de texto favorito.
 
-####
-``` bash
-$ vim codelab.md
-```
+### Cabecera con información del CodeLab
+Copia y pega la cabecera a continuación en el fichero markdown y modifica los valores acorde al CodeLab que quieres crear.
+Debajo del ejemplo tienes la explicación de cada una de las variables.
 
-#### Fill-in the header metadata
-Copy and paste the headers below into your markdown file and change the values appropriately. 
-Guidelines are available below the sample headers. 
-
-``` bash
-author: Author Name
-summary: Summary of your codelab that is human readable
-id: unique-codelab-identifier
+```console
+author: Nombre del autor
+summary: Resumen del CodeLab
+id: identificador-unico-del-codelab
 categories: codelab,markdown
 environments: Web
 status: Published
-feedback link: A link where users can go to provide feedback (Maybe the git repo)
-analytics account: Google Analytics ID
+feedback link: Un enlace en el que los usuarios puedan darte feedback (quizás creando un issue en un repositorio de git)
+analytics account: ID de Google Analytics
 ```
 
-Metadata consists of key-value pairs of the form "key: value". Keys cannot
-contain colons, and separate metadata fields must be separated by blank lines.
-At present, values must all be on one line. All metadata must come before the
-title. Any arbitrary keys and values may be used; however, only the following
-will be understood by the renderer:
+Los metadatos consisten en parejas de valores clave de la forma "clave: valor". Los valores deben estar en una sola línea. Todos los metadatos deben escribirse antes del título del CodeLab. En principio se pueden utilizar todas las claves y valores que quieras, sin embargo, solo los siguientes los interpretará el renderizador:
 
-* Summary: A human-readable summary of the codelab. Defaults to blank.
-* Id: An identifier composed of lowercase letters ideally describing the
-  content of the codelab. This field should be unique among
-  codelabs.
-* Categories: A comma-separated list of the topics the codelab covers.
-* Environments: A list of environments the codelab should be discoverable in.
-  Codelabs marked "Web" will be visible at the codelabs index. Codelabs marked
-  "Kiosk" will only be available at codelabs kiosks, which have special
-  equipment attached.
-* Status: The publication status of the codelab. Valid values are:
-  - Draft: Codelab is not finished.
-  - Published: Codelab is finished and visible.
-  - Deprecated: Codelab is considered stale and should not be widely advertised.
-  - Hidden: Codelab is not shown in index.
-* Feedback Link: A link to send users to if they wish to leave feedback on the
-  codelab.
-* Analytics Account: A Google Analytics ID to include with all codelab pages.
+* summary: Una descripción del CodeLab resumida. Por defecto en blanco.
+* id: Un identificador compuesto por letras minúsculas que idealmente describen el contenido del CodeLab. Este campo debe ser único entre los CodeLabs.
+* categories: Una lista separada por comas de los temas que trata el CodeLab.
+* environments: Una lista de entornos en los que se podrá encontrar el CodeLab. Los marcados como "Web" estarán visibles en el índice de CodeLabs.
+* status: El estado de la publicación del CodeLab. Los valores válidos son:
+- Draft: Es un borrador.
+- Published: Está terminado y visible.
+- Deprecated: Ha quedado obsoleto.
+- Hidden: Oculto, no se mostrará en el índice.
+* feedback link: Un enlace en el que los usuarios puedan darte feedback.
+* analytics account: Un ID de Google Analytics para incluir todas las páginas del CodeLab.
 
-#### Add the Title
-Next add your title using a single '#' character
+### Añade el título
+Añade ahora tu título usando el carácter almohadilla '#' (equivalente a la primera cabecera en markdown)
+
 ```
-# Title of codelab
+# Título del CodeLab
 ```
 
-#### Add Sections and Durations
-Then for each section use Header 2 or '##' and specify an optional duration beneath for time remaining calculations
-Optional section times will be used to automatically total and remaining tutorial times
-In markdown I've found that the time is formatted hh:mm:ss
+### Añade secciones y sus duraciones
+Luego para cada sección usa la segunda cabecera de markdown o '##' y especifica, de forma opcional, el tiempo estimado necesario para completar esa sección. Este tiempo estimado se indica como "Duration" con el formato hh:mm:ss.
 
-Example
+Ejemplo
 ``` bash
-## Section 1
+## Sección 1
 Duration: 0:10:00
 
-## Section 2
+## Sección 2
 Duration: 0:05:00
 ```
 
-#### Add Section Content
-Now that we have 2 sections to our titled codelab let's go ahead and add some content to each section. 
-Make up your own or copy and paste the example below: 
+### Añade contenido en la sección
+Ahora que tenemos 2 secciones en nuestro CodeLab podemos añadir contenido en cada sección. Copia y pega el ejemplo a continuación debajo del Duration de la sección 1:
 
-Copy into section 1 (Below Duration and above Section 2):
 ```
-### Info Boxes
-Plain Text followed by green and yellow info boxes 
+### Cajas de información
+Texto plano dentro de cajas de información verdes y amarillas
 
 Negative
-: This will appear in a yellow info box.
+: Esto aparecerá en una caja de información amarilla.
 
 Positive
-: This will appear in a green info box.
+: Esto aparecerá en una caja de información verde.
 
-You created info boxes!
+¡Ya tienes tus cajas de información creadas!
 
-### Bullets
-Plain Text followed by bullets
-* Hello
+### Lista con viñetas
+Texto plano en una lista con viñetas:
+
+* Hola
 * CodeLab
-* World
+* Mundo
 
-You created bullets!
+¡Ya tienes tu lista con viñetas creada!
 
-### Numbered List
-1. List
-1. Using
-1. Numbers
+### Lista numerada
+1. Lista
+2. Utilizando
+3. Números
 
-You created a numbered list!
+¡Ya tienes tu lista numerada creada!
 
 ```
 
-Copy into section 2 (Below Duration): 
+En la sección 2 vamos a añadir varios elementos más, una imagen entre ellos. Para añadir imágenes locales, crea una carpeta al lado de tu fichero .md llamada "img". Dentro de la misma, añade una imagen cualquiera que se llame prueba.png.
+
+Copia ahora en la sección 2 (debajo de Duration): 
 ```
-### Add a Link
-Adding a link!
-[Example of a Link](https://www.google.com)
+### Añade un enlace
+¡Añadiendo un enlace!
+[Ejemplo de enlace](https://www.davidlms.com)
 
-### Add an Image
-Adding an image!
-![image_caption](https://googlecloud.tips/img/031/codelabs.png)
+### Añade una imagen
+¡Añadiendo una imagen!
 
-### Embed an iframe
+![Descripción de la imagen](img/prueba.png)
+
+### Incrusta un iframe
+
 ![https://codepen.io/tzoght/embed/yRNZaP](https://en.wikipedia.org/wiki/File:Example.jpg "Try Me Publisher")
 ```
 
-More Markdown Parser examples can be found [here](https://github.com/googlecodelabs/tools/tree/master/claat/parser/md).
+Puedes encontrar más ejemplos [aquí](https://github.com/googlecodelabs/tools/tree/master/claat/parser/md).
 
-## Export and Serve
+## Exportar y servir
 Duration: 0:02:00
 
-Now that you have an initial codelab defined in your markdown file let's go ahead and generate the static site content. 
-We can export and serve the content locally using the `claat` command that we installed earlier. 
+Ahora que tenemos un CodeLab inicial definido en nuestro archivo markdown, vamos a generar la página web estática.
+Podemos exportar y servir el contenido de formar local usando el comando `claat` que instalamos anteriormente.
+
+###Windows
+
+Movemos nuestro archivo codelab.md que queremos generar a la carpeta en la que tengamos descargado el ejecutable de claat.
+
+Abrimos el símbolo del sistema y accedemos a la carpeta en la que tengamos descargado el ejecutable de claat.
+
+![Acceso al CMD en Windows](img/cmd-windows.png)
+
+Escribimos el siguiente comando:
+
+``` bash
+claat-windows-amd64.exe export codelab.md
+claat-windows-amd64.exe serve
+```
+(sustitumos claat-windows-amd64.exe por nuestra versión)
+
+![claat export en Windows](img/codelab-export-windows.png)
+
+Y ya tendremos nuestros archivos generados.
+
+![Archivos generados por claat en Windows](img/archivos-generados-windows.png)
+
+* Tu navegador debería haberse abierto (si no lo hace, prueba a escribir localhost:9000 en la dirección de tu navegador).
+* Elige la carpeta que tiene por nombre el "id" puesto en la cabecera del archivo. 
+* ¡Listo! ¡Ya tienes tu primer CodeLab!
+
+###Linux (Probado en Ubuntu)
+
+Movemos nuestro archivo codelab.md que queremos generar a la carpeta en la que tengamos descargado el ejecutable de claat.
+
+Abrimos una terminal y accedemos a la carpeta en la que tengamos descargado el ejecutable de claat. Ejecutamos el comando:
+
+``` bash
+./claat-linux-amd64 export codelab.md
+./claat-linux-amd64 serve
+```
+(sustitumos claat-linux-amd64 por nuestra versión)
+
+* Tu navegador debería haberse abierto (si no lo hace, prueba a escribir localhost:9000 en la dirección de tu navegador).
+* Elige la carpeta que tiene por nombre el "id" puesto en la cabecera del archivo. 
+* ¡Listo! ¡Ya tienes tu primer CodeLab!
+
+###macOS
+
+Abre una Terminal y accede a la carpeta en la que se encuentre el archivo codelab.md. Luego ejecuta:
 
 ``` bash
 $ claat export codelab.md
 $ claat serve
 ```
 
-* Your browser should have opened (if it doesn't then try going to localhost:9090 in your browser). 
-* Choose the directory that matches your "id" that you put in the headers. 
-* Viola! You should have your first codelab!
+* Tu navegador debería haberse abierto (si no lo hace, prueba a escribir localhost:9000 en la dirección de tu navegador).
+* Elige la carpeta que tiene por nombre el "id" puesto en la cabecera del archivo. 
+* ¡Listo! ¡Ya tienes tu primer CodeLab!
 
-## Host Your CodeLab
+## Aloja tu CodeLab
 Duration: 0:01:00
 
-When you ran the `claat export` command you created the static web content needed to host your codelab. 
-It placed static web content in a directory specified by your unique "id" and you can view it locally by opening the index.html page. 
+Cuando ejecutaste el comando `claat export` creaste el sitio web estático necesario para alojar en un servidor web tu CodeLab.
+Se generó una carpeta con el identificador que especificaste en "id" que contiene todos los archivos de la página, entre ellos el index.html, que puedes abrirlo de forma local.
 
 Negative
-: Note that when you view it locally by opening index.html some of the graphics may not show up (such as access_time, Next, Back), but they work once online. 
+: Ten en cuenta que cuando ves la página localmente abriendo el index.html algunos de los gráficos no se mostrarán (como access_time, Next, Back), pero funcionarán una vez esté online. 
 
+Ahora que tienes el contenido estático generado puedes alojarlo donde prefieras.
+Una opción es subiéndolo a un repositorio de Github y servirlo usando [Netlify](https://www.netlify.com/).
 
-Now that you have the static content you can host it however you want.
-One option is pushing it to github and serving it up from Netlify.  
-
-If you'd like to create your own landing page for codelabs, [like this one](https://codelabs.developers.google.com), there is a tool to do that as well! 
-Check it out here: [CodeLabs Site](https://github.com/googlecodelabs/tools/blob/master/site/README.md)
+Si quieres crear tu propio índice con enlaces a los CodeLabs, [similar a este]((https://codelabs.developers.google.com)), también hay una herramienta que lo hace. Echa un vistazo aquí: [CodeLabs Site](https://github.com/googlecodelabs/tools/blob/master/site/README.md)
