@@ -48,6 +48,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
 <title>Apuntes de Redes Locales — Una alternativa poco técnica y poco profesional</title>
+<script async defer data-domain="davidlms.github.io" src="https://plausible.io/js/plausible.js"></script>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -163,6 +164,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/core/templates/tiddlywiki5.html</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/Import</li>
@@ -194,6 +197,8 @@ Error message and password prompt
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
+
+<li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1760527228</li>
 
@@ -282,6 +287,8 @@ Error message and password prompt
 <li>$:/state/toc/Tabla de contenidos/Protocolos/IP-IPv4-115813501</li>
 
 <li>$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501</li>
+
+<li>$:/state/tree/$:/tags/</li>
 
 <li>$:/StoryList</li>
 
@@ -9910,6 +9917,67 @@ margin:0 auto;
     }
 }</pre>
 </div>
+<div created="20210804151622682" modified="20210804151649817" title="$:/core/templates/tiddlywiki5.html">
+<pre>&lt;$set name=&quot;saveTiddlerAndShadowsFilter&quot; filter=&quot;[subfilter&lt;saveTiddlerFilter&gt;] [subfilter&lt;saveTiddlerFilter&gt;plugintiddlers[]]&quot;&gt;
+`&lt;!doctype html&gt;
+`{{$:/core/templates/MOTW.html}}`&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;!--~~ Raw markup for the top of the head section ~~--&gt;
+`{{{ [&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/TopHead]] ||$:/core/templates/raw-static-tiddler}}}`
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;/&gt;
+&lt;meta name=&quot;application-name&quot; content=&quot;TiddlyWiki&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;TiddlyWiki&quot; /&gt;
+&lt;meta name=&quot;tiddlywiki-version&quot; content=&quot;`{{$:/core/templates/version}}`&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
+&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
+&lt;meta name=&quot;copyright&quot; content=&quot;`{{$:/core/copyright.txt}}`&quot; /&gt;
+&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;title&gt;`{{$:/core/wiki/title}}`&lt;/title&gt;
+&lt;script async defer data-domain=&quot;davidlms.github.io&quot; src=&quot;https://plausible.io/js/plausible.js&quot;&gt;&lt;/script&gt;
+&lt;!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--&gt;
+
+&lt;!--~~ Raw markup ~~--&gt;
+`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/core/wiki/rawmarkup]] ||$:/core/templates/plain-text-tiddler}}}
+{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkup]] ||$:/core/templates/plain-text-tiddler}}}
+{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified]] ||$:/core/templates/raw-static-tiddler}}}`
+&lt;/head&gt;
+&lt;body class=&quot;tc-body&quot;&gt;
+&lt;!--~~ Raw markup for the top of the body section ~~--&gt;
+`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/TopBody]] ||$:/core/templates/raw-static-tiddler}}}`
+&lt;!--~~ Static styles ~~--&gt;
+&lt;div id=&quot;styleArea&quot;&gt;
+`{{$:/boot/boot.css||$:/core/templates/css-tiddler}}`
+&lt;/div&gt;
+&lt;!--~~ Static content for Google and browsers without JavaScript ~~--&gt;
+&lt;noscript&gt;
+&lt;div id=&quot;splashArea&quot;&gt;
+`{{$:/core/templates/static.area}}`
+&lt;/div&gt;
+&lt;/noscript&gt;
+&lt;!--~~ Ordinary tiddlers ~~--&gt;
+`{{$:/core/templates/store.area.template.html}}`
+&lt;!--~~ Library modules ~~--&gt;
+&lt;div id=&quot;libraryModules&quot; style=&quot;display:none;&quot;&gt;
+`{{{ [is[system]type[application/javascript]library[yes]] ||$:/core/templates/javascript-tiddler}}}`
+&lt;/div&gt;
+&lt;!--~~ Boot kernel prologue ~~--&gt;
+&lt;div id=&quot;bootKernelPrefix&quot; style=&quot;display:none;&quot;&gt;
+`{{ $:/boot/bootprefix.js ||$:/core/templates/javascript-tiddler}}`
+&lt;/div&gt;
+&lt;!--~~ Boot kernel ~~--&gt;
+&lt;div id=&quot;bootKernel&quot; style=&quot;display:none;&quot;&gt;
+`{{ $:/boot/boot.js ||$:/core/templates/javascript-tiddler}}`
+&lt;/div&gt;
+&lt;!--~~ Raw markup for the bottom of the body section ~~--&gt;
+`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/BottomBody]] ||$:/core/templates/raw-static-tiddler}}}`
+&lt;/body&gt;
+&lt;/html&gt;`
+</pre>
+</div>
 <div created="20190907220144667" modified="20200430122153776" title="$:/DefaultTiddlers">
 <pre>[[01. Sobre el contenido]]
 [[Tabla de contenidos]]
@@ -10228,6 +10296,9 @@ margin:0 auto;
 <div created="20191012073403878" modified="20191014204525296" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
+<div created="20210804151530049" modified="20210804151530049" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+</div>
 <div created="20191012073752702" modified="20191012073800963" title="$:/state/tab--1760527228">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
 </div>
@@ -10243,11 +10314,11 @@ margin:0 auto;
 <div created="20190907220449851" modified="20191014212239905" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20190907221955795" modified="20190907234624147" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Shadows</pre>
+<div created="20190907221955795" modified="20210804151117037" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Explorer</pre>
 </div>
-<div created="20190907220257393" modified="20200430121821097" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20190907220257393" modified="20210804150555787" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20191012073346519" modified="20191014212233454" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -10360,7 +10431,10 @@ margin:0 auto;
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20200506123011413" list="[[01. Sobre el contenido]] [[Tabla de contenidos]] [[Itinerario recomendado para estudiantes]] [[Contenidos asociados a Resultados de Aprendizaje]]" modified="20200506123211033" title="$:/StoryList">
+<div created="20210804151119971" modified="20210804151119971" title="$:/state/tree/$:/tags/">
+<pre>show</pre>
+</div>
+<div created="20210804151313496" list="$:/AdvancedSearch $:/core/templates/tiddlywiki5.html [[01. Sobre el contenido]] [[Tabla de contenidos]] [[Itinerario recomendado para estudiantes]] [[Contenidos asociados a Resultados de Aprendizaje]]" modified="20210804151559823" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191013064639654" list="$:/core/ui/MoreSideBar/All $:/core/ui/MoreSideBar/Recent $:/core/ui/MoreSideBar/Tags $:/core/ui/MoreSideBar/Missing $:/core/ui/MoreSideBar/Drafts $:/core/ui/MoreSideBar/Orphans $:/core/ui/MoreSideBar/Types $:/core/ui/MoreSideBar/System $:/core/ui/MoreSideBar/Shadows $:/core/ui/MoreSideBar/Explorer $:/core/ui/MoreSideBar/Plugins" modified="20191013064639654" title="$:/tags/MoreSideBar">
@@ -10369,7 +10443,7 @@ margin:0 auto;
 <div created="20191013064408905" list="$:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20191013064408905" title="$:/tags/SideBar">
 <pre></pre>
 </div>
-<div created="20191013064614842" modified="20191013064703857" tags="" title="$:/tags/StartupAction">
+<div created="20191013064614842" modified="20210804151359864" tags="" title="$:/tags/StartupAction">
 <pre>&lt;$reveal type=&quot;lt&quot; state=&quot;$:/info/browser/screen/width&quot; text=&quot;3000&quot;&gt;
 &lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; $value=&quot;no&quot;/&gt;
 &lt;/$reveal&gt;
@@ -10378,8 +10452,8 @@ margin:0 auto;
 &lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; $value=&quot;yes&quot;/&gt;
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20191013064656573" modified="20191013064656573" title="$:/temp/advancedsearch">
-<pre>startup</pre>
+<div created="20191013064656573" modified="20210804151556965" title="$:/temp/advancedsearch">
+<pre>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;/&gt;</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -11198,7 +11272,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190922114149520" modified="20190922114150550" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>kat</pre>
 </div>
-<div created="20191013064653192" modified="20191013064656574" title="$:/temp/search">
+<div created="20191013064653192" modified="20210804150554497" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20190922114147428" modified="20190922114147428" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.20/index.html" url="https://tiddlywiki.com/library/v5.1.20/index.html">

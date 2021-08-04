@@ -48,7 +48,6 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
 <title>Apuntes de Servicios en Red — Una alternativa poco técnica y poco profesional</title>
-<script async defer data-domain="davidlms.github.io" src="https://plausible.io/js/plausible.js"></script>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -157,8 +156,6 @@ Error message and password prompt
 <li>$:/config/RelinkOnRename</li>
 
 <li>$:/core</li>
-
-<li>$:/core/templates/tiddlywiki5.html</li>
 
 <li>$:/DefaultTiddlers</li>
 
@@ -9646,67 +9643,6 @@ margin:0 auto;
     }
 }</pre>
 </div>
-<div created="20210804151757922" modified="20210804151801808" title="$:/core/templates/tiddlywiki5.html">
-<pre>&lt;$set name=&quot;saveTiddlerAndShadowsFilter&quot; filter=&quot;[subfilter&lt;saveTiddlerFilter&gt;] [subfilter&lt;saveTiddlerFilter&gt;plugintiddlers[]]&quot;&gt;
-`&lt;!doctype html&gt;
-`{{$:/core/templates/MOTW.html}}`&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
-&lt;!--~~ Raw markup for the top of the head section ~~--&gt;
-`{{{ [&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/TopHead]] ||$:/core/templates/raw-static-tiddler}}}`
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;/&gt;
-&lt;meta name=&quot;application-name&quot; content=&quot;TiddlyWiki&quot; /&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;TiddlyWiki&quot; /&gt;
-&lt;meta name=&quot;tiddlywiki-version&quot; content=&quot;`{{$:/core/templates/version}}`&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
-&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
-&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;
-&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
-&lt;meta name=&quot;copyright&quot; content=&quot;`{{$:/core/copyright.txt}}`&quot; /&gt;
-&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
-&lt;title&gt;`{{$:/core/wiki/title}}`&lt;/title&gt;
-&lt;script async defer data-domain=&quot;davidlms.github.io&quot; src=&quot;https://plausible.io/js/plausible.js&quot;&gt;&lt;/script&gt;
-&lt;!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--&gt;
-
-&lt;!--~~ Raw markup ~~--&gt;
-`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/core/wiki/rawmarkup]] ||$:/core/templates/plain-text-tiddler}}}
-{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkup]] ||$:/core/templates/plain-text-tiddler}}}
-{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified]] ||$:/core/templates/raw-static-tiddler}}}`
-&lt;/head&gt;
-&lt;body class=&quot;tc-body&quot;&gt;
-&lt;!--~~ Raw markup for the top of the body section ~~--&gt;
-`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/TopBody]] ||$:/core/templates/raw-static-tiddler}}}`
-&lt;!--~~ Static styles ~~--&gt;
-&lt;div id=&quot;styleArea&quot;&gt;
-`{{$:/boot/boot.css||$:/core/templates/css-tiddler}}`
-&lt;/div&gt;
-&lt;!--~~ Static content for Google and browsers without JavaScript ~~--&gt;
-&lt;noscript&gt;
-&lt;div id=&quot;splashArea&quot;&gt;
-`{{$:/core/templates/static.area}}`
-&lt;/div&gt;
-&lt;/noscript&gt;
-&lt;!--~~ Ordinary tiddlers ~~--&gt;
-`{{$:/core/templates/store.area.template.html}}`
-&lt;!--~~ Library modules ~~--&gt;
-&lt;div id=&quot;libraryModules&quot; style=&quot;display:none;&quot;&gt;
-`{{{ [is[system]type[application/javascript]library[yes]] ||$:/core/templates/javascript-tiddler}}}`
-&lt;/div&gt;
-&lt;!--~~ Boot kernel prologue ~~--&gt;
-&lt;div id=&quot;bootKernelPrefix&quot; style=&quot;display:none;&quot;&gt;
-`{{ $:/boot/bootprefix.js ||$:/core/templates/javascript-tiddler}}`
-&lt;/div&gt;
-&lt;!--~~ Boot kernel ~~--&gt;
-&lt;div id=&quot;bootKernel&quot; style=&quot;display:none;&quot;&gt;
-`{{ $:/boot/boot.js ||$:/core/templates/javascript-tiddler}}`
-&lt;/div&gt;
-&lt;!--~~ Raw markup for the bottom of the body section ~~--&gt;
-`{{{ [enlist&lt;saveTiddlerAndShadowsFilter&gt;tag[$:/tags/RawMarkupWikified/BottomBody]] ||$:/core/templates/raw-static-tiddler}}}`
-&lt;/body&gt;
-&lt;/html&gt;`
-</pre>
-</div>
 <div created="20190907220144667" modified="20200710181738626" title="$:/DefaultTiddlers">
 <pre>[[1. Sobre el contenido]]
 [[Tabla de contenidos]]
@@ -9937,8 +9873,8 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190907221955795" modified="20190907234624147" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20190907220257393" modified="20210804151729234" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20190907220257393" modified="20200710184216064" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20191013071227189" modified="20191013071228062" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -10000,7 +9936,7 @@ filter=&quot;[all[current]!is[system]split[: ]limit[1]addprefix[$:/config/Extern
 <div created="20190908082808684" modified="20190908082808684" title="$:/state/toc/Tabla de contenidos/Sistema binario-Contar en binario-115813501">
 <pre>open</pre>
 </div>
-<div created="20210804151750905" list="$:/core/templates/tiddlywiki5.html [[1. Sobre el contenido]] [[Tabla de contenidos]] [[Contenidos asociados a Resultados de Aprendizaje]]" modified="20210804151750905" title="$:/StoryList">
+<div created="20200720121650996" list="[[1. Sobre el contenido]] [[Tabla de contenidos]] [[4. Servicio web]] [[Contenidos asociados a Resultados de Aprendizaje]]" modified="20200720121711304" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191014205806919" modified="20191014205821144" tags="" title="$:/styles/static">
