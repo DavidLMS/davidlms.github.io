@@ -174,7 +174,7 @@ text-align: right;
 <ul>
 <li><strong>Widgets</strong>: Agregar widgets a la interfaz.</li>
 <li><strong>Signal/Slots</strong>: Definir interacción entre widgets.</li>
-<li><strong>Buddy</strong>: Asociar etiquetas con inputs.</li>
+<li><strong>Buddy</strong>: Asociar etiquetas con inputs. Si en la etiqueta añades el símbolo &amp; antes de una letra, se convierte en un atajo para el input con Alt + letra. No funciona en macos.</li>
 <li><strong>Tab Order</strong>: Establecer el orden por los diferentes inputs al usar la tecla Tab.</li>
 </ul>
 </section>
@@ -362,22 +362,15 @@ text-align: right;
 ;">
 <h1>Componentes: Input Widgets</h1>
 <ul>
-<li><strong>Combo Box</strong></li>
-<li><strong>Font Combo Box</strong></li>
-<li><strong>Line Edit</strong></li>
-<li><strong>Text Edit</strong></li>
-<li><strong>Plain Text Edit</strong></li>
-<li><strong>Spin Box</strong></li>
-<li><strong>Double Spin Box</strong></li>
-<li><strong>Time Edit</strong></li>
-<li><strong>Date Edit</strong></li>
-<li><strong>Date/Time Edit</strong></li>
-<li><strong>Dial</strong></li>
-<li><strong>Horizontal Scroll Bar</strong></li>
-<li><strong>Vertical Scroll Bar</strong></li>
-<li><strong>Horizontal Slider</strong></li>
-<li><strong>Vertical Slider</strong></li>
-<li><strong>Key Sequence Edit</strong></li>
+<li><strong>Combo Box</strong>: Lista desplegable.</li>
+<li><strong>Font Combo Box</strong>: Lista desplegable con las fuentes instaladas.</li>
+<li><strong>Line Edit</strong>: Cuadro de texto de una línea.</li>
+<li><strong>Text Edit</strong>: Área de texto con formato.</li>
+<li><strong>Plain Text Edit</strong>: Área de texto sin formato.</li>
+<li><strong>Spin Box</strong>: Caja de texto numérica.</li>
+<li><strong>Double Spin Box</strong>: Caja de texto numérica con decimales.</li>
+<li><strong>Time Edit</strong>: Para introducir una hora.</li>
+<li><strong>Date Edit</strong>: Para introducir una fecha.</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="gaia" data-style="footer {
@@ -393,17 +386,15 @@ section.right {
 text-align: right;
 }
 ;">
-<h1>Componentes: Containers</h1>
+<h1>Componentes: Input Widgets</h1>
 <ul>
-<li><strong>Group Box</strong></li>
-<li><strong>Scroll Area</strong></li>
-<li><strong>Tool Box</strong></li>
-<li><strong>Tab Widget</strong></li>
-<li><strong>Stacked Widget</strong></li>
-<li><strong>Frame</strong></li>
-<li><strong>Widget</strong></li>
-<li><strong>MDI Area</strong></li>
-<li><strong>Dock Widget</strong></li>
+<li><strong>Date/Time Edit</strong>: Para introducir una fecha y una hora.</li>
+<li><strong>Dial</strong>: Simula los controles analógicos. No se utiliza demasiado.</li>
+<li><strong>Horizontal Scroll Bar</strong>: Barra de scroll horizontal.</li>
+<li><strong>Vertical Scroll Bar</strong>: Barra de scroll vertical.</li>
+<li><strong>Horizontal Slider</strong>: Control deslizante horizontal.</li>
+<li><strong>Vertical Slider</strong>: Control deslizante vertical.</li>
+<li><strong>Key Sequence Edit</strong>: Permite introducir una tecla o un atajo pulsándolo directamente. Utilizado por ejemplo para definir controles en juegos.</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="gaia" data-style="footer {
@@ -419,9 +410,91 @@ section.right {
 text-align: right;
 }
 ;">
-<h1>Menú y barra de herramientas</h1>
+<h1>Componentes: Containers</h1>
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qtwidgets-widgets-groupbox-example.html"><strong>Group Box</strong></a>: Permite agrupar componentes, normalmente radio buttons o check boxes en grupos exclusibos.</li>
+<li><a href="https://doc.qt.io/qt-5/qscrollbar.html"><strong>Scroll Area</strong></a>: Crea una zona en la que es posible colocar componentes que ocupen más espacio del disponible, apareciendo barras de scroll para moverse a través del contenido.</li>
+<li><a href="https://doc.qt.io/qt-5/qtoolbox.html#details"><strong>Tool Box</strong></a>: Pestañas en columnas que permiten tener varios widgets &quot;apilados&quot;.</li>
+<li><a href="https://doc.qt.io/qt-5/qtwidgets-dialogs-tabdialog-example.html"><strong>Tab Widget</strong></a>: Similar al anterior, pero con las pestañas situadas en el lugar habitual. Pueden situarse también en cualquier lateral de la ventana.</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Componentes: Containers</h1>
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qstackedwidget.html#details"><strong>Stacked Widget</strong></a>: Permite navegar entre widgets usando flechas de dirección.</li>
+<li><a href="https://doc.qt.io/qt-5/qframe.html#details"><strong>Frame</strong></a>: Marco de ventana. Se puede utilizar como separador visual, pero su uso habitual es el de menú desplegable.</li>
+<li><a href="https://doc.qt.io/qt-5/qwidget.html#details"><strong>Widget</strong></a>: Es la base y el elemento principal de las interfaces en Qt. Toda la interfaz se construye sobre uno.</li>
+<li><a href="https://doc.qt.io/qt-5/qmdiarea.html#details"><strong>MDI Area</strong></a>: Permite añadir subventanas dentro de otra.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Componentes: Containers</h1>
+<ul>
+<li><a href="https://doc.qt.io/qt-5/qtwidgets-mainwindows-dockwidgets-example.html"><strong>Dock Widget</strong></a>: Son widgets que pueden arrastrarse como ventanas separadas de la principal, pero formando parte de la misma aplicación. Se suelen utilizar para tener barras de herramientas flotantes.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="lead" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" class="lead" style="--class:lead;--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Componentes: Ejemplo de Dock Widget</h1>
+
+<p><img src="ejemplo-dock.png" alt="interfaces-ra width:650px" style="width:650px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Menú y barra de herramientas</h1>
+<ul>
+<li>Pasamos a <a href="https://doc.qt.io/archives/qt-4.8/designer-creating-mainwindows.html"><strong>QMainWindow</strong></a>: Un QWidget preparado por Qt para tener las características propias de una ventana principal: barra de estado, barra de herramientas con <a href="https://doc.qt.io/qt-5/qtwidgets-widgets-icons-example.html">iconos</a>, menú...</li>
+<li>Un <strong>QAction</strong> permite definir múltiples interfaces para un mismo componente. Es lo ideal cuando queremos una acción que pueda desde el menú, la barra de herramientas o a través de una combinación de teclas.</li>
+<li>En Qt Designer, al abrir un QMainWindow, permite añadir opciones al menú. Con click derecho podemos añadir una barra de herramientas, que podemos rellenar con el editor de acciones.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="gaia" data-style="footer {
   text-align: right;
 }
 section.right {
@@ -444,7 +517,7 @@ text-align: right;
 <li>Enlace de componentes a orígenes de datos.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="gaia" data-style="footer {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="gaia" data-style="footer {
   text-align: right;
 }
 section.right {
