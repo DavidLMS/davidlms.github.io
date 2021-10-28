@@ -210,25 +210,155 @@ text-align: right;
 <li>Todos los archivos deben seguir <a href="https://doc.qt.io/qt-5/designer-ui-file-format.html">este XML schema</a>.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="lead" data-theme="gaia" data-style="footer {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="gaia" data-style="footer {
   text-align: right;
 }
 section.right {
 text-align: right;
 }
-" class="lead" style="--class:lead;--theme:gaia;--style:footer {
+" style="--theme:gaia;--style:footer {
   text-align: right;
 }
 section.right {
 text-align: right;
 }
 ;">
-<h1>Contenidos que faltan</h1>
+<h1>Elementos, etiquetas, atributos y valores</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&lt;widget class=&quot;QLabel&quot; name=&quot;label_3&quot;&gt;
+     &lt;property name=&quot;text&quot;&gt;
+      &lt;string&gt;ID&lt;/string&gt;
+     &lt;/property&gt;
+     &lt;property name=&quot;buddy&quot;&gt;
+      &lt;cstring&gt;lineEdit_3&lt;/cstring&gt;
+     &lt;/property&gt;
+    &lt;/widget&gt;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Elementos</h1>
+<p><img src="elementos.png" alt="interfaces-ra width:1150px" style="width:1150px;" /></p>
 <ul>
-<li>Elementos, etiquetas, atributos y valores.</li>
-<li>Controles, propiedades.</li>
-<li>Eventos, controladores.</li>
-<li>Análisis y Edición del documento XML.</li>
+<li>En este ejemplo, los elementos definen componentes, propiedades y subcomponentes de esas propiedades.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Etiquetas</h1>
+<p><img src="etiquetas.png" alt="interfaces-ra width:1150px" style="width:1150px;" /></p>
+<ul>
+<li>Las etiquetas posibles vienen definidas en el schema. Deben estar correctamente anidadas y cerradas.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Atributos</h1>
+<p><img src="atributos.png" alt="interfaces-ra width:1150px" style="width:1150px;" /></p>
+<ul>
+<li>En este ejemplo, los atributos sirven para marcar el tipo de widget y el nombre de los diferentes componentes y propiedades. Los atributos suelen usarse para metadatos.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Valores</h1>
+<p><img src="valores.png" alt="interfaces-ra width:1150px" style="width:1150px;" /></p>
+<ul>
+<li>Los valores en este ejemplo permiten dotar de contenido a las propiedades.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Eventos</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&lt;connection&gt;
+   &lt;sender&gt;pushButton&lt;/sender&gt;
+   &lt;signal&gt;clicked()&lt;/signal&gt;
+   &lt;receiver&gt;lineEdit&lt;/receiver&gt;
+   &lt;slot&gt;clear()&lt;/slot&gt;
+   &lt;hints&gt; &lt;!-- Esta etiqueta determina la posición de la flecha en Qt Designer --&gt;
+    &lt;hint type=&quot;sourcelabel&quot;&gt;
+     &lt;x&gt;218&lt;/x&gt;
+     &lt;y&gt;173&lt;/y&gt;
+    &lt;/hint&gt;
+    &lt;hint type=&quot;destinationlabel&quot;&gt;
+     &lt;x&gt;247&lt;/x&gt;
+     &lt;y&gt;57&lt;/y&gt;
+    &lt;/hint&gt;
+   &lt;/hints&gt;
+  &lt;/connection&gt;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="gaia" data-style="footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+" style="--theme:gaia;--style:footer {
+  text-align: right;
+}
+section.right {
+text-align: right;
+}
+;">
+<h1>Análisis y edición del documento XML</h1>
+<ul>
+<li>Al utilizar el lenguaje XML, mientras se siga el Schema correspondiente, Qt permite escribir la interfaz directamente en este lenguaje.</li>
+<li>Desde cero o partiendo de un archivo UI creado en Qt Designer.</li>
 </ul>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
