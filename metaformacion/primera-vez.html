@@ -1,0 +1,429 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Mi primera vez con Meta Quest 2</title>
+  <link rel="stylesheet" href="./steps-mi_primera_vez_con_meta_quest_2/assets/spectre.css"></link>
+
+  <link rel="stylesheet" href="./steps-mi_primera_vez_con_meta_quest_2/assets/toc.css"></link>
+  <link rel="stylesheet" href="./steps-mi_primera_vez_con_meta_quest_2/assets/common.css"></link>
+  <script src="./steps-mi_primera_vez_con_meta_quest_2/assets/toc.js"></script>
+
+  <style>
+    .bg {
+      background-color: #eff0f3;
+    }
+    .headline {
+      color: #0d0d0d;
+    }
+    .topSection {
+      padding: 50px .5rem;
+    }
+    .card {
+      border: 0;
+      box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15);
+      height: 100%;
+      margin-bottom: 3.5rem;
+    }
+    .card-header, .card-body {
+      padding-left: 2rem !important;
+    }
+    .card-image {
+      text-align: left;
+      padding: 1rem;
+    }
+    .card-image img{
+      box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15);
+      /* max-width: 750px; */
+      margin: auto;
+      margin-bottom: 2rem;
+      display: unset !important;
+    }
+    .toc, .tocFake {
+      z-index: 10;
+      position: fixed;
+      top: 60px;
+      left: 15px;
+      max-width: 250px;
+      padding: 10px;
+      box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15);
+      background-color: white;
+    }
+    .tocFake {
+      cursor: pointer;
+      top: 20px;
+    }
+    @media (max-width:1350px){
+      .toc {
+        max-width: 200px;
+      }
+    }
+
+    .headline:focus, .headline:hover {
+      outline : none !important;
+    }
+    .toc-link::before{
+      width:5px;
+    }
+    .is-active-link::before{
+      background-color: rgba(255,196,35,1);
+    }
+    .toc-link {
+      font-size: 0.8em;
+    }
+    .doubleCheesburger {
+      width: 12px;
+      height: 12px;
+      background-size: contain;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAAw0lEQVR4nO3YMQ7CMAxG4Qc74gJlRL07qjgBV+rQXCAMHUBRhiAKSdv3SV482R48/CBJkiRJLxdgAAIQV14BuAP9J8uPDQy+dI1AV3KAoYFhf1W3dNlD5gABOJVcaoUCcH5vHCsNUktMG7kDPP4wSC1Fu/Vs9wleSy/VMT+MqYHBv62J+bEXLy9JkvbNPKCBwZcu8wDMA8wDYtowD8gwD8A8QJIk7Zh5QAODL13mAZgHmAfEtGEekGEegHmAJEmSpI17AhoPKkbYwzDbAAAAAElFTkSuQmCC);
+    }
+    .form-checkbox {
+      display: inline;
+    }
+    input[type="checkbox"], .form-icon {
+      transform:scale(2, 2);
+    }
+    .stepTitle {
+      display:inline-block;
+      margin-left: 10px;
+    }
+    .card {
+      border: 2px solid transparent;
+    }
+    .completedCard {
+      border: 2px solid #2a9a39;
+      box-shadow: 0 0.25rem 1rem rgb(43 154 56 / 0.45);
+    }
+
+    .form-checkbox input:checked+.form-icon,
+    .form-radio input:checked+.form-icon,
+    .form-switch input:checked+.form-icon {
+      background: #00c400;
+      border-color: #00c400
+    }
+
+    .form-checkbox input:focus+.form-icon,
+    .form-radio input:focus+.form-icon,
+    .form-switch input:focus+.form-icon {
+      border-color: #00c400;
+      box-shadow: 0 0.25rem 1rem rgb(43 154 56 / 0.2);
+    }
+
+    .form-checkbox input:indeterminate+.form-icon {
+      background: #00c400;
+      border-color: #00c400
+    }
+
+    
+  </style>
+
+  <script>
+    var exportSettings = {"format":"jpeg","quality":"100","imageSize":100,"imageAlign":"left","oneStepPerPage":false,"includeTOS":true,"includeCoverPage":true,"includeNumbers":true,"embeddableExport":false,"embedAssets":false,"textPosition":"top","includeCheckboxes":false,"tocHeadline":"Table of contents","includeFooter":true,"includeHeader":true,"headerText":"[[Guide_Title]]","headerLogo":null,"headerLogoAlign":"right","footerNumbering":"Page [[Page_Number]]","footerLogo":null,"footerText":"[[Guide_Title]]","customCSS":"","pageOrientation":"portrait","footerLogoAlign":"left","pdfStepMode":"mode2","preparsed":{"headers":["Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2"],"footers":["Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2","Mi primera vez con Meta Quest 2"],"numberings":["Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]","Page [[Page_Number]]"]},"fullAssetsPath":"/Applications/Folge.app/Contents/Resources/app.asar/dist/electron/static/templates/html/assets"};
+
+    window.onload = function() {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc',
+        positionFixedSelector: '.toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.section',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: '.headline',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+        headingsOffset: 5,
+        headingLabelCallback: function(heading, node) {
+          var ancestor = findAncestor(node, 'card');
+          var isCompleted = ancestor && (findAncestor(node, 'card').classList.contains('completedCard'));
+          return (isCompleted ? '✅ ' : '') + heading.trim();
+        }
+      });
+      var tocFake = document.getElementsByClassName('tocFake')[0]
+      var tocReal = document.getElementsByClassName('toc')[0];
+      tocFake.addEventListener('click', function() {
+        toggleClassName(tocFake, 'show-md');
+        toggleClassName(tocReal, 'hide-md');
+      })
+      
+
+    }
+    function toggleClassName(element, className) {
+      element.classList.toggle(className);
+    }
+    function checkboxListener(checkbox) {
+      checkbox.addEventListener('change', function(event) {
+        var stepId = event.target.getAttribute('data-step-id');
+        var isChecked = event.target.checked
+        var cardNode = document.querySelector('.card[data-step-id="'+stepId+'"]');
+        cardNode.classList.toggle('completedCard');
+        tocbot.refresh();
+      })
+    }
+    function findAncestor (el, cls) {
+        while ((el = el && el.parentElement) && !el.classList.contains(cls));
+        return el;
+    }
+  </script>
+
+</head>
+
+<body class="bg">
+  <div class="tocFake show-md">
+    <div class="icon doubleCheesburger"></div>
+  </div>
+  <div class="toc hide-md"></div>
+  <div class="topSection">
+    <div class="container grid-lg text-center guideDetailsWrapper">
+      <h2 class="headline title">Mi primera vez con Meta Quest 2</h2>
+        <span class="description"><p>En esta guía se indicará cuáles son los pasos a seguir para utilizar por primera vez el headset Meta Quest 2 una vez se ha configurado.</p></span>
+    </div>
+  </div>
+  <div class="section">
+      <div class="container grid-md">
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-1">
+
+              <div class="card-header card-title h5 headline" id="step-1">
+                <div class="stepTitle">
+                  <b>1 </b>
+                Nos colocamos el dispositivo en la cabeza y nos lo ajustamos
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p>Podemos ajustar la cinta superior, también la trasera y el espacio entre las lentes. Deberemos ajustar todo en un punto en el que estemos cómodos, no se mueva el dispositivo al ladear la cabeza y veamos nítidamente.</p><p><span style="background-color: rgb(255, 255, 255);">Agarramos también los mandos en la posición adecuada, usando las abrazaderas por seguridad.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Nos colocamos el dispositivo en la cabeza y nos lo ajustamos" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/IPKOVH5oJA.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-2">
+
+              <div class="card-header card-title h5 headline" id="step-2">
+                <div class="stepTitle">
+                  <b>2 </b>
+                Encendemos el dispositivo
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Pulsamos el botón lateral derecho unos segundos hasta que aparezca el logo de Oculus.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Encendemos el dispositivo" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_1.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-3">
+
+              <div class="card-header card-title h5 headline" id="step-3">
+                <div class="stepTitle">
+                  <b>3 </b>
+                Sistema Guardián
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p>Tenemos varias posibilidades en este punto dependiendo del usuario que se le haya dado previamente:</p><ol><li>Si se ha creado antes un Sistema Guardián y estamos dentro de su rango, ve al paso 8.</li><li>Si se ha creado antes un Sistema Guardián y no estamos dentro de su rango, pero vemos una zona iluminada en azul, camina a esa zona y ve al paso 8.</li><li>Si no se encuentra ningún Sistema Guardián, pulsa en Crear Sistema Guardián.</li></ol><br></div>
+                <div class="card-image">
+                  <img 
+                      alt="Sistema Guardián" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_2.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-4">
+
+              <div class="card-header card-title h5 headline" id="step-4">
+                <div class="stepTitle">
+                  <b>4 </b>
+                Elige el tamaño
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p>Nos darán dos opciones entre las que tendremos que elegir:</p><ol><li><strong>Límite fijo</strong>. No podremos movernos dentro de la realidad virtual. Ideal cuando tenemos poco espacio o estamos sentados. Si elegimos esta opción, ve al paso 7.</li><li><strong>Límite con desplazamiento</strong>. Delimitaremos un área, que debe estar despejada, en la que podremos movernos en el siguiente paso.</li></ol><br></div>
+                <div class="card-image">
+                  <img 
+                      alt="Elige el tamaño" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_3.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-5">
+
+              <div class="card-header card-title h5 headline" id="step-5">
+                <div class="stepTitle">
+                  <b>5 </b>
+                Marca el nivel del suelo
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Baja los mandos boca abajo hasta tocar el suelo y, cuando esté situado correctamente, apunta con uno de los mandos hacia aceptar y pulsa el botón que cae debajo de tu índice.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Marca el nivel del suelo" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_4.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-6">
+
+              <div class="card-header card-title h5 headline" id="step-6">
+                <div class="stepTitle">
+                  <b>6 </b>
+                Delimita el área
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Apunta al suelo con el mando de tu mano favorita y mantén pulsado el botón que cae debajo de tu dedo índice para hasta realizar un círculo completo. Lo ideal es que el área tenga al menos 2x2 metros. Cuando estés satistecho con la misma, confirma el área apuntando con el mando y pulsando el botón debajo de tu dedo índice.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Delimita el área" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_5.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-7">
+
+              <div class="card-header card-title h5 headline" id="step-7">
+                <div class="stepTitle">
+                  <b>7 </b>
+                Confirma el Sistema Guardián
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Si hay obstáculos en el área, el sistema te avisará. Retira esos obstáculos o continúa asumiendo el riesgo.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Confirma el Sistema Guardián" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_6.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-8">
+
+              <div class="card-header card-title h5 headline" id="step-8">
+                <div class="stepTitle">
+                  <b>8 </b>
+                Oculus Home
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Te aparecerá la pantalla principal de Oculus, con uno de los escenarios predefinidos y el menú delante. Si no lo localizas, mantén pulsado el botón con el símbolo de oculus en el mando derecho. Está acción colocará el menú en el lugar en el que estás mirando.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Oculus Home" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_7.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-9">
+
+              <div class="card-header card-title h5 headline" id="step-9">
+                <div class="stepTitle">
+                  <b>9 </b>
+                En la barra de menú principal, pulsa el botón para acceder a las aplicaciones
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p><span style="background-color: rgb(255, 255, 255);">Apunta con tu mando al símbolo formado por cuatro cuadrados pequeños a la derecha de la barra y pulsa el botón que cae debajo de tu dedo índice.</span></p></div>
+                <div class="card-image">
+                  <img 
+                      alt="En la barra de menú principal, pulsa el botón para acceder a las aplicaciones" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_8.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns flex-centered">
+          <div class="column col-xs-10 col-md-10 col-xl-10">
+            <div class="card stepCard" data-step-id="step-10">
+
+              <div class="card-header card-title h5 headline" id="step-10">
+                <div class="stepTitle">
+                  <b>10 </b>
+                Comienza con First Steps
+                </div>
+              </div>
+              <div class="card-body stepDescription"><p>Selecciona la aplicación First Steps para abrirla. Si no la vez en pantalla, puedes usar el jostick para subir o bajar por el listado de aplicaciones. En esta aplicación se te explicarán los fundamentos básicos de control del dispositivo Meta Quest 2.</p><p>Recuerda que la primera vez que lo uses no deberías estar más de 10 minutos. Intenta hacer un uso incremental de pocos minutos cada día para evitar mareos indeseados. Tu cuerpo se acostumbrará poco a poco al nuevo entorno.</p></div>
+                <div class="card-image">
+                  <img 
+                      alt="Comienza con First Steps" 
+                      class="img-responsive stepImage" 
+            
+                      src="./steps-mi_primera_vez_con_meta_quest_2/step_9.jpeg" 
+            
+                    />
+               
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
