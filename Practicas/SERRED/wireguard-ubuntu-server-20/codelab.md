@@ -151,15 +151,23 @@ También podemos acceder a ver nuestra clave pública ejecutando:
 sudo cat /etc/wireguard/keys/server.key.pub
 ```
 
-###Determinar la interfaz predeterminada
+###Determinar la interfaz que vamos a enrutar
 
-Es necesario conocer el nombre de la interfaz que estamos usando para acceder a Internet, ya que tendremos que escribirlo en la configuración. Si no sabes cuál es, el siguiente comando te lo revelará:
+Es necesario conocer el nombre de la interfaz que queremos enrutar a través del túnel, ya que tendremos que escribirlo en la configuración. Si el servidor se conecta a Internet a través de la misma interfaz que a su red local, el siguiente comando te lo revelará:
 
 ```
 ip -o -4 route show to default | awk '{print $5}'
 ```
 
 El nombre que a mí me muestra es `ens3`. Anota el tuyo.
+
+Si el servidor se conecta a Internet usando una interfaz distinta a la interfaz a través de la cual se conecta a la red privada a la que queremos que acceda el cliente VPN, tendremos que obtener el nombre analizando todas las interfaces que aparecen ejecutando el comando:
+
+```
+ip add
+```
+
+La interfaz de la red local será aquella que tenga configurada una IP del rango de la red privada.
 
 ###Configurar la interfaz para WireGuard
 WireGuard funciona añadiendo una interfaz de red a nuestro servidor, que es la que utilizará el túnel VPN. La llamaremos `wg0`.
