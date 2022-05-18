@@ -214,3 +214,77 @@ Beamer Theme  : singapore
 * Experiencias en la web: [Access Mars](https://experiments.withgoogle.com/access-mars), [Speak to Go](https://experiments.withgoogle.com/speak-to-go), 
 * Una gran cantidad de vídeos en 360: [Viaje al interior del cuerpo humano](https://www.youtube.com/watch?v=d9D5csXovEM), [Tour por Londres](https://www.youtube.com/watch?v=m9EClKA1VeQ)
 * [Y esto solo acaba de empezar](https://www.desconsolados.com/2021/07/17/visita-albarracin-de-manera-virtual-gracias-a-vr-chat/)
+
+# Futuro
+
+# Proyect Cambria
+
+~Center
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Is your living room:<br><br>A. A fishing pond 🎣<br>B. The perfect work space 👨‍💻<br>C. A lush forest 🌳<br><br>Soon, with our new Presence Platform the answer will be D. All of the above and more!<br><br>Check out the sneak peek of how mixed reality will look on Project Cambria. <a href="https://t.co/UTSVGNYGDH">pic.twitter.com/UTSVGNYGDH</a></p>&mdash; Meta Quest (@MetaQuestVR) <a href="https://twitter.com/MetaQuestVR/status/1524827022626676736?ref_src=twsrc%5Etfw">May 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+~
+
+# Rumorología
+
+- Más ligeras
+
+- Tracking facial
+
+- Tracking de cuerpo completo
+
+- Realidad mixta
+
+# Posibles mandos
+
+~Center
+<blockquote class="twitter-tweet" data-lang="es" data-dnt="true"><p lang="en" dir="ltr">I found the likely patent for Meta Cambria&#39;s Force-Feedback triggers for their controllers that I reported is a final feature<br><br>Submitted in 2019. The figure already looks quite similar to the leaked renders 😇<a href="https://t.co/bYFfyjLAhn">https://t.co/bYFfyjLAhn</a> <a href="https://t.co/qg4EcsUGeJ">pic.twitter.com/qg4EcsUGeJ</a></p>&mdash; Brad Lynch (@SadlyItsBradley) <a href="https://twitter.com/SadlyItsBradley/status/1509062047488778246?ref_src=twsrc%5Etfw">30 de marzo de 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+~
+
+# Vídeo de muestra
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/osIWrikTriM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Objetivos a alcanzar
+
+* Futuro del trabajo
+
+* Futuro del ocio
+
+* Futuro del deporte
+
+* Futuro de la educación
+
+# Desarrollo
+
+# Nativo
+
+- [Oculus](https://developer.oculus.com/downloads/?locale=es_ES)
+
+- [Vive](https://developer.vive.com/resources/)
+
+- [ARkit](https://developer.apple.com/augmented-reality/) / [ARCore](https://developers.google.com/ar)
+
+# Videojuegos
+
+- [Unity](https://unity.com/es/unity/features/vr)
+
+- [Unreal Engine](https://www.unrealengine.com/en-US/xr)
+
+- [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) como Store
+
+# Web
+
+- WebXR: [ThreeJS](https://threejs.org), [AR.js](https://ar-js-org.github.io/AR.js-Docs/), [A-Frame](https://aframe.io)
+
+- A-Frame depende del resto, pero el más fácil de utilizar
+
+- Modalidades: VR, AR sin marcador, AR con marcador (AR.js), AR con localización (AR.js)
+
+# Otros
+
+- [ReadyPlayerMe](https://readyplayer.me/es)
+
+- [Lens Studio](https://ar.snap.com/lens-studio) de Snapchat
+
+- [SparkAR](https://sparkar.facebook.com/ar-studio/) de Meta (Instagram, Facebook)
+
+- [Effect House](https://effecthouse.tiktok.com/?lang=es-es) de TikTok
