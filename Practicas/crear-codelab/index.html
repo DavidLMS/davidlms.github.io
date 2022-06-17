@@ -52,10 +52,10 @@
       <google-codelab-step label="Preparación del entorno" duration="5">
         <p>Para crear un CodeLab, necesitas tener instalados <em>Go</em> y <em>claat</em> (la herramienta por línea de comandos de codelabs).</p>
 <p>A continuación puedes ver las instrucciones de instalación para los sistemas operativos más populares.</p>
-<h2 is-upgraded>Windows</h2>
+<p>###Windows</p>
 <p>Vamos a la <a href="https://github.com/googlecodelabs/tools/releases" target="_blank">página de releases de claat</a> y <strong>descargamos la versión apropiada</strong>. Si tienes Windows de 64 bits, descargamos &#34;claat-windows-amd64.exe&#34;.</p>
 <p class="image-container"><img alt="Releases de claat" src="img/bd099f22173028e1.png"></p>
-<h2 is-upgraded>Linux (Probado en Ubuntu)</h2>
+<p>###Linux (Probado en Ubuntu)</p>
 <p>Vamos a la <a href="https://github.com/googlecodelabs/tools/releases" target="_blank">página de releases de claat</a> y <strong>descargamos la versión apropiada</strong>. Si tienes Linux de 64 bits, descargamos &#34;claat-linux-amd64&#34;.</p>
 <p class="image-container"><img alt="Releases de claat" src="img/bd099f22173028e1.png"></p>
 <p><strong>Abrimos una terminal</strong> y accedemos a la carpeta en la que tengamos descargado el ejecutable de claat.</p>
@@ -63,7 +63,7 @@
 <pre><code language="language-bash" class="language-bash">sudo chmod +x claat-linux-amd64
 </code></pre>
 <p>(sustitumos claat-linux-amd64 por nuestra versión)</p>
-<h2 is-upgraded>macOS</h2>
+<p>###macOS</p>
 <h3 is-upgraded>Instala Go</h3>
 <p>Instala <a href="https://golang.org/dl/" target="_blank">Go</a> si no has hecho aún. Puedes usar <strong>Homebrew</strong> si lo tienes en macOS:</p>
 <pre><code language="language-bash" class="language-bash">$ brew install go
@@ -77,7 +77,7 @@ $ export PATH=$PATH:$GOROOT/bin
 </code></pre>
 <h3 is-upgraded>Instala claat</h3>
 <p>Para <strong>instalar claat</strong>, ejecuta lo siguiente en una Terminal:</p>
-<pre><code language="language-bash" class="language-bash">$ go get -u -v -x github.com/googlecodelabs/tools/claat
+<pre><code language="language-bash" class="language-bash">$ go install github.com/googlecodelabs/tools/claat@latest
 </code></pre>
 <p>Ahora deberías tener el comando <em>claat</em> disponible en la terminal.</p>
 <pre><code language="language-bash" class="language-bash">$ claat
@@ -180,7 +180,7 @@ Texto plano en una lista con viñetas:
     
       <google-codelab-step label="Exportar y servir" duration="2">
         <p>Ahora que tenemos un CodeLab inicial definido en nuestro archivo markdown, vamos a generar <strong>la página web estática</strong>. Podemos exportar y servir el contenido de forma local usando el comando <code>claat</code> que instalamos anteriormente.</p>
-<h2 is-upgraded>Windows</h2>
+<p>###Windows</p>
 <p>Movemos nuestro archivo codelab.md que queremos generar a la carpeta en la que tengamos descargado el ejecutable de claat.</p>
 <p>Abrimos el símbolo del sistema y accedemos desde el mismo a la carpeta en la que tengamos descargado el ejecutable de claat.</p>
 <p class="image-container"><img alt="Acceso al CMD en Windows" src="img/81a09eb5485ab171.png"></p>
@@ -200,7 +200,7 @@ Texto plano en una lista con viñetas:
 <li>Elige la carpeta que tiene por nombre el &#34;id&#34; puesto en la cabecera del archivo.</li>
 <li>¡Listo! ¡Ya tienes tu primer CodeLab!</li>
 </ul>
-<h2 is-upgraded>Linux (Probado en Ubuntu)</h2>
+<p>###Linux (Probado en Ubuntu)</p>
 <p>Movemos nuestro archivo codelab.md que queremos generar a la carpeta en la que tengamos descargado el ejecutable de claat.</p>
 <p>Abrimos una terminal y accedemos desde el mismo a la carpeta en la que tengamos descargado el ejecutable de claat. Ejecutamos el comando:</p>
 <pre><code language="language-bash" class="language-bash">./claat-linux-amd64 export codelab.md
@@ -212,7 +212,7 @@ Texto plano en una lista con viñetas:
 <li>Elige la carpeta que tiene por nombre el &#34;id&#34; puesto en la cabecera del archivo.</li>
 <li>¡Listo! ¡Ya tienes tu primer CodeLab!</li>
 </ul>
-<h2 is-upgraded>macOS</h2>
+<p>###macOS</p>
 <p>Abre una Terminal y accede desde la misma a la carpeta en la que se encuentre el archivo codelab.md. Luego ejecuta:</p>
 <pre><code language="language-bash" class="language-bash">$ claat export codelab.md
 $ claat serve
@@ -228,10 +228,9 @@ $ claat serve
     
       <google-codelab-step label="Aloja tu CodeLab" duration="1">
         <p>Cuando ejecutaste el comando <code>claat export</code> creaste el sitio web estático necesario para alojar en un servidor web tu CodeLab. Se generó <strong>una carpeta con el identificador</strong> que especificaste en &#34;id&#34; que contiene todos los archivos de la página, entre ellos el index.html, que puedes abrirlo de forma local.</p>
-<aside class="warning"><p>Ten en cuenta que cuando ves la página localmente abriendo el index.html algunos de los gráficos no se mostrarán (como access_time, Next, Back), pero funcionarán una vez esté online.</p>
-</aside>
+<p>Negative : Ten en cuenta que cuando ves la página localmente abriendo el index.html algunos de los gráficos no se mostrarán (como access_time, Next, Back), pero funcionarán una vez esté online.</p>
 <p>Ahora que tienes el contenido estático generado puedes <strong>alojarlo donde prefieras</strong>. Una opción es subiéndolo a un repositorio de Github y servirlo usando <a href="https://www.netlify.com/" target="_blank">Netlify</a>.</p>
-<p>Si quieres crear tu propio índice con enlaces a los CodeLabs, <a href="(https://codelabs.developers.google.com" target="_blank">similar a este</a>), también hay una herramienta que lo hace. Echa un vistazo aquí: <a href="https://github.com/googlecodelabs/tools/blob/master/site/README.md" target="_blank">CodeLabs Site</a></p>
+<p>Si quieres crear tu propio índice con enlaces a los CodeLabs, <a href="(https://codelabs.developers.google.com)" target="_blank">similar a este</a>, también hay una herramienta que lo hace. Echa un vistazo aquí: <a href="https://github.com/googlecodelabs/tools/blob/master/site/README.md" target="_blank">CodeLabs Site</a></p>
 
 
       </google-codelab-step>
@@ -241,7 +240,7 @@ $ claat serve
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
-  <script src="https://davidlms.github.io/Practicas/crear-codelab/js/codelab-elements.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
 
 </body>

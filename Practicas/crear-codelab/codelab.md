@@ -85,7 +85,7 @@ $ export PATH=$PATH:$GOROOT/bin
 Para **instalar claat**, ejecuta lo siguiente en una Terminal:
 
 ``` bash
-$ go get -u -v -x github.com/googlecodelabs/tools/claat
+$ go install github.com/googlecodelabs/tools/claat@latest
 ```
 
 Ahora deberías tener el comando *claat* disponible en la terminal. 
