@@ -37,13 +37,13 @@ Para crear un CodeLab, necesitas tener instalados *Go* y *claat* (la herramienta
 
 A continuación puedes ver las instrucciones de instalación para los sistemas operativos más populares.
 
-###Windows
+### Windows
 
 Vamos a la [página de releases de claat](https://github.com/googlecodelabs/tools/releases) y **descargamos la versión apropiada**. Si tienes Windows de 64 bits, descargamos "claat-windows-amd64.exe".
 
 ![Releases de claat](img/codelab.releases.png)
 
-###Linux (Probado en Ubuntu)
+### Linux (Probado en Ubuntu)
 
 Vamos a la [página de releases de claat](https://github.com/googlecodelabs/tools/releases) y **descargamos la versión apropiada**. Si tienes Linux de 64 bits, descargamos "claat-linux-amd64".
 
@@ -58,7 +58,7 @@ sudo chmod +x claat-linux-amd64
 ```
 (sustitumos claat-linux-amd64 por nuestra versión)
 
-###macOS
+### macOS
 
 #### Instala Go 
 
@@ -75,7 +75,7 @@ Ejecuta lo siguiente en una **Terminal** para establecer las variables de entorn
 
 ``` bash
 $ export GOPATH=$HOME/Go
-$ export GOROOT=/usr/local/opt/go/libexec
+$ export GOROOT="$(brew --prefix golang)/libexec"
 $ export PATH=$PATH:$GOPATH/bin
 $ export PATH=$PATH:$GOROOT/bin
 ```
