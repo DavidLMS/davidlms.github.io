@@ -32,7 +32,8 @@ Oculus Quest (2018) → Oculus Quest 2 (2020) → Meta Quest 2 (2021)
 
 **RAM**: 6GB
 
-**Almacenamiento**: 128GB (350€) / 256GB (450€)
+
+**Almacenamiento**: 128GB (de 350€ a 450€) / 256GB (de 450€ a 550€)
 
 **Peso**: 503g
 
@@ -92,7 +93,8 @@ Múltiples recursos para diferentes materias
 Y lo mejor está por llegar...
 
 <img class="r-stretch" style="text-align: center" src="assets/learn.jpg">
----
+
+
 ## ¿Cuándo usar VR en educación?
 
 Falta de material (caro o escaso).
@@ -108,7 +110,8 @@ Actividades peligrosas.
 Actividad manual que requiere pasos muy precisos.
 
 Ambiente controlado para replicar acciones de forma individual.
----
+
+
 ## Creación de experiencias educativas
 
 Educa360
@@ -118,7 +121,8 @@ Zoe
 Ausencia de soluciones libres
 
 <img class="r-stretch" style="text-align: center" src="assets/zoe.png">
----
+
+
 ## Idiomas
 
 [Mondly: Learn Languages in VR](https://www.oculus.com/experiences/quest/4214902388537196/?locale=es_ES)
@@ -126,7 +130,8 @@ Ausencia de soluciones libres
 Intercambios virtuales: [Horizon Venues](https://www.oculus.com/experiences/quest/3002729676463989/?locale=es_ES)
 
 [ImmerseMe](https://immerseme.co)
----
+
+
 ## Música
 
 [Virtuoso](https://www.oculus.com/experiences/quest/4705981139481778)
@@ -134,7 +139,8 @@ Intercambios virtuales: [Horizon Venues](https://www.oculus.com/experiences/ques
 [Grand Reality](https://grandreality.app)
 
 [MelodyVR](https://www.oculus.com/experiences/quest/2617356444966011?ranking_trace=0_2617356444966011_QUESTSEARCH_7f06bc06-0c45-468a-891d-0ddf4356691a)
----
+
+
 ## Biología y Geología
 
 [ecosphere](https://www.oculus.com/experiences/quest/2926036530794417?ranking_trace=0_2926036530794417_QUESTSEARCH_021646a7-849a-4599-9485-e3773070836e)
@@ -142,7 +148,8 @@ Intercambios virtuales: [Horizon Venues](https://www.oculus.com/experiences/ques
 [High School Anatomy for Quest](https://www.oculus.com/experiences/quest/5556243174447482/)
 
 [CPR](https://www.oculus.com/experiences/quest/5320252051348244/?utm_source=sidequest)
----
+
+
 ## Administrativo
 
 [Horizon Workrooms](https://www.oculus.com/experiences/quest/2514011888645651/)
@@ -150,7 +157,8 @@ Intercambios virtuales: [Horizon Venues](https://www.oculus.com/experiences/ques
 [ShapesXR](https://www.oculus.com/experiences/quest/3899112273551602/)
 
 [Job Simulator](https://www.oculus.com/experiences/quest/3235570703151406/?locale=es_ES)
----
+
+
 ## Informática
 
 Videojuegos serios: [Crear experiencias educativas](https://www.zoe.com/software/zoe-for-unity/)
@@ -158,7 +166,8 @@ Videojuegos serios: [Crear experiencias educativas](https://www.zoe.com/software
 Web: [A-Frame](https://aframe.io)
 
 [Desarrollo](https://developer.oculus.com/get-started-platform/)
----
+
+
 ## Física y Química
 
 [Molecule Builder](https://www.oculus.com/experiences/quest/3632813843496339/?utm_medium=share&utm_source=oculus)
@@ -167,7 +176,7 @@ Web: [A-Frame](https://aframe.io)
 
 [Nanome](https://www.oculus.com/experiences/rift/1873145426039242/)
 
----
+
 ## Ciencias
 
 [Titans of Space +](https://www.oculus.com/experiences/quest/2359857214088490/?locale=es_ES)
@@ -175,7 +184,8 @@ Web: [A-Frame](https://aframe.io)
 [Mission:ISS](https://www.oculus.com/experiences/quest/2094303753986147/?locale=es_ES)
 
 [National Geographic Explore VR](https://www.oculus.com/experiences/quest/2046607608728563)
----
+
+
 ## Matemáticas
 
 [Pandemic by Prisms](https://www.oculus.com/experiences/quest/3079043625531665/?utm_source=oculusapplab.com)
@@ -185,7 +195,8 @@ Web: [A-Frame](https://aframe.io)
 [Number Cruncher](https://sidequestvr.com/app/6642/number-cruncher)
 
 [XR-Graph](https://xr-graph.vercel.app)
----
+
+
 ## Tecnología
 
 [Gadgeteer](https://www.oculus.com/experiences/quest/2567395559960697)
@@ -193,7 +204,8 @@ Web: [A-Frame](https://aframe.io)
 [Adam Savage's Tested VR](https://www.oculus.com/experiences/quest/2586839431358655/)
 
 [Gravity Sketch](https://www.oculus.com/experiences/quest/1587090851394426/)
----
+
+
 ## Formación y Orientación Laboral
 
 [VirtualSpeech](https://www.oculus.com/experiences/quest/3973230756042512/?locale=es_ES)
@@ -201,7 +213,8 @@ Web: [A-Frame](https://aframe.io)
 [Spatial](https://www.oculus.com/experiences/quest/2927141310670477)
 
 [Bodyswaps](https://www.oculus.com/experiences/quest/3714188128706579/?utm_source=oculusapplab.com)
----
+
+
 ## Lengua y Literatura
 
 [Anne Frank House VR](https://www.oculus.com/experiences/quest/1958100334295482?ranking_trace=0_1958100334295482_QUESTSEARCH_5beb6ad8-cbb7-4fe9-a2e5-6d0a0156b087)
@@ -209,7 +222,8 @@ Web: [A-Frame](https://aframe.io)
 [Keep Talking and Nobody Explodes](https://www.oculus.com/experiences/quest/2010043642376517?ranking_trace=0_2010043642376517_QUESTSEARCH_4f1ae067-7a52-4c06-bd63-65beb252b950)
 
 [Rutas de Don Quijote (La Mancha VR)](https://www.youtube.com/watch?v=uBIZwFD8mH8)
----
+
+
 ## Geografía e Historia
 
 [Wander](https://www.oculus.com/experiences/quest/2078376005587859/?locale=es_ES)
@@ -217,7 +231,8 @@ Web: [A-Frame](https://aframe.io)
 [Tours virtuales](https://my.matterport.com/show/?m=d42fuVA21To)
 
 [Google Earth VR](https://arvr.google.com/earth/)
----
+
+
 ## Comercio y Marketing
 
 Aplican aplicaciones de los apartados de Idiomas y Administrativo
@@ -227,7 +242,8 @@ Aplican aplicaciones de los apartados de Idiomas y Administrativo
 [El cambio en la industria](https://business.trustedshops.es/blog/ejemplos-realidad-aumentada-realidad-virtual-estrategia-marketing/)
 
 [Analítica VR en los comercios](https://cognitive3d.com/retail/)
----
+
+
 ## Servicios sociales y a la comunidad
 
 [ZenVR](https://sidequestvr.com/app/5026/zenvr)
@@ -237,7 +253,8 @@ Aplican aplicaciones de los apartados de Idiomas y Administrativo
 [Sea Level Rise Explorer: Long Beach](https://sidequestvr.com/app/3784/sea-level-rise-explorer-long-beach)
 
 [Everyday Inclusion - An Interactive Learning Journey About Unconscious Bias](https://sidequestvr.com/app/1262/everyday-inclusion-an-interactive-learning-journey-about-unconscious-bias)
----
+
+
 ## Más sobre educación
 
 [Enlace a la tienda oficial](https://www.oculus.com/experiences/quest/)
@@ -252,7 +269,22 @@ Una gran cantidad de vídeos en 360: [Viaje al interior del cuerpo humano](https
 ---
 ## Actualidad
 
-Meta Quest Pro
+<img class="r-stretch" style="text-align: center" src="assets/meta-quest-pro.png">
+
+
+## Meta Quest Pro
+
+Presentado en octubre
+
+Modo passthrough en color
+
+Capacidad para transmitir emociones
+
+Mandos mejorados
+
+Enfoque profesional
+
+Su precio es 1800€
 ---
 ## Objetivos a alcanzar
 
@@ -265,7 +297,8 @@ Futuro del deporte
 Futuro de la educación
 ---
 ## Desarrollo
----
+
+
 ## Nativo
 
 [Oculus](https://developer.oculus.com/downloads/?locale=es_ES)
@@ -273,7 +306,8 @@ Futuro de la educación
 [Vive](https://developer.vive.com/resources/)
 
 [ARkit](https://developer.apple.com/augmented-reality/) / [ARCore](https://developers.google.com/ar)
----
+
+
 ## Videojuegos
 
 [Unity](https://unity.com/es/unity/features/vr)
@@ -281,7 +315,8 @@ Futuro de la educación
 [Unreal Engine](https://www.unrealengine.com/en-US/xr)
 
 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) como Store
----
+
+
 ## Web
 
 WebXR: [ThreeJS](https://threejs.org), [AR.js](https://ar-js-org.github.io/AR.js-Docs/), [A-Frame](https://aframe.io)
@@ -289,7 +324,8 @@ WebXR: [ThreeJS](https://threejs.org), [AR.js](https://ar-js-org.github.io/AR.js
 A-Frame depende del resto, pero el más fácil de utilizar
 
 Modalidades: VR, AR sin marcador, AR con marcador (AR.js), AR con localización (AR.js)
----
+
+
 ## Otros
 
 [ReadyPlayerMe](https://readyplayer.me/es)
