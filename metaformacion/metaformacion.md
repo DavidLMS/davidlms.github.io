@@ -44,11 +44,7 @@ Oculus Quest (2018) → Oculus Quest 2 (2020) → Meta Quest 2 (2021)
 
 ## Echa un vistazo
 
-<!--
-
 <div class="sketchfab-embed-wrapper"> <iframe title="Quest 2 Headset - FanArt" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/ee496aa030bf4f37a52b445196796af3/embed?autostart=1"> </iframe> </div>
-
--->
 ---
 ## Seguridad
 
